@@ -1,350 +1,4 @@
-<!DOCTYPE html><html lang="pt">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Fely e Amigos | Soluções Digitais</title><meta name="description" content="Fely e Amigos — Soluções Digitais. Websites, CVs profissionais, identidade visual, materiais digitais e presença online."><style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f7f9fc;
-    color:#172033;
-    line-height:1.6;
-}
-
-header{
-    background:#ffffff;
-    padding:15px 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 2px 12px rgba(0,0,0,0.08);
-}
-
-.logo img{
-    width:150px;
-    height:auto;
-    display:block;
-}
-
-nav{
-    display:flex;
-    gap:22px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#172033;
-    font-weight:bold;
-    font-size:15px;
-}
-
-nav a:hover{
-    color:#1769aa;
-}
-
-.hero{
-    min-height:620px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:80px 6%;
-    background:linear-gradient(135deg,#eef7ff,#ffffff);
-}
-
-.hero-content{
-    max-width:850px;
-}
-
-.badge{
-    display:inline-block;
-    padding:8px 16px;
-    border-radius:30px;
-    background:#e3f2fd;
-    color:#1769aa;
-    font-weight:bold;
-    font-size:13px;
-    margin-bottom:20px;
-}
-
-.hero h1{
-    font-size:52px;
-    margin-bottom:18px;
-    color:#12263f;
-}
-
-.hero h2{
-    font-size:27px;
-    color:#1769aa;
-    margin-bottom:20px;
-}
-
-.hero p{
-    max-width:700px;
-    margin:0 auto 30px;
-    font-size:18px;
-    color:#536174;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 24px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-    margin:5px;
-    transition:0.3s;
-}
-
-.btn-primary{
-    background:#1769aa;
-    color:white;
-}
-
-.btn-primary:hover{
-    background:#0d4f82;
-}
-
-.btn-secondary{
-    background:white;
-    color:#1769aa;
-    border:2px solid #1769aa;
-}
-
-.btn-secondary:hover{
-    background:#eef7ff;
-}
-
-section{
-    padding:80px 6%;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:45px;
-}
-
-.section-title h2{
-    font-size:36px;
-    margin-bottom:10px;
-    color:#12263f;
-}
-
-.section-title p{
-    color:#657286;
-}
-
-.about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    font-size:18px;
-}
-
-.cards{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.card{
-    background:white;
-    padding:28px 22px;
-    border-radius:14px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.07);
-    text-align:center;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card-icon{
-    font-size:40px;
-    margin-bottom:15px;
-}
-
-.card h3{
-    margin-bottom:10px;
-    color:#12263f;
-}
-
-.card p{
-    color:#657286;
-    font-size:15px;
-}
-
-.portfolio{
-    background:#ffffff;
-}
-
-.portfolio-grid{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.project{
-    background:#f7f9fc;
-    border-radius:14px;
-    overflow:hidden;
-    box-shadow:0 5px 18px rgba(0,0,0,0.07);
-}
-
-.project-top{
-    min-height:180px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#e9f4fc;
-    overflow:hidden;
-}
-
-.project-top img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    display:block;
-}
-
-.project-emoji{
-    font-size:55px;
-}
-
-.project-content{
-    padding:24px;
-}
-
-.project-content span{
-    font-size:12px;
-    color:#1769aa;
-    font-weight:bold;
-    text-transform:uppercase;
-}
-
-.project-content h3{
-    margin:8px 0 10px;
-    color:#12263f;
-}
-
-.project-content p{
-    color:#657286;
-    font-size:15px;
-    margin-bottom:18px;
-}
-
-.project-btn{
-    display:inline-block;
-    padding:10px 16px;
-    background:#1769aa;
-    color:white;
-    text-decoration:none;
-    border-radius:7px;
-    font-size:14px;
-    font-weight:bold;
-    margin:3px 2px;
-}
-
-.project-btn:hover{
-    background:#0d4f82;
-}
-
-.project-images{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:8px;
-    padding:8px;
-    background:#eef3f8;
-}
-
-.project-images img{
-    width:100%;
-    height:120px;
-    object-fit:cover;
-    border-radius:8px;
-    background:white;
-}
-
-.cv-links{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-}
-
-.process{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:15px;
-}
-
-.step{
-    text-align:center;
-    padding:20px 10px;
-}
-
-.number{
-    width:50px;
-    height:50px;
-    margin:0 auto 15px;
-    border-radius:50%;
-    background:#1769aa;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    font-size:20px;
-}
-
-.step h3{
-    font-size:16px;
-    margin-bottom:7px;
-}
-
-.step p{
-    font-size:14px;
-    color:#657286;
-}
-
-.contact{
-    background:linear-gradient(135deg,#12263f,#1769aa);
-    color:white;
-    text-align:center;
-}
-
-.contact .section-title h2,
-.contact .section-title p{
-    color:white;
-}
-
-.contact p{
-    max-width:650px;
-    margin:auto;
-}
-
-.contact-buttons{
-    margin-top:25px;
-}
-
-footer{
-    background:#0c1828;
-    color:#b8c4d3;
-    text-align:center;
+  text-align:center;
     padding:25px 6%;
     font-size:14px;
 }
@@ -706,4 +360,843 @@ Solicitar orçamento
 </p><p>
 Transformar ideias em soluções digitais.
 </p></footer></body>
+</html>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fely e Amigos | Soluções Digitais</title>
+
+<meta name="description" content="Fely e Amigos — Soluções Digitais. Websites, CVs profissionais, identidade visual, materiais digitais e presença online.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#172033;
+    line-height:1.6;
+}
+
+header{
+    background:#ffffff;
+    padding:15px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+
+.logo img{
+    width:150px;
+    height:auto;
+    display:block;
+}
+
+nav{
+    display:flex;
+    gap:22px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#172033;
+    font-weight:bold;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#1769aa;
+}
+
+.hero{
+    min-height:620px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 6%;
+    background:linear-gradient(135deg,#eef7ff,#ffffff);
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 16px;
+    border-radius:30px;
+    background:#e3f2fd;
+    color:#1769aa;
+    font-weight:bold;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:18px;
+    color:#12263f;
+}
+
+.hero h2{
+    font-size:27px;
+    color:#1769aa;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:0 auto 30px;
+    font-size:18px;
+    color:#536174;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 24px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:5px;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#1769aa;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#0d4f82;
+}
+
+.btn-secondary{
+    background:white;
+    color:#1769aa;
+    border:2px solid #1769aa;
+}
+
+.btn-secondary:hover{
+    background:#eef7ff;
+}
+
+section{
+    padding:80px 6%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:36px;
+    margin-bottom:10px;
+    color:#12263f;
+}
+
+.section-title p{
+    color:#657286;
+}
+
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+}
+
+.cards{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:28px 22px;
+    border-radius:14px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.07);
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card-icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#12263f;
+}
+
+.card p{
+    color:#657286;
+    font-size:15px;
+}
+
+.portfolio{
+    background:#ffffff;
+}
+
+.portfolio-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.project{
+    background:#f7f9fc;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,0.07);
+}
+
+.project-top{
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#e9f4fc;
+    font-size:55px;
+}
+
+.project-content{
+    padding:24px;
+}
+
+.project-content span{
+    font-size:12px;
+    color:#1769aa;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.project-content h3{
+    margin:8px 0 10px;
+    color:#12263f;
+}
+
+.project-content p{
+    color:#657286;
+    font-size:15px;
+    margin-bottom:18px;
+}
+
+.project-btn{
+    display:inline-block;
+    padding:10px 16px;
+    background:#1769aa;
+    color:white;
+    text-decoration:none;
+    border-radius:7px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.process{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.step{
+    text-align:center;
+    padding:20px 10px;
+}
+
+.number{
+    width:50px;
+    height:50px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    background:#1769aa;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.step h3{
+    font-size:16px;
+    margin-bottom:7px;
+}
+
+.step p{
+    font-size:14px;
+    color:#657286;
+}
+
+.contact{
+    background:linear-gradient(135deg,#12263f,#1769aa);
+    color:white;
+    text-align:center;
+}
+
+.contact .section-title h2,
+.contact .section-title p{
+    color:white;
+}
+
+.contact p{
+    max-width:650px;
+    margin:auto;
+}
+
+.contact-buttons{
+    margin-top:25px;
+}
+
+footer{
+    background:#0c1828;
+    color:#b8c4d3;
+    text-align:center;
+    padding:25px 6%;
+    font-size:14px;
+}
+
+@media(max-width:900px){
+
+    nav{
+        gap:12px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .portfolio-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .process{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+}
+
+@media(max-width:700px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .logo img{
+        width:135px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .hero{
+        padding:65px 5%;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero h2{
+        font-size:22px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+
+    .section-title h2{
+        font-size:29px;
+    }
+
+    .cards,
+    .portfolio-grid,
+    .process{
+        grid-template-columns:1fr;
+    }
+
+    .btn{
+        display:block;
+        max-width:300px;
+        margin:10px auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="file_00000000080481f4995a6890c96202cc%20(2).png"
+alt="Fely e Amigos - Soluções Digitais">
+</div>
+
+<nav>
+<a href="#inicio">Início</a>
+<a href="#sobre">Sobre</a>
+<a href="#servicos">Serviços</a>
+<a href="#portfolio">Portfólio</a>
+<a href="#processo">Como Funciona</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+</header>
+
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<div class="badge">SOLUÇÕES DIGITAIS</div>
+
+<h1>Fely e Amigos</h1>
+
+<h2>Transformar ideias em soluções digitais.</h2>
+
+<p>
+Ajudamos pessoas, profissionais e pequenos negócios
+a transformar ideias e necessidades em soluções digitais
+simples, profissionais e acessíveis.
+</p>
+
+<a class="btn btn-primary"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20saber%20mais%20sobre%20os%20serviços."
+target="_blank">
+Falar connosco
+</a>
+
+<a class="btn btn-secondary" href="#portfolio">
+Ver portfólio
+</a>
+
+</div>
+
+</section>
+
+
+<section id="sobre">
+
+<div class="section-title">
+<h2>Sobre o Fely e Amigos</h2>
+<p>Ideias simples podem transformar-se em grandes soluções.</p>
+</div>
+
+<div class="about">
+
+<p>
+O <strong>Fely e Amigos — Soluções Digitais</strong> nasceu com
+uma missão simples: ajudar pessoas e pequenos negócios a terem
+uma presença digital mais profissional.
+</p>
+
+<br>
+
+<p>
+Criamos soluções adaptadas às necessidades de cada pessoa,
+desde um website profissional até um currículo, identidade
+visual ou material digital.
+</p>
+
+</div>
+
+</section>
+
+
+<section id="servicos">
+
+<div class="section-title">
+
+<h2>Os nossos serviços</h2>
+
+<p>
+Soluções digitais pensadas para diferentes necessidades.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-icon">🌐</div>
+<h3>Websites</h3>
+<p>
+Criamos websites profissionais, responsivos e adaptados
+para telemóveis.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">📄</div>
+<h3>CV Profissional</h3>
+<p>
+Currículos modernos, organizados e preparados para
+candidaturas profissionais.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🎨</div>
+<h3>Logos & Identidade</h3>
+<p>
+Criamos conceitos visuais para pessoas, marcas e pequenos negócios.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🖼️</div>
+<h3>Materiais Digitais</h3>
+<p>
+Flyers, banners, cartões digitais e outros materiais para divulgação.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">💼</div>
+<h3>Portfólios</h3>
+<p>
+Apresente os seus trabalhos e competências através de um portfólio digital.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">📱</div>
+<h3>WhatsApp & Redes</h3>
+<p>
+Integração de WhatsApp, redes sociais e canais digitais.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🚀</div>
+<h3>Presença Digital</h3>
+<p>
+Ajudamos a organizar a presença digital de profissionais e negócios.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">⚙️</div>
+<h3>Soluções Personalizadas</h3>
+<p>
+Desenvolvemos soluções de acordo com a necessidade apresentada.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="portfolio" id="portfolio">
+
+<div class="section-title">
+
+<h2>O nosso portfólio</h2>
+
+<p>
+Projetos próprios e demonstrativos que mostram o que conseguimos desenvolver.
+</p>
+
+</div>
+
+<div class="portfolio-grid">
+
+
+<div class="project">
+
+<div class="project-top">🎓</div>
+
+<div class="project-content">
+
+<span>Projeto próprio</span>
+
+<h3>Fely e Amigos — Educação</h3>
+
+<p>
+Website dedicado à educação, aprendizagem,
+pais e estudantes.
+</p>
+
+<a class="project-btn"
+href="https://felicidadedias.github.io/fely-e-amigos/"
+target="_blank">
+Ver projeto
+</a>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-top">💻</div>
+
+<div class="project-content">
+
+<span>Projeto próprio</span>
+
+<h3>Fely e Amigos — Soluções Digitais</h3>
+
+<p>
+A nossa própria plataforma de apresentação
+de serviços digitais.
+</p>
+
+<a class="project-btn"
+href="https://felicidadedias.github.io/fely-e-amigos-solucoes-digitais./"
+target="_blank">
+Ver projeto
+</a>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-top">📄</div>
+
+<div class="project-content">
+
+<span>Projeto demonstrativo</span>
+
+<h3>CV Profissional</h3>
+
+<p>
+Modelo de currículo moderno para profissionais
+e candidatos a emprego.
+</p>
+
+<a class="project-btn"
+href="#contacto">
+Solicitar
+</a>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-top">🎨</div>
+
+<div class="project-content">
+
+<span>Projeto demonstrativo</span>
+
+<h3>Identidade Visual</h3>
+
+<p>
+Conceito visual para marcas, profissionais
+e pequenos negócios.
+</p>
+
+<a class="project-btn"
+href="#contacto">
+Solicitar
+</a>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-top">🖼️</div>
+
+<div class="project-content">
+
+<span>Projeto demonstrativo</span>
+
+<h3>Flyer Digital</h3>
+
+<p>
+Material visual para divulgação de produtos,
+serviços ou eventos.
+</p>
+
+<a class="project-btn"
+href="#contacto">
+Solicitar
+</a>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-top">💼</div>
+
+<div class="project-content">
+
+<span>Projeto demonstrativo</span>
+
+<h3>Portfólio Profissional</h3>
+
+<p>
+Uma página digital para apresentar trabalhos,
+competências e experiência.
+</p>
+
+<a class="project-btn"
+href="#contacto">
+Solicitar
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section id="processo">
+
+<div class="section-title">
+
+<h2>Como funciona</h2>
+
+<p>
+Um processo simples, claro e profissional.
+</p>
+
+</div>
+
+<div class="process">
+
+<div class="step">
+<div class="number">1</div>
+<h3>Conte-nos a ideia</h3>
+<p>Explique o que precisa.</p>
+</div>
+
+<div class="step">
+<div class="number">2</div>
+<h3>Analisamos</h3>
+<p>Entendemos a sua necessidade.</p>
+</div>
+
+<div class="step">
+<div class="number">3</div>
+<h3>Propomos</h3>
+<p>Apresentamos uma solução.</p>
+</div>
+
+<div class="step">
+<div class="number">4</div>
+<h3>Desenvolvemos</h3>
+<p>Criamos o projeto.</p>
+</div>
+
+<div class="step">
+<div class="number">5</div>
+<h3>Entregamos</h3>
+<p>Apresentamos o resultado final.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="contact" id="contacto">
+
+<div class="section-title">
+
+<h2>Tem uma ideia?</h2>
+
+<p>
+Conte-nos o que precisa e vamos analisar como podemos
+transformar a sua ideia numa solução digital.
+</p>
+
+</div>
+
+<div class="contact-buttons">
+
+<a class="btn btn-primary"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20uma%20ideia%20e%20gostaria%20de%20saber%20como%20podem%20ajudar."
+target="_blank">
+💬 Solicitar uma solução
+</a>
+
+<a class="btn btn-secondary"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20gostaria%20de%20receber%20um%20orçamento."
+target="_blank">
+Solicitar orçamento
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 Fely e Amigos — Soluções Digitais.
+</p>
+
+<p>
+Transformar ideias em soluções digitais.
+</p>
+
+</footer>
+
+</body>
 </html>
