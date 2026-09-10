@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Fely e Amigos | Soluções Digitais</title>
 
-<meta name="description" content="Fely e Amigos — Soluções Digitais. Websites, CVs profissionais, identidade visual, materiais digitais e presença online.">
+<meta name="description"
+content="Fely e Amigos — Soluções Digitais. Websites, CVs profissionais, identidade visual, materiais digitais e presença online.">
 
 <style>
+
+/* =========================
+   RESET
+========================= */
+
 *{
     margin:0;
     padding:0;
@@ -16,332 +24,689 @@
     scroll-behavior:smooth;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f7f9fc;
-    color:#172033;
-    line-height:1.6;
+:root{
+    --primary:#1769aa;
+    --primary-dark:#0d4775;
+    --navy:#10243e;
+    --text:#26364a;
+    --muted:#718096;
+    --light:#f6f9fc;
+    --white:#ffffff;
+    --border:#e6edf4;
+    --shadow:0 15px 45px rgba(16,36,62,0.08);
+    --radius:18px;
 }
 
+body{
+    font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:var(--light);
+    color:var(--text);
+    line-height:1.7;
+}
+
+/* =========================
+   HEADER
+========================= */
+
 header{
-    background:#ffffff;
-    padding:15px 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+
+    background:rgba(255,255,255,0.96);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid var(--border);
+
+    padding:16px 6%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .logo img{
-    width:150px;
+    width:145px;
     height:auto;
     display:block;
 }
 
 nav{
     display:flex;
-    gap:22px;
+    align-items:center;
+    gap:25px;
 }
 
 nav a{
+    color:var(--navy);
     text-decoration:none;
-    color:#172033;
-    font-weight:bold;
-    font-size:15px;
+    font-size:14px;
+    font-weight:600;
+
+    transition:0.25s;
 }
 
 nav a:hover{
-    color:#1769aa;
+    color:var(--primary);
 }
 
+/* =========================
+   HERO
+========================= */
+
 .hero{
-    min-height:620px;
+    min-height:700px;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
-    padding:80px 6%;
-    background:linear-gradient(135deg,#eef7ff,#ffffff);
+
+    padding:100px 6%;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(23,105,170,0.10),
+    transparent 35%),
+
+    linear-gradient(
+    135deg,
+    #f5faff,
+    #ffffff
+    );
 }
 
 .hero-content{
-    max-width:850px;
+    max-width:900px;
 }
 
-.badge{
-    display:inline-block;
-    padding:8px 16px;
-    border-radius:30px;
-    background:#e3f2fd;
-    color:#1769aa;
-    font-weight:bold;
-    font-size:13px;
-    margin-bottom:20px;
+.hero-label{
+    display:inline-flex;
+
+    padding:7px 16px;
+
+    border:1px solid #cfe4f5;
+
+    border-radius:50px;
+
+    background:#eef7fd;
+
+    color:var(--primary);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:25px;
 }
 
 .hero h1{
-    font-size:52px;
-    margin-bottom:18px;
-    color:#12263f;
+    font-size:clamp(44px,7vw,72px);
+
+    line-height:1.05;
+
+    color:var(--navy);
+
+    margin-bottom:20px;
+
+    letter-spacing:-2px;
+}
+
+.hero h1 span{
+    color:var(--primary);
 }
 
 .hero h2{
-    font-size:27px;
-    color:#1769aa;
-    margin-bottom:20px;
+    font-size:clamp(22px,3vw,30px);
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    margin-bottom:22px;
 }
 
 .hero p{
     max-width:700px;
-    margin:0 auto 30px;
+
+    margin:0 auto 35px;
+
+    color:var(--muted);
+
     font-size:18px;
-    color:#536174;
 }
 
+.hero-buttons{
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
 .btn{
-    display:inline-block;
-    padding:14px 24px;
-    border-radius:8px;
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    min-height:50px;
+
+    padding:0 24px;
+
+    border-radius:10px;
+
     text-decoration:none;
-    font-weight:bold;
-    margin:5px;
-    transition:0.3s;
+
+    font-weight:700;
+
+    font-size:14px;
+
+    transition:
+    transform .25s,
+    box-shadow .25s,
+    background .25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
 }
 
 .btn-primary{
-    background:#1769aa;
+    background:var(--primary);
+
     color:white;
+
+    box-shadow:
+    0 10px 25px rgba(23,105,170,0.22);
 }
 
 .btn-primary:hover{
-    background:#0d4f82;
+    background:var(--primary-dark);
 }
 
-.btn-secondary{
+.btn-outline{
     background:white;
-    color:#1769aa;
-    border:2px solid #1769aa;
+
+    color:var(--primary);
+
+    border:1px solid #c8ddec;
 }
 
-.btn-secondary:hover{
-    background:#eef7ff;
+.btn-outline:hover{
+    border-color:var(--primary);
 }
+
+/* =========================
+   SECTIONS
+========================= */
 
 section{
-    padding:80px 6%;
+    padding:100px 6%;
 }
 
-.section-title{
+.section-heading{
+    max-width:720px;
+
+    margin:0 auto 55px;
+
     text-align:center;
-    margin-bottom:45px;
 }
 
-.section-title h2{
-    font-size:36px;
+.section-label{
+    color:var(--primary);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
     margin-bottom:10px;
-    color:#12263f;
 }
 
-.section-title p{
-    color:#657286;
-}
+.section-heading h2{
+    color:var(--navy);
 
-.about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    font-size:18px;
-}
+    font-size:clamp(30px,4vw,42px);
 
-.cards{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
+    line-height:1.2;
 
-.card{
-    background:white;
-    padding:28px 22px;
-    border-radius:14px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.07);
-    text-align:center;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card-icon{
-    font-size:40px;
     margin-bottom:15px;
 }
 
-.card h3{
-    margin-bottom:10px;
-    color:#12263f;
+.section-heading p{
+    color:var(--muted);
+
+    font-size:16px;
 }
 
-.card p{
-    color:#657286;
-    font-size:15px;
-}
+/* =========================
+   ABOUT
+========================= */
 
-.portfolio{
-    background:#ffffff;
-}
+.about-wrapper{
+    max-width:1000px;
 
-.portfolio-grid{
-    max-width:1100px;
     margin:auto;
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:1fr 1fr;
+
     gap:25px;
 }
 
-.project{
-    background:#f7f9fc;
-    border-radius:14px;
-    overflow:hidden;
-    box-shadow:0 5px 18px rgba(0,0,0,0.07);
+.about-box{
+    background:white;
+
+    padding:35px;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
 }
 
-.project-top{
-    height:150px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#e9f4fc;
-    font-size:55px;
+.about-box h3{
+    color:var(--navy);
+
+    margin-bottom:12px;
 }
 
-.project-content{
-    padding:24px;
-}
+.about-box p{
+    color:var(--muted);
 
-.project-content span{
-    font-size:12px;
-    color:#1769aa;
-    font-weight:bold;
-    text-transform:uppercase;
-}
-
-.project-content h3{
-    margin:8px 0 10px;
-    color:#12263f;
-}
-
-.project-content p{
-    color:#657286;
     font-size:15px;
-    margin-bottom:18px;
 }
 
-.project-btn{
-    display:inline-block;
-    padding:10px 16px;
-    background:#1769aa;
-    color:white;
-    text-decoration:none;
-    border-radius:7px;
+/* =========================
+   SERVICES
+========================= */
+
+.services-grid{
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+}
+
+.service{
+    background:white;
+
+    padding:30px 24px;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    transition:.3s;
+
+    box-shadow:
+    0 5px 25px rgba(16,36,62,0.04);
+}
+
+.service:hover{
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow);
+
+    border-color:#cbddea;
+}
+
+.service-number{
+    color:var(--primary);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    margin-bottom:22px;
+
+    letter-spacing:1px;
+}
+
+.service h3{
+    color:var(--navy);
+
+    font-size:18px;
+
+    margin-bottom:10px;
+}
+
+.service p{
+    color:var(--muted);
+
     font-size:14px;
-    font-weight:bold;
+}
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio{
+    background:white;
+}
+
+.portfolio-grid{
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:28px;
+}
+
+.project{
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 8px 30px rgba(16,36,62,0.06);
+
+    transition:.3s;
+}
+
+.project:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 18px 50px rgba(16,36,62,0.11);
+}
+
+.project-gallery{
+    background:#f0f5f9;
+
+    padding:10px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:8px;
+}
+
+.project-gallery.single{
+    grid-template-columns:1fr;
+}
+
+.project-gallery img{
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+
+    display:block;
+
+    border-radius:10px;
+
+    background:white;
+}
+
+.project-info{
+    padding:30px;
+}
+
+.project-tag{
+    display:inline-block;
+
+    color:var(--primary);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    margin-bottom:9px;
+}
+
+.project-info h3{
+    color:var(--navy);
+
+    font-size:23px;
+
+    margin-bottom:10px;
+}
+
+.project-info p{
+    color:var(--muted);
+
+    font-size:14px;
+
+    margin-bottom:22px;
+}
+
+.project-buttons{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+}
+
+/* =========================
+   CV
+========================= */
+
+.cv-list{
+    display:grid;
+
+    gap:10px;
+
+    margin-top:20px;
+}
+
+.cv-item{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    padding:13px 15px;
+
+    background:#f7fafc;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+}
+
+.cv-item strong{
+    color:var(--navy);
+
+    font-size:13px;
+}
+
+.cv-item span{
+    color:var(--muted);
+
+    font-size:11px;
+}
+
+/* =========================
+   PROCESS
+========================= */
+
+.process-section{
+    background:#f7fafd;
 }
 
 .process{
     max-width:1100px;
+
     margin:auto;
+
     display:grid;
-    grid-template-columns:repeat(5,1fr);
+
+    grid-template-columns:
+    repeat(5,1fr);
+
     gap:15px;
 }
 
 .step{
     text-align:center;
+
     padding:20px 10px;
 }
 
-.number{
-    width:50px;
-    height:50px;
-    margin:0 auto 15px;
+.step-number{
+    width:52px;
+    height:52px;
+
+    margin:0 auto 18px;
+
     border-radius:50%;
-    background:#1769aa;
-    color:white;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    font-weight:bold;
-    font-size:20px;
+
+    background:var(--navy);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:800;
 }
 
 .step h3{
+    color:var(--navy);
+
     font-size:16px;
+
     margin-bottom:7px;
 }
 
 .step p{
-    font-size:14px;
-    color:#657286;
+    color:var(--muted);
+
+    font-size:13px;
 }
 
-.contact{
-    background:linear-gradient(135deg,#12263f,#1769aa);
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:
+    linear-gradient(
+    135deg,
+    #10243e,
+    #1769aa
+    );
+
     color:white;
+
     text-align:center;
+
+    padding:90px 6%;
 }
 
-.contact .section-title h2,
-.contact .section-title p{
+.cta h2{
+    font-size:clamp(30px,5vw,46px);
+
+    margin-bottom:15px;
+}
+
+.cta p{
+    max-width:650px;
+
+    margin:0 auto 30px;
+
+    color:rgba(255,255,255,0.78);
+}
+
+.cta .btn-outline{
+    background:transparent;
+
+    border-color:rgba(255,255,255,0.5);
+
     color:white;
 }
 
-.contact p{
-    max-width:650px;
-    margin:auto;
-}
-
-.contact-buttons{
-    margin-top:25px;
-}
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-    background:#0c1828;
-    color:#b8c4d3;
+    background:#091522;
+
+    color:#9aaabc;
+
     text-align:center;
-    padding:25px 6%;
-    font-size:14px;
+
+    padding:30px 6%;
+
+    font-size:13px;
 }
 
-@media(max-width:900px){
+footer strong{
+    color:white;
+}
 
-    nav{
-        gap:12px;
-    }
+/* =========================
+   RESPONSIVE
+========================= */
 
-    nav a{
-        font-size:13px;
-    }
+@media(max-width:950px){
 
-    .cards{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .portfolio-grid{
-        grid-template-columns:repeat(2,1fr);
+    .services-grid{
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
     .process{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+        repeat(3,1fr);
     }
 
-    .hero h1{
-        font-size:42px;
+    nav{
+        gap:15px;
     }
 }
 
@@ -349,7 +714,10 @@ footer{
 
     header{
         flex-direction:column;
+
         gap:15px;
+
+        padding:14px 5%;
     }
 
     .logo img{
@@ -358,24 +726,24 @@ footer{
 
     nav{
         flex-wrap:wrap;
+
         justify-content:center;
-        gap:10px;
+
+        gap:8px 14px;
     }
 
     nav a{
-        font-size:12px;
+        font-size:11px;
     }
 
     .hero{
-        padding:65px 5%;
+        min-height:650px;
+
+        padding:80px 5%;
     }
 
     .hero h1{
-        font-size:35px;
-    }
-
-    .hero h2{
-        font-size:22px;
+        letter-spacing:-1px;
     }
 
     .hero p{
@@ -383,186 +751,351 @@ footer{
     }
 
     section{
-        padding:60px 5%;
+        padding:75px 5%;
     }
 
-    .section-title h2{
-        font-size:29px;
+    .about-wrapper{
+        grid-template-columns:1fr;
     }
 
-    .cards,
-    .portfolio-grid,
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .project-info{
+        padding:24px;
+    }
+
+    .project-gallery img{
+        height:150px;
+    }
+
+    .cv-item{
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+
+        max-width:320px;
+
+        margin:auto;
+    }
+}
+
+@media(max-width:420px){
+
     .process{
         grid-template-columns:1fr;
     }
 
-    .btn{
-        display:block;
-        max-width:300px;
-        margin:10px auto;
+    .project-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .project-gallery img{
+        height:190px;
     }
 }
+
 </style>
+
 </head>
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
 <div class="logo">
-<img src="file_00000000080481f4995a6890c96202cc%20(2).png"
-alt="Fely e Amigos - Soluções Digitais">
+
+<img
+src="assets/logo-site.png"
+alt="Fely e Amigos — Soluções Digitais">
+
 </div>
 
 <nav>
+
 <a href="#inicio">Início</a>
+
 <a href="#sobre">Sobre</a>
+
 <a href="#servicos">Serviços</a>
+
 <a href="#portfolio">Portfólio</a>
-<a href="#processo">Como Funciona</a>
+
+<a href="#processo">Processo</a>
+
 <a href="#contacto">Contacto</a>
+
 </nav>
 
 </header>
 
 
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero" id="inicio">
 
 <div class="hero-content">
 
-<div class="badge">SOLUÇÕES DIGITAIS</div>
+<div class="hero-label">
+FELY E AMIGOS · SOLUÇÕES DIGITAIS
+</div>
 
-<h1>Fely e Amigos</h1>
+<h1>
+Ideias que ganham <span>forma.</span>
+</h1>
 
-<h2>Transformar ideias em soluções digitais.</h2>
+<h2>
+Transformar ideias em soluções digitais.
+</h2>
 
 <p>
-Ajudamos pessoas, profissionais e pequenos negócios
-a transformar ideias e necessidades em soluções digitais
-simples, profissionais e acessíveis.
+Criamos websites, currículos profissionais, identidades
+visuais, materiais digitais e outras soluções para pessoas,
+profissionais e pequenos negócios.
 </p>
 
-<a class="btn btn-primary"
+<div class="hero-buttons">
+
+<a
+class="btn btn-primary"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20saber%20mais%20sobre%20os%20serviços."
 target="_blank">
+
 Falar connosco
+
 </a>
 
-<a class="btn btn-secondary" href="#portfolio">
+<a
+class="btn btn-outline"
+href="#portfolio">
+
 Ver portfólio
+
 </a>
+
+</div>
 
 </div>
 
 </section>
 
+
+<!-- =========================
+     SOBRE
+========================= -->
 
 <section id="sobre">
 
-<div class="section-title">
-<h2>Sobre o Fely e Amigos</h2>
-<p>Ideias simples podem transformar-se em grandes soluções.</p>
+<div class="section-heading">
+
+<div class="section-label">
+SOBRE NÓS
 </div>
 
-<div class="about">
+<h2>
+Soluções digitais pensadas para pessoas reais.
+</h2>
 
 <p>
-O <strong>Fely e Amigos — Soluções Digitais</strong> nasceu com
-uma missão simples: ajudar pessoas e pequenos negócios a terem
-uma presença digital mais profissional.
+Tecnologia simples, apresentação profissional
+e soluções adaptadas a cada necessidade.
 </p>
 
-<br>
+</div>
+
+<div class="about-wrapper">
+
+<div class="about-box">
+
+<h3>
+O que fazemos
+</h3>
 
 <p>
-Criamos soluções adaptadas às necessidades de cada pessoa,
-desde um website profissional até um currículo, identidade
-visual ou material digital.
+O Fely e Amigos — Soluções Digitais ajuda pessoas,
+profissionais e pequenos negócios a transformar ideias
+em materiais e experiências digitais profissionais.
 </p>
+
+</div>
+
+<div class="about-box">
+
+<h3>
+A nossa abordagem
+</h3>
+
+<p>
+Primeiro entendemos a necessidade. Depois pensamos
+na solução e desenvolvemos um resultado simples,
+elegante e adequado ao objetivo.
+</p>
+
+</div>
 
 </div>
 
 </section>
 
+
+<!-- =========================
+     SERVIÇOS
+========================= -->
 
 <section id="servicos">
 
-<div class="section-title">
+<div class="section-heading">
 
-<h2>Os nossos serviços</h2>
+<div class="section-label">
+SERVIÇOS
+</div>
+
+<h2>
+O que podemos criar para si.
+</h2>
 
 <p>
-Soluções digitais pensadas para diferentes necessidades.
+Soluções digitais para apresentar, comunicar e crescer.
 </p>
 
 </div>
 
-<div class="cards">
+<div class="services-grid">
 
-<div class="card">
-<div class="card-icon">🌐</div>
+<div class="service">
+
+<div class="service-number">01</div>
+
 <h3>Websites</h3>
+
 <p>
-Criamos websites profissionais, responsivos e adaptados
+Websites modernos, responsivos e adaptados
 para telemóveis.
 </p>
+
 </div>
 
-<div class="card">
-<div class="card-icon">📄</div>
+
+<div class="service">
+
+<div class="service-number">02</div>
+
 <h3>CV Profissional</h3>
+
 <p>
-Currículos modernos, organizados e preparados para
-candidaturas profissionais.
+Currículos modernos, organizados e preparados
+para candidaturas.
 </p>
+
 </div>
 
-<div class="card">
-<div class="card-icon">🎨</div>
-<h3>Logos & Identidade</h3>
+
+<div class="service">
+
+<div class="service-number">03</div>
+
+<h3>Identidade Visual</h3>
+
 <p>
-Criamos conceitos visuais para pessoas, marcas e pequenos negócios.
+Logos e conceitos visuais para marcas,
+profissionais e negócios.
 </p>
+
 </div>
 
-<div class="card">
-<div class="card-icon">🖼️</div>
+
+<div class="service">
+
+<div class="service-number">04</div>
+
 <h3>Materiais Digitais</h3>
+
 <p>
-Flyers, banners, cartões digitais e outros materiais para divulgação.
+Flyers, banners, cartões digitais e materiais
+para divulgação.
 </p>
+
 </div>
 
-<div class="card">
-<div class="card-icon">💼</div>
+
+<div class="service">
+
+<div class="service-number">05</div>
+
 <h3>Portfólios</h3>
+
 <p>
-Apresente os seus trabalhos e competências através de um portfólio digital.
+Apresentação profissional de trabalhos,
+competências e experiência.
 </p>
+
 </div>
 
-<div class="card">
-<div class="card-icon">📱</div>
+
+<div class="service">
+
+<div class="service-number">06</div>
+
 <h3>WhatsApp & Redes</h3>
+
 <p>
-Integração de WhatsApp, redes sociais e canais digitais.
+Integração e organização dos principais canais
+digitais de contacto.
 </p>
+
 </div>
 
-<div class="card">
-<div class="card-icon">🚀</div>
+
+<div class="service">
+
+<div class="service-number">07</div>
+
 <h3>Presença Digital</h3>
+
 <p>
-Ajudamos a organizar a presença digital de profissionais e negócios.
+Estratégias simples para melhorar a apresentação
+digital de profissionais e negócios.
 </p>
+
 </div>
 
-<div class="card">
-<div class="card-icon">⚙️</div>
+
+<div class="service">
+
+<div class="service-number">08</div>
+
 <h3>Soluções Personalizadas</h3>
+
 <p>
-Desenvolvemos soluções de acordo com a necessidade apresentada.
+Criamos soluções específicas de acordo
+com cada necessidade.
 </p>
+
 </div>
 
 </div>
@@ -570,167 +1103,524 @@ Desenvolvemos soluções de acordo com a necessidade apresentada.
 </section>
 
 
+<!-- =========================
+     PORTFÓLIO
+========================= -->
+
 <section class="portfolio" id="portfolio">
 
-<div class="section-title">
+<div class="section-heading">
 
-<h2>O nosso portfólio</h2>
+<div class="section-label">
+PORTFÓLIO
+</div>
+
+<h2>
+Trabalho que pode ser visto.
+</h2>
 
 <p>
-Projetos próprios e demonstrativos que mostram o que conseguimos desenvolver.
+Projetos próprios e demonstrativos que mostram
+o tipo de solução que podemos desenvolver.
 </p>
 
 </div>
+
 
 <div class="portfolio-grid">
 
 
+<!-- =========================
+     PROJETO 01
+========================= -->
+
 <div class="project">
 
-<div class="project-top">🎓</div>
+<div class="project-gallery single">
 
-<div class="project-content">
+<div class="project-top-placeholder"
+style="
+height:180px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#10243e,#1769aa);
+color:white;
+font-size:22px;
+font-weight:800;
+letter-spacing:1px;
+">
+FELY E AMIGOS
+</div>
 
-<span>Projeto próprio</span>
+</div>
 
-<h3>Fely e Amigos — Educação</h3>
+<div class="project-info">
+
+<div class="project-tag">
+Projeto próprio
+</div>
+
+<h3>
+Fely e Amigos — Educação
+</h3>
 
 <p>
 Website dedicado à educação, aprendizagem,
 pais e estudantes.
 </p>
 
-<a class="project-btn"
+<div class="project-buttons">
+
+<a
+class="btn btn-primary"
 href="https://felicidadedias.github.io/fely-e-amigos/"
 target="_blank">
+
 Ver projeto
+
 </a>
 
 </div>
 
 </div>
 
+</div>
+
+
+<!-- =========================
+     PROJETO 02
+========================= -->
 
 <div class="project">
 
-<div class="project-top">💻</div>
+<div class="project-gallery single">
 
-<div class="project-content">
+<div class="project-top-placeholder"
+style="
+height:180px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#1769aa,#10243e);
+color:white;
+font-size:20px;
+font-weight:800;
+text-align:center;
+padding:20px;
+">
+FELY E AMIGOS<br>
+SOLUÇÕES DIGITAIS
+</div>
 
-<span>Projeto próprio</span>
+</div>
 
-<h3>Fely e Amigos — Soluções Digitais</h3>
+<div class="project-info">
+
+<div class="project-tag">
+Projeto próprio
+</div>
+
+<h3>
+Fely e Amigos — Soluções Digitais
+</h3>
 
 <p>
-A nossa própria plataforma de apresentação
-de serviços digitais.
+A nossa própria plataforma digital
+de apresentação de serviços.
 </p>
 
-<a class="project-btn"
+<div class="project-buttons">
+
+<a
+class="btn btn-primary"
 href="https://felicidadedias.github.io/fely-e-amigos-solucoes-digitais./"
 target="_blank">
+
 Ver projeto
+
 </a>
 
 </div>
 
 </div>
 
+</div>
+
+
+<!-- =========================
+     PROJETO 03 — CV
+========================= -->
 
 <div class="project">
 
-<div class="project-top">📄</div>
+<div class="project-gallery single">
 
-<div class="project-content">
+<div class="project-top-placeholder"
+style="
+height:180px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#eef5fa;
+color:#10243e;
+font-size:45px;
+">
+CV
+</div>
 
-<span>Projeto demonstrativo</span>
+</div>
 
-<h3>CV Profissional</h3>
+<div class="project-info">
+
+<div class="project-tag">
+Projetos demonstrativos
+</div>
+
+<h3>
+CVs Profissionais
+</h3>
 
 <p>
-Modelo de currículo moderno para profissionais
-e candidatos a emprego.
+Modelos de currículos desenvolvidos para
+diferentes perfis profissionais.
 </p>
 
-<a class="project-btn"
-href="#contacto">
-Solicitar
+<div class="cv-list">
+
+<div class="cv-item">
+
+<div>
+<strong>Ana Sofia Manuel</strong>
+<br>
+<span>Assistente Administrativa</span>
+</div>
+
+<a
+class="project-btn"
+href="assets/CV1.pdf"
+target="_blank">
+Ver CV
+</a>
+
+</div>
+
+
+<div class="cv-item">
+
+<div>
+<strong>Maria Elisa Joaquina</strong>
+<br>
+<span>Técnica de Recursos Humanos</span>
+</div>
+
+<a
+class="project-btn"
+href="assets/CV2.pdf"
+target="_blank">
+Ver CV
+</a>
+
+</div>
+
+
+<div class="cv-item">
+
+<div>
+<strong>João Pedro Manuel</strong>
+<br>
+<span>Técnico de Informática</span>
+</div>
+
+<a
+class="project-btn"
+href="assets/CV3.pdf"
+target="_blank">
+Ver CV
 </a>
 
 </div>
 
 </div>
 
+</div>
+
+</div>
+
+
+<!-- =========================
+     PROJETO 04 — IDENTIDADE
+========================= -->
 
 <div class="project">
 
-<div class="project-top">🎨</div>
+<div class="project-gallery">
 
-<div class="project-content">
+<img
+src="assets/kudima-logo.png"
+alt="Logo KUDIMA CAFÉ">
 
-<span>Projeto demonstrativo</span>
+<img
+src="assets/kudima-logo-1.png"
+alt="Segunda versão do logo KUDIMA CAFÉ">
 
-<h3>Identidade Visual</h3>
+<img
+src="assets/kudima-identidade.png"
+alt="Identidade visual KUDIMA CAFÉ">
+
+<img
+src="assets/kudima-identidade-1.png"
+alt="Apresentação da identidade visual KUDIMA CAFÉ">
+
+</div>
+
+<div class="project-info">
+
+<div class="project-tag">
+Projeto demonstrativo
+</div>
+
+<h3>
+KUDIMA CAFÉ — Identidade Visual
+</h3>
 
 <p>
-Conceito visual para marcas, profissionais
-e pequenos negócios.
+Conceito de identidade visual desenvolvido
+para uma cafeteria fictícia.
 </p>
 
-<a class="project-btn"
+<div class="project-buttons">
+
+<a
+class="project-btn"
+href="assets/kudima-logo.png"
+target="_blank">
+Ver logo
+</a>
+
+<a
+class="project-btn"
 href="#contacto">
-Solicitar
+Solicitar semelhante
 </a>
 
 </div>
 
 </div>
 
+</div>
+
+
+<!-- =========================
+     PROJETO 05 — FLYER
+========================= -->
 
 <div class="project">
 
-<div class="project-top">🖼️</div>
+<div class="project-gallery single">
 
-<div class="project-content">
+<img
+src="assets/kudima-flyer.png"
+alt="Flyer promocional KUDIMA CAFÉ">
 
-<span>Projeto demonstrativo</span>
+</div>
 
-<h3>Flyer Digital</h3>
+<div class="project-info">
+
+<div class="project-tag">
+Projeto demonstrativo
+</div>
+
+<h3>
+KUDIMA CAFÉ — Flyer Digital
+</h3>
 
 <p>
-Material visual para divulgação de produtos,
-serviços ou eventos.
+Material promocional desenvolvido para
+divulgação de uma oferta.
 </p>
 
-<a class="project-btn"
+<div class="project-buttons">
+
+<a
+class="project-btn"
+href="assets/kudima-flyer.png"
+target="_blank">
+Ver flyer
+</a>
+
+<a
+class="project-btn"
 href="#contacto">
-Solicitar
+Solicitar semelhante
 </a>
 
 </div>
 
 </div>
 
+</div>
+
+
+<!-- =========================
+     PROJETO 06 — CARTÃO
+========================= -->
 
 <div class="project">
 
-<div class="project-top">💼</div>
+<div class="project-gallery">
 
-<div class="project-content">
+<img
+src="assets/kudima-cartao-1.png"
+alt="Cartão digital KUDIMA CAFÉ">
 
-<span>Projeto demonstrativo</span>
+<img
+src="assets/kudima-cartao-2.png"
+alt="Cartão digital KUDIMA CAFÉ">
 
-<h3>Portfólio Profissional</h3>
+<img
+src="assets/kudima-cartao-3.png"
+alt="Cartão digital KUDIMA CAFÉ">
+
+</div>
+
+<div class="project-info">
+
+<div class="project-tag">
+Projeto demonstrativo
+</div>
+
+<h3>
+KUDIMA CAFÉ — Cartão Digital
+</h3>
 
 <p>
-Uma página digital para apresentar trabalhos,
+Cartão de visita digital criado para
+apresentação e contacto com clientes.
+</p>
+
+<div class="project-buttons">
+
+<a
+class="project-btn"
+href="assets/kudima-cartao-1.png"
+target="_blank">
+Ver cartão
+</a>
+
+<a
+class="project-btn"
+href="#contacto">
+Solicitar semelhante
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     PROJETO 07
+========================= -->
+
+<div class="project">
+
+<div class="project-gallery single">
+
+<div
+style="
+height:180px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#f1f5f8;
+color:#10243e;
+font-size:45px;
+">
+✦
+</div>
+
+</div>
+
+<div class="project-info">
+
+<div class="project-tag">
+Projeto demonstrativo
+</div>
+
+<h3>
+Portfólio Profissional
+</h3>
+
+<p>
+Página digital para apresentar trabalhos,
 competências e experiência.
 </p>
 
-<a class="project-btn"
+<div class="project-buttons">
+
+<a
+class="btn btn-primary"
 href="#contacto">
 Solicitar
 </a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     PROJETO 08
+========================= -->
+
+<div class="project">
+
+<div class="project-gallery single">
+
+<div
+style="
+height:180px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#eef7fd,#dcecf8);
+color:#1769aa;
+font-size:45px;
+">
++
+</div>
+
+</div>
+
+<div class="project-info">
+
+<div class="project-tag">
+Solução personalizada
+</div>
+
+<h3>
+A sua próxima ideia
+</h3>
+
+<p>
+Tem uma ideia para um website, marca,
+CV ou material digital? Podemos desenvolver.
+</p>
+
+<div class="project-buttons">
+
+<a
+class="btn btn-primary"
+href="#contacto">
+Falar connosco
+</a>
+
+</div>
 
 </div>
 
@@ -742,80 +1632,159 @@ Solicitar
 </section>
 
 
-<section id="processo">
+<!-- =========================
+     PROCESSO
+========================= -->
 
-<div class="section-title">
+<section
+class="process-section"
+id="processo">
 
-<h2>Como funciona</h2>
+<div class="section-heading">
+
+<div class="section-label">
+PROCESSO
+</div>
+
+<h2>
+Simples. Claro. Profissional.
+</h2>
 
 <p>
-Um processo simples, claro e profissional.
+Do primeiro contacto à entrega da solução.
 </p>
 
 </div>
 
 <div class="process">
 
-<div class="step">
-<div class="number">1</div>
-<h3>Conte-nos a ideia</h3>
-<p>Explique o que precisa.</p>
-</div>
 
 <div class="step">
-<div class="number">2</div>
-<h3>Analisamos</h3>
-<p>Entendemos a sua necessidade.</p>
+
+<div class="step-number">
+01
 </div>
 
-<div class="step">
-<div class="number">3</div>
-<h3>Propomos</h3>
-<p>Apresentamos uma solução.</p>
-</div>
-
-<div class="step">
-<div class="number">4</div>
-<h3>Desenvolvemos</h3>
-<p>Criamos o projeto.</p>
-</div>
-
-<div class="step">
-<div class="number">5</div>
-<h3>Entregamos</h3>
-<p>Apresentamos o resultado final.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="contact" id="contacto">
-
-<div class="section-title">
-
-<h2>Tem uma ideia?</h2>
+<h3>
+Conte-nos
+</h3>
 
 <p>
-Conte-nos o que precisa e vamos analisar como podemos
-transformar a sua ideia numa solução digital.
+Explique o que precisa.
 </p>
 
 </div>
 
-<div class="contact-buttons">
 
-<a class="btn btn-primary"
+<div class="step">
+
+<div class="step-number">
+02
+</div>
+
+<h3>
+Analisamos
+</h3>
+
+<p>
+Entendemos o objetivo.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+03
+</div>
+
+<h3>
+Propomos
+</h3>
+
+<p>
+Apresentamos uma solução.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+04
+</div>
+
+<h3>
+Criamos
+</h3>
+
+<p>
+Desenvolvemos o projeto.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+05
+</div>
+
+<h3>
+Entregamos
+</h3>
+
+<p>
+Apresentamos o resultado.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACTO
+========================= -->
+
+<section
+class="cta"
+id="contacto">
+
+<h2>
+Tem uma ideia?
+</h2>
+
+<p>
+Conte-nos o que precisa. Vamos analisar a sua
+necessidade e encontrar uma solução digital adequada.
+</p>
+
+<div class="hero-buttons">
+
+<a
+class="btn btn-primary"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20uma%20ideia%20e%20gostaria%20de%20saber%20como%20podem%20ajudar."
 target="_blank">
+
 💬 Solicitar uma solução
+
 </a>
 
-<a class="btn btn-secondary"
+
+<a
+class="btn btn-outline"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20gostaria%20de%20receber%20um%20orçamento."
 target="_blank">
+
 Solicitar orçamento
+
 </a>
 
 </div>
@@ -823,17 +1792,26 @@ Solicitar orçamento
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
 <p>
-© 2026 Fely e Amigos — Soluções Digitais.
+<strong>Fely e Amigos</strong> — Soluções Digitais
 </p>
 
 <p>
 Transformar ideias em soluções digitais.
 </p>
 
+<p>
+© 2026 Fely e Amigos. Todos os direitos reservados.
+</p>
+
 </footer>
+
 
 </body>
 </html>
