@@ -1,9 +1,14 @@
-<!DOCTYPE html><html lang="pt">
+<!DOCTYPE html>
+<html lang="pt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Fely e Amigos | Soluções Digitais</title>
-<meta name="description" content="Fely e Amigos — Soluções Digitais. Websites, CVs profissionais, identidade visual, materiais digitais, portfólios e presença online."><style>
+
+<meta name="description" content="Fely e Amigos — Soluções Digitais. Websites, CVs profissionais, identidade visual, materiais digitais, portfólios e presença online.">
+
+<style>
 
 /* =========================
    BASE
@@ -758,6 +763,44 @@ section{
 
 
 /* =========================
+   WHATSAPP FLUTUANTE
+========================= */
+
+.whatsapp-float{
+    position:fixed;
+    width:58px;
+    height:58px;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    text-decoration:none;
+    box-shadow:0 5px 18px rgba(0,0,0,0.25);
+    z-index:9999;
+    transition:0.3s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.08);
+}
+
+@media(max-width:700px){
+    .whatsapp-float{
+        width:54px;
+        height:54px;
+        right:16px;
+        bottom:16px;
+        font-size:25px;
+    }
+}
+
+
+/* =========================
    FOOTER
 ========================= */
 
@@ -923,12 +966,23 @@ footer{
 
 }
 
-</style></head><body><!-- =========================
+</style>
+</head>
+
+<body>
+
+<!-- =========================
      HEADER
-========================= --><header><div class="logo">
+========================= -->
+
+<header>
+
+<div class="logo">
 <img src="file_00000000080481f4995a6890c96202cc%20(2).png"
 alt="Fely e Amigos - Soluções Digitais">
-</div><nav>
+</div>
+
+<nav>
 <a href="#inicio">Início</a>
 <a href="#sobre">Sobre</a>
 <a href="#servicos">Serviços</a>
@@ -936,19 +990,38 @@ alt="Fely e Amigos - Soluções Digitais">
 <a href="#portfolio">Portfólio</a>
 <a href="#processo">Como Funciona</a>
 <a href="#contacto">Contacto</a>
-</nav></header><!-- =========================
+</nav>
+
+</header>
+
+
+<!-- =========================
      HERO
-========================= --><section class="hero" id="inicio"><div class="hero-content"><div class="badge">
+========================= -->
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<div class="badge">
 SOLUÇÕES DIGITAIS
-</div><h1>
+</div>
+
+<h1>
 Fely e Amigos
-</h1><h2>
+</h1>
+
+<h2>
 <strong>Transformar ideias em soluções digitais.</strong>
-</h2><p>
+</h2>
+
+<p>
 Ajudamos pessoas, profissionais e pequenos negócios
 a transformar ideias e necessidades em soluções digitais
 <strong>simples, profissionais e acessíveis.</strong>
-</p><a class="btn btn-primary"
+</p>
+
+<a class="btn btn-primary"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20saber%20mais%20sobre%20os%20serviços."
 target="_blank">
 Falar connosco
@@ -960,365 +1033,785 @@ Ver portfólio
 </a>
 
 </div>
-</section><!-- =========================
+
+</section>
+
+
+<!-- =========================
      SOBRE
-========================= --><section id="sobre"><div class="section-title"><h2>
+========================= -->
+
+<section id="sobre">
+
+<div class="section-title">
+
+<h2>
 Sobre o Fely e Amigos
-</h2><p>
+</h2>
+
+<p>
 <strong>Ideias simples</strong> podem transformar-se em grandes soluções.
-</p></div><div class="about"><p>
+</p>
+
+</div>
+
+<div class="about">
+
+<p>
 O <strong>Fely e Amigos — Soluções Digitais</strong> nasceu com
 uma missão simples: ajudar pessoas e pequenos negócios a terem
 uma presença digital mais profissional.
-</p><br><p>
+</p>
+
+<br>
+
+<p>
 Criamos soluções adaptadas às necessidades de cada pessoa,
 desde um <strong>website profissional</strong> até um
 <strong>currículo, identidade visual ou material digital.</strong>
-</p></div></section><!-- =========================
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
      SERVIÇOS
-========================= --><section id="servicos"><div class="section-title"><h2>
+========================= -->
+
+<section id="servicos">
+
+<div class="section-title">
+
+<h2>
 Os nossos serviços
-</h2><p>
+</h2>
+
+<p>
 Soluções digitais pensadas para diferentes necessidades.
-</p></div><div class="cards"><!-- WEBSITES --><div class="card"><img class="card-image"
+</p>
+
+</div>
+
+<div class="cards">
+
+
+<!-- WEBSITES -->
+
+<div class="card">
+
+<img class="card-image"
 src="Websites.jpg"
 alt="Websites profissionais">
 
 <h3>
 <strong>Websites</strong>
-</h3><p>
+</h3>
+
+<p>
 Criamos websites profissionais, responsivos e adaptados
 para telemóveis.
-</p><a class="service-btn"
+</p>
+
+<a class="service-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20interesse%20no%20serviço%20de%20Websites%20e%20gostaria%20de%20saber%20mais."
 target="_blank">
 Solicitar este serviço
 </a>
 
-</div><!-- CV PROFISSIONAL --><div class="card"><img class="card-image"
+</div>
+
+
+<!-- CV PROFISSIONAL -->
+
+<div class="card">
+
+<img class="card-image"
 src="CV Profissional.jpg"
 alt="CV Profissional">
 
 <h3>
 <strong>CV Profissional</strong>
-</h3><p>
+</h3>
+
+<p>
 Currículos modernos, organizados e preparados para
 candidaturas profissionais.
-</p><a class="service-btn"
+</p>
+
+<a class="service-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20interesse%20no%20serviço%20de%20CV%20Profissional%20e%20gostaria%20de%20saber%20mais."
 target="_blank">
 Solicitar este serviço
 </a>
 
-</div><!-- LOGOS E IDENTIDADE --><div class="card"><img class="card-image"
+</div>
+
+
+<!-- LOGOS E IDENTIDADE -->
+
+<div class="card">
+
+<img class="card-image"
 src="logotipo.jpg"
 alt="logotipo e identidade visual">
 
 <h3>
 <strong>Logos & Identidade</strong>
-</h3><p>
+</h3>
+
+<p>
 Criamos conceitos visuais para pessoas, marcas e pequenos negócios.
-</p><a class="service-btn"
+</p>
+
+<a class="service-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20interesse%20no%20serviço%20de%20Logos%20e%20Identidade%20Visual%20e%20gostaria%20de%20saber%20mais."
 target="_blank">
 Solicitar este serviço
 </a>
 
-</div><!-- MATERIAIS DIGITAIS --><div class="card"><img class="card-image"
+</div>
+
+
+<!-- MATERIAIS DIGITAIS -->
+
+<div class="card">
+
+<img class="card-image"
 src="Flyer%20Digital.jpg"
 alt="Flyer Digital">
 
 <h3>
 <strong>Materiais Digitais</strong>
-</h3><p>
+</h3>
+
+<p>
 Flyers, banners, cartões digitais e outros materiais para divulgação.
-</p><a class="service-btn"
+</p>
+
+<a class="service-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20interesse%20no%20serviço%20de%20Materiais%20Digitais%20e%20gostaria%20de%20saber%20mais."
 target="_blank">
 Solicitar este serviço
 </a>
 
-</div><!-- PORTFÓLIOS --><div class="card"><img class="card-image"
+</div>
+
+
+<!-- PORTFÓLIOS -->
+
+<div class="card">
+
+<img class="card-image"
 src="Portfólio%20Digital.jpg"
 alt="Portfólio Digital">
 
 <h3>
 <strong>Portfólios</strong>
-</h3><p>
+</h3>
+
+<p>
 Apresente os seus trabalhos e competências através de um portfólio digital.
-</p><a class="service-btn"
+</p>
+
+<a class="service-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20interesse%20no%20serviço%20de%20Portfólio%20Digital%20e%20gostaria%20de%20saber%20mais."
 target="_blank">
 Solicitar este serviço
 </a>
 
-</div><!-- WHATSAPP E REDES --><div class="card"><img class="card-image"
+</div>
+
+
+<!-- WHATSAPP E REDES -->
+
+<div class="card">
+
+<img class="card-image"
 src="Cartão%20Digital.jpg"
 alt="Cartão Digital">
 
 <h3>
 <strong>WhatsApp & Redes</strong>
-</h3><p>
+</h3>
+
+<p>
 Integração de WhatsApp, redes sociais e canais digitais.
-</p><a class="service-btn"
+</p>
+
+<a class="service-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20interesse%20no%20serviço%20de%20WhatsApp%20e%20Redes%20Sociais%20e%20gostaria%20de%20saber%20mais."
 target="_blank">
 Solicitar este serviço
 </a>
 
-</div><!-- PRESENÇA DIGITAL --><div class="card"><img class="card-image"
+</div>
+
+
+<!-- PRESENÇA DIGITAL -->
+
+<div class="card">
+
+<img class="card-image"
 src="Presença%20Digital.jpg"
 alt="Presença Digital">
 
 <h3>
 <strong>Presença Digital</strong>
-</h3><p>
+</h3>
+
+<p>
 Ajudamos a organizar a presença digital de profissionais e negócios.
-</p><a class="service-btn"
+</p>
+
+<a class="service-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20interesse%20no%20serviço%20de%20Presença%20Digital%20e%20gostaria%20de%20saber%20mais."
 target="_blank">
 Solicitar este serviço
 </a>
 
-</div><!-- SOLUÇÕES PERSONALIZADAS --><div class="card"><img class="card-image"
+</div>
+
+
+<!-- SOLUÇÕES PERSONALIZADAS -->
+
+<div class="card">
+
+<img class="card-image"
 src="Soluções%20Personalizadas.jpg"
 alt="Soluções Personalizadas">
 
 <h3>
 <strong>Soluções Personalizadas</strong>
-</h3><p>
+</h3>
+
+<p>
 Desenvolvemos soluções de acordo com a necessidade apresentada.
-</p><a class="service-btn"
+</p>
+
+<a class="service-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20uma%20necessidade%20específica%20e%20gostaria%20de%20conhecer%20uma%20Solução%20Personalizada."
 target="_blank">
 Solicitar este serviço
 </a>
 
-</div></div>
-</section><!-- =========================
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
      PREÇOS
-========================= --><section class="pricing" id="precos"><div class="section-title"><h2>
+========================= -->
+
+<section class="pricing" id="precos">
+
+<div class="section-title">
+
+<h2>
 <strong>Preços e Pacotes</strong>
-</h2><p>
+</h2>
+
+<p>
 Soluções profissionais com preços acessíveis.
-</p></div><div class="pricing-grid"><!-- CV --><div class="price-card"><div class="price-icon">📄</div><h3>
+</p>
+
+</div>
+
+<div class="pricing-grid">
+
+
+<!-- CV -->
+
+<div class="price-card">
+
+<div class="price-icon">📄</div>
+
+<h3>
 <strong>CV Profissional</strong>
-</h3><div class="price">
+</h3>
+
+<div class="price">
 1.500 Kz
-</div><p>
+</div>
+
+<p>
 Currículo moderno, organizado e profissional.
-</p><a class="price-btn"
+</p>
+
+<a class="price-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20solicitar%20um%20CV%20Profissional%20de%201.500%20Kz."
 target="_blank">
 Pedir pelo WhatsApp
 </a>
 
-</div><!-- CV + CARTA --><div class="price-card"><div class="price-icon">📑</div><h3>
+</div>
+
+
+<!-- CV + CARTA -->
+
+<div class="price-card">
+
+<div class="price-icon">📑</div>
+
+<h3>
 <strong>CV + Carta</strong>
-</h3><div class="price">
+</h3>
+
+<div class="price">
 3.000 Kz
-</div><p>
+</div>
+
+<p>
 CV profissional + carta de apresentação.
-</p><a class="price-btn"
+</p>
+
+<a class="price-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20o%20pacote%20CV%20%2B%20Carta%20por%203.000%20Kz."
 target="_blank">
 Pedir pelo WhatsApp
 </a>
 
-</div><!-- FLYER --><div class="price-card"><div class="price-icon">🖼️</div><h3>
+</div>
+
+
+<!-- FLYER -->
+
+<div class="price-card">
+
+<div class="price-icon">🖼️</div>
+
+<h3>
 <strong>Flyer Digital</strong>
-</h3><div class="price">
+</h3>
+
+<div class="price">
 2.000 Kz
-</div><p>
+</div>
+
+<p>
 Flyer profissional para divulgação.
-</p><a class="price-btn"
+</p>
+
+<a class="price-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Flyer%20Digital%20de%202.000%20Kz."
 target="_blank">
 Pedir pelo WhatsApp
 </a>
 
-</div><!-- CARTÃO --><div class="price-card"><div class="price-icon">💳</div><h3>
+</div>
+
+
+<!-- CARTÃO -->
+
+<div class="price-card">
+
+<div class="price-icon">💳</div>
+
+<h3>
 <strong>Cartão Digital</strong>
-</h3><div class="price">
+</h3>
+
+<div class="price">
 2.000 Kz
-</div><p>
+</div>
+
+<p>
 Cartão digital profissional para contactos e divulgação.
-</p><a class="price-btn"
+</p>
+
+<a class="price-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Cartão%20Digital%20de%202.000%20Kz."
 target="_blank">
 Pedir pelo WhatsApp
 </a>
 
-</div><!-- LOGOTIPO --><div class="price-card"><div class="price-icon">🎨</div><h3>
+</div>
+
+
+<!-- LOGOTIPO -->
+
+<div class="price-card">
+
+<div class="price-icon">🎨</div>
+
+<h3>
 <strong>Logotipo</strong>
-</h3><div class="price">
+</h3>
+
+<div class="price">
 3.000 Kz
-</div><p>
+</div>
+
+<p>
 Logotipo personalizado para a sua marca ou negócio.
-</p><a class="price-btn"
+</p>
+
+<a class="price-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Logotipo%20por%203.000%20Kz."
 target="_blank">
 Pedir pelo WhatsApp
 </a>
 
-</div><!-- LOGO + IDENTIDADE --><div class="price-card"><div class="price-icon">✨</div><h3>
+</div>
+
+
+<!-- LOGO + IDENTIDADE -->
+
+<div class="price-card">
+
+<div class="price-icon">✨</div>
+
+<h3>
 <strong>Logo + Identidade</strong>
-</h3><div class="price">
+</h3>
+
+<div class="price">
 7.000 Kz
-</div><p>
+</div>
+
+<p>
 Logotipo + identidade visual básica.
-</p><a class="price-btn"
+</p>
+
+<a class="price-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20Logo%20%2B%20Identidade%20por%207.000%20Kz."
 target="_blank">
 Pedir pelo WhatsApp
 </a>
 
-</div><!-- PORTFÓLIO --><div class="price-card"><div class="price-icon">💼</div><h3>
+</div>
+
+
+<!-- PORTFÓLIO -->
+
+<div class="price-card">
+
+<div class="price-icon">💼</div>
+
+<h3>
 <strong>Portfólio Digital</strong>
-</h3><div class="price">
+</h3>
+
+<div class="price">
 22.500 Kz
-</div><p>
+</div>
+
+<p>
 Página digital para apresentar trabalhos e competências.
-</p><a class="price-btn"
+</p>
+
+<a class="price-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Portfólio%20Digital%20por%2022.500%20Kz."
 target="_blank">
 Pedir pelo WhatsApp
 </a>
 
-</div><!-- WEBSITE START --><div class="price-card featured"><div class="price-badge">
+</div>
+
+
+<!-- WEBSITE START -->
+
+<div class="price-card featured">
+
+<div class="price-badge">
 ⭐ DESTAQUE
-</div><div class="price-icon">🌐</div><h3>
+</div>
+
+<div class="price-icon">🌐</div>
+
+<h3>
 <strong>Website Start</strong>
-</h3><div class="price">
+</h3>
+
+<div class="price">
 30.000 Kz
-</div><p>
+</div>
+
+<p>
 Página simples, responsiva e com integração WhatsApp.
-</p><a class="price-btn"
+</p>
+
+<a class="price-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Website%20Start%20por%2030.000%20Kz."
 target="_blank">
 Pedir pelo WhatsApp
 </a>
 
-</div><!-- WEBSITE PRO --><div class="price-card"><div class="price-icon">💻</div><h3>
+</div>
+
+
+<!-- WEBSITE PRO -->
+
+<div class="price-card">
+
+<div class="price-icon">💻</div>
+
+<h3>
 <strong>Website Pro</strong>
-</h3><div class="price">
+</h3>
+
+<div class="price">
 50.000 Kz
-</div><p>
+</div>
+
+<p>
 Website profissional com várias secções e presença digital completa.
-</p><a class="price-btn"
+</p>
+
+<a class="price-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Website%20Pro%20por%2050.000%20Kz."
 target="_blank">
 Pedir pelo WhatsApp
 </a>
 
-</div><!-- WEBSITE BUSINESS --><div class="price-card"><div class="price-icon">🏢</div><h3>
+</div>
+
+
+<!-- WEBSITE BUSINESS -->
+
+<div class="price-card">
+
+<div class="price-icon">🏢</div>
+
+<h3>
 <strong>Website Business</strong>
-</h3><div class="price">
+</h3>
+
+<div class="price">
 90.000 Kz+
-</div><p>
+</div>
+
+<p>
 Solução mais completa para empresas e negócios.
-</p><a class="price-btn"
+</p>
+
+<a class="price-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20saber%20mais%20sobre%20o%20Website%20Business%20a%20partir%20de%2090.000%20Kz."
 target="_blank">
 Pedir pelo WhatsApp
 </a>
 
-</div></div><!-- =========================
+</div>
+
+</div>
+
+
+<!-- =========================
      PACOTES
-========================= --><div class="packages-title"><h3>
+========================= -->
+
+<div class="packages-title">
+
+<h3>
 🔥 <strong>Pacotes Especiais</strong>
-</h3><p>
+</h3>
+
+<p>
 Escolha uma solução completa e simplifique o seu projeto.
-</p></div><div class="packages"><!-- PROFISSIONAL --><div class="package"><div class="package-badge">
+</p>
+
+</div>
+
+<div class="packages">
+
+
+<!-- PROFISSIONAL -->
+
+<div class="package">
+
+<div class="package-badge">
 🔥 RECOMENDADO
-</div><h3>
+</div>
+
+<h3>
 📄 Pacote Profissional
-</h3><div class="package-price">
+</h3>
+
+<div class="package-price">
 7.000 Kz
-</div><p>
+</div>
+
+<p>
 Para quem quer apresentar-se melhor profissionalmente.
-</p><ul>
+</p>
+
+<ul>
 <li>✔️ <strong>CV Profissional</strong></li>
 <li>✔️ <strong>Carta de Apresentação</strong></li>
 <li>✔️ <strong>Preparação para candidatura</strong></li>
-</ul><a class="package-btn"
+</ul>
+
+<a class="package-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20o%20Pacote%20Profissional%20por%207.000%20Kz."
 target="_blank">
 QUERO ESTE PACOTE
 </a>
 
-</div><!-- NEGÓCIO --><div class="package featured-package"><div class="package-badge">
+</div>
+
+
+<!-- NEGÓCIO -->
+
+<div class="package featured-package">
+
+<div class="package-badge">
 ⭐ MAIS PROCURADO
-</div><h3>
+</div>
+
+<h3>
 🚀 Pacote Negócio
-</h3><div class="package-price">
+</h3>
+
+<div class="package-price">
 15.000 Kz
-</div><p>
+</div>
+
+<p>
 Para pequenos negócios que querem começar com uma imagem profissional.
-</p><ul>
+</p>
+
+<ul>
 <li>✔️ <strong>Logotipo</strong></li>
 <li>✔️ <strong>Flyer Digital</strong></li>
 <li>✔️ <strong>Cartão Digital</strong></li>
 <li>✔️ <strong>Descrição comercial para WhatsApp</strong></li>
-</ul><a class="package-btn"
+</ul>
+
+<a class="package-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20o%20Pacote%20Negócio%20por%2015.000%20Kz."
 target="_blank">
 QUERO ESTE PACOTE
 </a>
 
-</div><!-- PRESENÇA DIGITAL --><div class="package"><h3>
+</div>
+
+
+<!-- PRESENÇA DIGITAL -->
+
+<div class="package">
+
+<h3>
 🌐 Presença Digital
-</h3><div class="package-price">
+</h3>
+
+<div class="package-price">
 50.000 Kz
-</div><p>
+</div>
+
+<p>
 Uma solução para quem quer começar uma presença digital profissional.
-</p><ul>
+</p>
+
+<ul>
 <li>✔️ <strong>Website Start</strong></li>
 <li>✔️ <strong>Logotipo</strong></li>
 <li>✔️ <strong>Cartão Digital</strong></li>
 <li>✔️ <strong>Integração WhatsApp</strong></li>
-</ul><a class="package-btn"
+</ul>
+
+<a class="package-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20o%20Pacote%20Presença%20Digital%20por%2050.000%20Kz."
 target="_blank">
 QUERO ESTE PACOTE
 </a>
 
-</div></div><div class="trust-line">
+</div>
+
+</div>
+
+
+<div class="trust-line">
 ✓ Preços transparentes •
 ✓ Atendimento pelo WhatsApp •
 ✓ Soluções personalizadas
-</div><div class="price-note">
+</div>
+
+<div class="price-note">
 <strong>Nota:</strong> Os preços apresentados são <strong>preços base</strong>.
 Projetos personalizados ou necessidades específicas podem ter
 um orçamento diferente.
-</div></section><!-- =========================
+</div>
+
+</section>
+
+
+<!-- =========================
      PORTFÓLIO
-========================= --><section class="portfolio" id="portfolio"><div class="section-title"><h2>
+========================= -->
+
+<section class="portfolio" id="portfolio">
+
+<div class="section-title">
+
+<h2>
 <strong>O nosso portfólio</strong>
-</h2><p>
+</h2>
+
+<p>
 Projetos próprios e demonstrativos que mostram o que conseguimos desenvolver.
-</p></div><div class="portfolio-grid"><!-- PROJETO 1 --><div class="project featured-project"><div class="project-top"><div class="project-emoji">
+</p>
+
+</div>
+
+<div class="portfolio-grid">
+
+
+<!-- PROJETO 1 -->
+
+<div class="project featured-project">
+
+<div class="project-top">
+
+<div class="project-emoji">
 🎓
-</div></div><div class="project-content"><div class="project-badge">
+</div>
+
+</div>
+
+<div class="project-content">
+
+<div class="project-badge">
 ⭐ PROJETO EM DESTAQUE
-</div><span>
+</div>
+
+<span>
 Projeto próprio
-</span><h3>
+</span>
+
+<h3>
 <strong>Fely e Amigos — Educação</strong>
-</h3><p>
+</h3>
+
+<p>
 Website dedicado à educação, aprendizagem,
 pais e estudantes.
-</p><div class="project-info"><strong>O que desenvolvemos:</strong>
+</p>
+
+<div class="project-info">
+
+<strong>O que desenvolvemos:</strong>
 
 <span>
 Website institucional com estrutura profissional,
 conteúdo educativo e navegação adaptada para telemóveis.
-</span><strong>Ideal para:</strong>
+</span>
+
+<strong>Ideal para:</strong>
 
 <span>
 Projetos educativos, professores, explicadores,
 formadores e profissionais da área da educação.
-</span></div><div class="project-sales-buttons"><a class="project-btn"
+</span>
+
+</div>
+
+<div class="project-sales-buttons">
+
+<a class="project-btn"
 href="https://felicidadedias.github.io/fely-e-amigos/"
 target="_blank">
 Ver projeto
@@ -1330,29 +1823,65 @@ target="_blank">
 Quero um projeto parecido
 </a>
 
-</div></div>
-</div><!-- PROJETO 2 --><div class="project featured-project"><div class="project-top"><div class="project-emoji">
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PROJETO 2 -->
+
+<div class="project featured-project">
+
+<div class="project-top">
+
+<div class="project-emoji">
 💻
-</div></div><div class="project-content"><div class="project-badge">
+</div>
+
+</div>
+
+<div class="project-content">
+
+<div class="project-badge">
 ⭐ PROJETO EM DESTAQUE
-</div><span>
+</div>
+
+<span>
 Projeto próprio
-</span><h3>
+</span>
+
+<h3>
 <strong>Fely e Amigos — Soluções Digitais</strong>
-</h3><p>
+</h3>
+
+<p>
 A nossa própria plataforma de apresentação
 de serviços digitais.
-</p><div class="project-info"><strong>O que desenvolvemos:</strong>
+</p>
+
+<div class="project-info">
+
+<strong>O que desenvolvemos:</strong>
 
 <span>
 Website profissional para apresentação de serviços,
 preços, pacotes, portfólio e contacto direto pelo WhatsApp.
-</span><strong>Ideal para:</strong>
+</span>
+
+<strong>Ideal para:</strong>
 
 <span>
 Profissionais, empreendedores, prestadores de serviços
 e pequenos negócios.
-</span></div><div class="project-sales-buttons"><a class="project-btn"
+</span>
+
+</div>
+
+<div class="project-sales-buttons">
+
+<a class="project-btn"
 href="https://felicidadedias.github.io/fely-e-amigos-solucoes-digitais./"
 target="_blank">
 Ver projeto
@@ -1364,33 +1893,73 @@ target="_blank">
 Quero um projeto parecido
 </a>
 
-</div></div>
-</div><!-- PROJETO 3 --><div class="project featured-project"><div class="cv-preview"><div class="cv-icon">
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PROJETO 3 -->
+
+<div class="project featured-project">
+
+<div class="cv-preview">
+
+<div class="cv-icon">
 📄
-</div><strong>
+</div>
+
+<strong>
 CVs Profissionais
-</strong><div>
+</strong>
+
+<div>
 3 modelos demonstrativos
-</div></div><div class="project-content"><div class="project-badge">
+</div>
+
+</div>
+
+<div class="project-content">
+
+<div class="project-badge">
 ⭐ SERVIÇO EM DESTAQUE
-</div><span>
+</div>
+
+<span>
 Projetos demonstrativos
-</span><h3>
+</span>
+
+<h3>
 <strong>CVs Profissionais</strong>
-</h3><p>
+</h3>
+
+<p>
 Três modelos de currículos profissionais
 criados para diferentes áreas de atuação.
-</p><div class="project-info"><strong>O que desenvolvemos:</strong>
+</p>
+
+<div class="project-info">
+
+<strong>O que desenvolvemos:</strong>
 
 <span>
 CVs modernos, organizados e preparados
 para apresentação profissional.
-</span><strong>Ideal para:</strong>
+</span>
+
+<strong>Ideal para:</strong>
 
 <span>
 Candidatos a emprego, estudantes,
 profissionais e pessoas que procuram novas oportunidades.
-</span></div><div class="cv-links"><a class="project-btn"
+</span>
+
+</div>
+
+<div class="cv-links">
+
+<a class="project-btn"
 href="CV1.pdf"
 target="_blank">
 CV 1
@@ -1408,14 +1977,26 @@ target="_blank">
 CV 3
 </a>
 
-</div><a class="project-btn secondary-project-btn"
+</div>
+
+<a class="project-btn secondary-project-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20vi%20os%20CVs%20do%20portfólio%20e%20quero%20criar%20o%20meu%20CV."
 target="_blank">
 Quero criar o meu CV
 </a>
 
 </div>
-</div><!-- PROJETO 4 --><div class="project featured-project"><div class="project-images"><img src="logo.png"
+
+</div>
+
+
+<!-- PROJETO 4 -->
+
+<div class="project featured-project">
+
+<div class="project-images">
+
+<img src="logo.png"
 alt="Logo KUDIMA CAFÉ">
 
 <img src="logo1.png"
@@ -1427,26 +2008,46 @@ alt="Identidade Visual KUDIMA CAFÉ">
 <img src="identidade%20visual%201.png"
 alt="Identidade Visual KUDIMA CAFÉ apresentação">
 
-</div><div class="project-content"><div class="project-badge">
+</div>
+
+<div class="project-content">
+
+<div class="project-badge">
 ⭐ PROJETO EM DESTAQUE
-</div><span>
+</div>
+
+<span>
 Projeto demonstrativo
-</span><h3>
+</span>
+
+<h3>
 <strong>KUDIMA CAFÉ — Identidade Visual</strong>
-</h3><p>
+</h3>
+
+<p>
 Conceito de identidade visual desenvolvido
 para uma cafeteria fictícia.
-</p><div class="project-info"><strong>O que desenvolvemos:</strong>
+</p>
+
+<div class="project-info">
+
+<strong>O que desenvolvemos:</strong>
 
 <span>
 Logotipo e elementos de identidade visual
 para criar uma apresentação mais profissional.
-</span><strong>Ideal para:</strong>
+</span>
+
+<strong>Ideal para:</strong>
 
 <span>
 Cafeterias, restaurantes, lojas, marcas,
 empreendedores e pequenos negócios.
-</span></div><a class="project-btn"
+</span>
+
+</div>
+
+<a class="project-btn"
 href="logo.png"
 target="_blank">
 Ver logo
@@ -1458,34 +2059,64 @@ target="_blank">
 Ver identidade
 </a>
 
-<br><a class="project-btn secondary-project-btn"
+<br>
+
+<a class="project-btn secondary-project-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20vi%20o%20projeto%20KUDIMA%20CAFÉ%20e%20quero%20uma%20identidade%20visual%20para%20o%20meu%20negócio."
 target="_blank">
 Criar para o meu negócio
 </a>
 
 </div>
-</div><!-- PROJETO 5 --><div class="project"><div class="project-top"><img src="flayer.png"
+
+</div>
+
+
+<!-- PROJETO 5 -->
+
+<div class="project">
+
+<div class="project-top">
+
+<img src="flayer.png"
 alt="Flyer KUDIMA CAFÉ">
 
-</div><div class="project-content"><span>
+</div>
+
+<div class="project-content">
+
+<span>
 Projeto demonstrativo
-</span><h3>
+</span>
+
+<h3>
 <strong>KUDIMA CAFÉ — Flyer Digital</strong>
-</h3><p>
+</h3>
+
+<p>
 Flyer promocional criado para divulgação
 de uma oferta da cafeteria.
-</p><div class="project-info"><strong>O que desenvolvemos:</strong>
+</p>
+
+<div class="project-info">
+
+<strong>O que desenvolvemos:</strong>
 
 <span>
 Material digital preparado para divulgação
 de produtos, serviços e promoções.
-</span><strong>Ideal para:</strong>
+</span>
+
+<strong>Ideal para:</strong>
 
 <span>
 Negócios, lojas, restaurantes, eventos
 e campanhas promocionais.
-</span></div><a class="project-btn"
+</span>
+
+</div>
+
+<a class="project-btn"
 href="flayer.png"
 target="_blank">
 Ver flyer
@@ -1498,30 +2129,58 @@ Quero um flyer
 </a>
 
 </div>
-</div><!-- PROJETO 6 --><div class="project"><div class="project-images"><img src="Cartão de visita para cafeteria e padaria moderno em preto e amarelo_20260910_180252_0002.png"
+
+</div>
+
+
+<!-- PROJETO 6 -->
+
+<div class="project">
+
+<div class="project-images">
+
+<img src="Cartão de visita para cafeteria e padaria moderno em preto e amarelo_20260910_180252_0002.png"
 alt="Cartão digital KUDIMA CAFÉ">
 
 <img src="Cartão de visita para cafeteria e padaria moderno em preto e amarelo_20260910_180252_0001.png"
 alt="Cartão digital KUDIMA CAFÉ versão 2">
 
-</div><div class="project-content"><span>
+</div>
+
+<div class="project-content">
+
+<span>
 Projeto demonstrativo
-</span><h3>
+</span>
+
+<h3>
 <strong>KUDIMA CAFÉ — Cartão Digital</strong>
-</h3><p>
+</h3>
+
+<p>
 Cartão de visita digital desenvolvido
 para apresentação e contacto com clientes.
-</p><div class="project-info"><strong>O que desenvolvemos:</strong>
+</p>
+
+<div class="project-info">
+
+<strong>O que desenvolvemos:</strong>
 
 <span>
 Cartão digital profissional para facilitar
 a apresentação e o contacto com clientes.
-</span><strong>Ideal para:</strong>
+</span>
+
+<strong>Ideal para:</strong>
 
 <span>
 Profissionais, empresas, vendedores,
 empreendedores e pequenos negócios.
-</span></div><a class="project-btn"
+</span>
+
+</div>
+
+<a class="project-btn"
 href="Cartão de visita para cafeteria e padaria moderno em preto e amarelo_20260910_180252_0001.png"
 target="_blank">
 Ver cartão
@@ -1534,104 +2193,257 @@ Quero um cartão
 </a>
 
 </div>
-</div><!-- PROJETO 7 --><div class="project"><div class="project-top"><div class="project-emoji">
+
+</div>
+
+
+<!-- PROJETO 7 -->
+
+<div class="project">
+
+<div class="project-top">
+
+<div class="project-emoji">
 💼
-</div></div><div class="project-content"><span>
+</div>
+
+</div>
+
+<div class="project-content">
+
+<span>
 Projeto demonstrativo
-</span><h3>
+</span>
+
+<h3>
 <strong>Portfólio Profissional</strong>
-</h3><p>
+</h3>
+
+<p>
 Página digital para apresentar trabalhos,
 competências e experiência profissional.
-</p><div class="project-info"><strong>O que desenvolvemos:</strong>
+</p>
+
+<div class="project-info">
+
+<strong>O que desenvolvemos:</strong>
 
 <span>
 Portfólio digital organizado para apresentar
 trabalhos, competências e experiência.
-</span><strong>Ideal para:</strong>
+</span>
+
+<strong>Ideal para:</strong>
 
 <span>
 Designers, fotógrafos, técnicos, freelancers,
 profissionais e empreendedores.
-</span></div><a class="project-btn"
+</span>
+
+</div>
+
+<a class="project-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20criar%20um%20Portfólio%20Profissional."
 target="_blank">
 Quero um portfólio
 </a>
 
 </div>
-</div><!-- PROJETO 8 --><div class="project"><div class="project-top"><div class="project-emoji">
+
+</div>
+
+
+<!-- PROJETO 8 -->
+
+<div class="project">
+
+<div class="project-top">
+
+<div class="project-emoji">
 🚀
-</div></div><div class="project-content"><span>
+</div>
+
+</div>
+
+<div class="project-content">
+
+<span>
 Serviço
-</span><h3>
+</span>
+
+<h3>
 <strong>Presença Digital</strong>
-</h3><p>
+</h3>
+
+<p>
 Organização da presença digital de profissionais,
 marcas e pequenos negócios.
-</p><div class="project-info"><strong>O que desenvolvemos:</strong>
+</p>
+
+<div class="project-info">
+
+<strong>O que desenvolvemos:</strong>
 
 <span>
 Estratégia e organização dos principais elementos
 da presença digital de uma marca ou profissional.
-</span><strong>Ideal para:</strong>
+</span>
+
+<strong>Ideal para:</strong>
 
 <span>
 Profissionais, marcas e pequenos negócios
 que querem começar ou melhorar a sua presença online.
-</span></div><a class="project-btn"
+</span>
+
+</div>
+
+<a class="project-btn"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20melhorar%20a%20Presença%20Digital%20do%20meu%20negócio."
 target="_blank">
 Melhorar minha presença digital
 </a>
 
 </div>
-</div></div>
-</section><!-- =========================
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
      PROCESSO
-========================= --><section id="processo"><div class="section-title"><h2>
+========================= -->
+
+<section id="processo">
+
+<div class="section-title">
+
+<h2>
 <strong>Como funciona</strong>
-</h2><p>
+</h2>
+
+<p>
 Um processo simples, claro e profissional.
-</p></div><div class="process"><div class="step"><div class="number">
+</p>
+
+</div>
+
+<div class="process">
+
+<div class="step">
+
+<div class="number">
 1
-</div><h3>
+</div>
+
+<h3>
 <strong>Conte-nos a ideia</strong>
-</h3><p>
+</h3>
+
+<p>
 Explique o que precisa.
-</p></div><div class="step"><div class="number">
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">
 2
-</div><h3>
+</div>
+
+<h3>
 <strong>Analisamos</strong>
-</h3><p>
+</h3>
+
+<p>
 Entendemos a sua necessidade.
-</p></div><div class="step"><div class="number">
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">
 3
-</div><h3>
+</div>
+
+<h3>
 <strong>Propomos</strong>
-</h3><p>
+</h3>
+
+<p>
 Apresentamos uma solução.
-</p></div><div class="step"><div class="number">
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">
 4
-</div><h3>
+</div>
+
+<h3>
 <strong>Desenvolvemos</strong>
-</h3><p>
+</h3>
+
+<p>
 Criamos o projeto.
-</p></div><div class="step"><div class="number">
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">
 5
-</div><h3>
+</div>
+
+<h3>
 <strong>Entregamos</strong>
-</h3><p>
+</h3>
+
+<p>
 Apresentamos o resultado final.
-</p></div></div>
-</section><!-- =========================
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
      CONTACTO
-========================= --><section class="contact" id="contacto"><div class="section-title"><h2>
+========================= -->
+
+<section class="contact" id="contacto">
+
+<div class="section-title">
+
+<h2>
 <strong>Tem uma ideia?</strong>
-</h2><p>
+</h2>
+
+<p>
 Conte-nos o que precisa e vamos analisar como podemos
 transformar a sua ideia numa solução digital.
-</p></div><div class="contact-buttons"><a class="btn btn-primary"
+</p>
+
+</div>
+
+<div class="contact-buttons">
+
+<a class="btn btn-primary"
 href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20uma%20ideia%20e%20gostaria%20de%20saber%20como%20podem%20ajudar."
 target="_blank">
 💬 Solicitar uma solução
@@ -1644,11 +2456,37 @@ Solicitar orçamento
 </a>
 
 </div>
-</section><!-- =========================
+
+</section>
+
+
+<!-- =========================
+     WHATSAPP FLUTUANTE
+========================= -->
+
+<a href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços."
+class="whatsapp-float"
+target="_blank"
+aria-label="Falar connosco pelo WhatsApp">
+💬
+</a>
+
+
+<!-- =========================
      FOOTER
-========================= --><footer><p>
+========================= -->
+
+<footer>
+
+<p>
 © 2026 <strong>Fely e Amigos — Soluções Digitais.</strong>
-</p><p>
+</p>
+
+<p>
 <strong>Transformar ideias em soluções digitais.</strong>
-</p></footer></body>
+</p>
+
+</footer>
+
+</body>
 </html>
