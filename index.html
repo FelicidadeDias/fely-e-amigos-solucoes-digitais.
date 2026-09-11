@@ -207,20 +207,27 @@ section{
 
 .card{
     background:white;
-    padding:28px 22px;
+    padding:20px 20px 28px;
     border-radius:14px;
     box-shadow:0 5px 20px rgba(0,0,0,0.07);
     text-align:center;
     transition:0.3s;
+    overflow:hidden;
 }
 
 .card:hover{
     transform:translateY(-5px);
 }
 
-.card-icon{
-    font-size:40px;
-    margin-bottom:15px;
+/* IMAGENS DOS SERVIÇOS */
+
+.card-image{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:18px;
+    display:block;
 }
 
 .card h3{
@@ -730,6 +737,10 @@ footer{
         height:170px;
     }
 
+    .card-image{
+        height:210px;
+    }
+
 }
 
 </style>
@@ -883,9 +894,14 @@ Soluções digitais pensadas para diferentes necessidades.
 <div class="cards">
 
 
+<!-- WEBSITES -->
+
 <div class="card">
 
-<div class="card-icon">🌐</div>
+<img
+class="card-image"
+src="Websites.jpg"
+alt="Websites profissionais">
 
 <h3>
 <strong>Websites</strong>
@@ -899,9 +915,14 @@ para telemóveis.
 </div>
 
 
+<!-- CV PROFISSIONAL -->
+
 <div class="card">
 
-<div class="card-icon">📄</div>
+<img
+class="card-image"
+src="CV%20Profissional.jpg"
+alt="CV Profissional">
 
 <h3>
 <strong>CV Profissional</strong>
@@ -915,9 +936,14 @@ candidaturas profissionais.
 </div>
 
 
+<!-- LOGOS E IDENTIDADE -->
+
 <div class="card">
 
-<div class="card-icon">🎨</div>
+<img
+class="card-image"
+src="Logotipo.jpg"
+alt="Logotipo e identidade visual">
 
 <h3>
 <strong>Logos & Identidade</strong>
@@ -930,9 +956,14 @@ Criamos conceitos visuais para pessoas, marcas e pequenos negócios.
 </div>
 
 
+<!-- MATERIAIS DIGITAIS -->
+
 <div class="card">
 
-<div class="card-icon">🖼️</div>
+<img
+class="card-image"
+src="Fyer%20Digital.jpg"
+alt="Flyer Digital">
 
 <h3>
 <strong>Materiais Digitais</strong>
@@ -945,9 +976,14 @@ Flyers, banners, cartões digitais e outros materiais para divulgação.
 </div>
 
 
+<!-- PORTFÓLIOS -->
+
 <div class="card">
 
-<div class="card-icon">💼</div>
+<img
+class="card-image"
+src="Portfólio%20Digital.jpg"
+alt="Portfólio Digital">
 
 <h3>
 <strong>Portfólios</strong>
@@ -960,9 +996,14 @@ Apresente os seus trabalhos e competências através de um portfólio digital.
 </div>
 
 
+<!-- WHATSAPP E REDES -->
+
 <div class="card">
 
-<div class="card-icon">📱</div>
+<img
+class="card-image"
+src="Cartão%20Digital.jpg"
+alt="Cartão Digital">
 
 <h3>
 <strong>WhatsApp & Redes</strong>
@@ -975,9 +1016,14 @@ Integração de WhatsApp, redes sociais e canais digitais.
 </div>
 
 
+<!-- PRESENÇA DIGITAL -->
+
 <div class="card">
 
-<div class="card-icon">🚀</div>
+<img
+class="card-image"
+src="Presença%20Digital.jpg"
+alt="Presença Digital">
 
 <h3>
 <strong>Presença Digital</strong>
@@ -990,9 +1036,14 @@ Ajudamos a organizar a presença digital de profissionais e negócios.
 </div>
 
 
+<!-- SOLUÇÕES PERSONALIZADAS -->
+
 <div class="card">
 
-<div class="card-icon">⚙️</div>
+<img
+class="card-image"
+src="Soluções%20Personalizadas.jpg"
+alt="Soluções Personalizadas">
 
 <h3>
 <strong>Soluções Personalizadas</strong>
@@ -1003,6 +1054,7 @@ Desenvolvemos soluções de acordo com a necessidade apresentada.
 </p>
 
 </div>
+
 
 </div>
 
