@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Fely e Amigos | Soluções Digitais</title>
@@ -9,6 +11,10 @@
 <meta name="description" content="Fely e Amigos — Soluções Digitais. Websites, CVs profissionais, identidade visual, materiais digitais, portfólios e presença online.">
 
 <style>
+
+/* =========================
+   BASE
+========================= */
 
 *{
     margin:0;
@@ -24,7 +30,14 @@ body{
     line-height:1.6;
 }
 
-/* HEADER */
+strong{
+    font-weight:800;
+}
+
+
+/* =========================
+   HEADER
+========================= */
 
 header{
     background:#ffffff;
@@ -60,7 +73,10 @@ nav a:hover{
     color:#1769aa;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
     min-height:620px;
@@ -106,7 +122,10 @@ nav a:hover{
     color:#536174;
 }
 
-/* BUTTONS */
+
+/* =========================
+   BOTÕES
+========================= */
 
 .btn{
     display:inline-block;
@@ -137,7 +156,10 @@ nav a:hover{
     background:#eef7ff;
 }
 
-/* SECTIONS */
+
+/* =========================
+   SEÇÕES
+========================= */
 
 section{
     padding:80px 6%;
@@ -158,7 +180,10 @@ section{
     color:#657286;
 }
 
-/* ABOUT */
+
+/* =========================
+   SOBRE
+========================= */
 
 .about{
     max-width:900px;
@@ -167,7 +192,10 @@ section{
     font-size:18px;
 }
 
-/* SERVICES */
+
+/* =========================
+   SERVIÇOS
+========================= */
 
 .cards{
     max-width:1100px;
@@ -205,7 +233,163 @@ section{
     font-size:15px;
 }
 
-/* PORTFOLIO */
+
+/* =========================
+   PREÇOS
+========================= */
+
+.pricing{
+    background:#eef7ff;
+}
+
+.pricing-grid{
+    max-width:1150px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.price-card{
+    background:#ffffff;
+    padding:28px 24px;
+    border-radius:16px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    text-align:center;
+    border:2px solid transparent;
+    transition:0.3s;
+}
+
+.price-card:hover{
+    transform:translateY(-6px);
+    border-color:#1769aa;
+}
+
+.price-icon{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.price-card h3{
+    font-size:21px;
+    color:#12263f;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:30px;
+    font-weight:800;
+    color:#1769aa;
+    margin:15px 0;
+}
+
+.price-card p{
+    color:#657286;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.price-btn{
+    display:inline-block;
+    width:100%;
+    padding:12px 15px;
+    background:#1769aa;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.price-btn:hover{
+    background:#0d4f82;
+}
+
+.price-note{
+    max-width:800px;
+    margin:35px auto 0;
+    text-align:center;
+    color:#657286;
+    font-size:14px;
+}
+
+
+/* =========================
+   PACOTES
+========================= */
+
+.packages-title{
+    text-align:center;
+    margin:60px 0 30px;
+}
+
+.packages-title h3{
+    font-size:28px;
+    color:#12263f;
+}
+
+.packages-title p{
+    color:#657286;
+}
+
+.packages{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.package{
+    background:linear-gradient(135deg,#12263f,#1769aa);
+    color:white;
+    padding:30px 25px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,0.12);
+}
+
+.package h3{
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+.package-price{
+    font-size:32px;
+    font-weight:800;
+    margin:15px 0;
+}
+
+.package p{
+    font-size:14px;
+    margin-bottom:20px;
+    opacity:0.95;
+}
+
+.package ul{
+    list-style:none;
+    text-align:left;
+    margin-bottom:22px;
+}
+
+.package li{
+    margin:8px 0;
+}
+
+.package-btn{
+    display:block;
+    padding:12px;
+    background:white;
+    color:#1769aa;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+
+/* =========================
+   PORTFÓLIO
+========================= */
 
 .portfolio{
     background:#ffffff;
@@ -290,7 +474,10 @@ section{
     background:#0d4f82;
 }
 
-/* IMAGENS DOS PROJETOS */
+
+/* =========================
+   IMAGENS DOS PROJETOS
+========================= */
 
 .project-images{
     display:grid;
@@ -308,7 +495,10 @@ section{
     background:white;
 }
 
-/* CV */
+
+/* =========================
+   CV
+========================= */
 
 .cv-preview{
     background:linear-gradient(135deg,#12263f,#1769aa);
@@ -336,7 +526,10 @@ section{
     gap:5px;
 }
 
-/* PROCESS */
+
+/* =========================
+   PROCESSO
+========================= */
 
 .process{
     max-width:1100px;
@@ -375,7 +568,10 @@ section{
     color:#657286;
 }
 
-/* CONTACT */
+
+/* =========================
+   CONTACTO
+========================= */
 
 .contact{
     background:linear-gradient(135deg,#12263f,#1769aa);
@@ -397,7 +593,10 @@ section{
     margin-top:25px;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#0c1828;
@@ -407,7 +606,10 @@ footer{
     font-size:14px;
 }
 
-/* RESPONSIVO */
+
+/* =========================
+   RESPONSIVO
+========================= */
 
 @media(max-width:900px){
 
@@ -423,6 +625,14 @@ footer{
         grid-template-columns:repeat(2,1fr);
     }
 
+    .pricing-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .packages{
+        grid-template-columns:1fr;
+    }
+
     .portfolio-grid{
         grid-template-columns:repeat(2,1fr);
     }
@@ -434,7 +644,9 @@ footer{
     .hero h1{
         font-size:42px;
     }
+
 }
+
 
 @media(max-width:700px){
 
@@ -482,6 +694,7 @@ footer{
     }
 
     .cards,
+    .pricing-grid,
     .portfolio-grid,
     .process{
         grid-template-columns:1fr;
@@ -491,6 +704,14 @@ footer{
         display:block;
         max-width:300px;
         margin:10px auto;
+    }
+
+    .price-card{
+        padding:25px 20px;
+    }
+
+    .price{
+        font-size:28px;
     }
 
     .project-top{
@@ -512,11 +733,15 @@ footer{
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- HEADER -->
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -530,10 +755,17 @@ alt="Fely e Amigos - Soluções Digitais">
 <nav>
 
 <a href="#inicio">Início</a>
+
 <a href="#sobre">Sobre</a>
+
 <a href="#servicos">Serviços</a>
+
+<a href="#precos">Preços</a>
+
 <a href="#portfolio">Portfólio</a>
+
 <a href="#processo">Como Funciona</a>
+
 <a href="#contacto">Contacto</a>
 
 </nav>
@@ -541,7 +773,9 @@ alt="Fely e Amigos - Soluções Digitais">
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="inicio">
 
@@ -556,13 +790,13 @@ Fely e Amigos
 </h1>
 
 <h2>
-Transformar ideias em soluções digitais.
+<strong>Transformar ideias em soluções digitais.</strong>
 </h2>
 
 <p>
 Ajudamos pessoas, profissionais e pequenos negócios
 a transformar ideias e necessidades em soluções digitais
-simples, profissionais e acessíveis.
+<strong>simples, profissionais e acessíveis.</strong>
 </p>
 
 <a class="btn btn-primary"
@@ -585,7 +819,9 @@ Ver portfólio
 </section>
 
 
-<!-- SOBRE -->
+<!-- =========================
+     SOBRE
+========================= -->
 
 <section id="sobre">
 
@@ -596,7 +832,7 @@ Sobre o Fely e Amigos
 </h2>
 
 <p>
-Ideias simples podem transformar-se em grandes soluções.
+<strong>Ideias simples</strong> podem transformar-se em grandes soluções.
 </p>
 
 </div>
@@ -616,8 +852,8 @@ uma presença digital mais profissional.
 <p>
 
 Criamos soluções adaptadas às necessidades de cada pessoa,
-desde um website profissional até um currículo, identidade
-visual ou material digital.
+desde um <strong>website profissional</strong> até um
+<strong>currículo, identidade visual ou material digital.</strong>
 
 </p>
 
@@ -626,7 +862,9 @@ visual ou material digital.
 </section>
 
 
-<!-- SERVIÇOS -->
+<!-- =========================
+     SERVIÇOS
+========================= -->
 
 <section id="servicos">
 
@@ -644,12 +882,13 @@ Soluções digitais pensadas para diferentes necessidades.
 
 <div class="cards">
 
+
 <div class="card">
 
 <div class="card-icon">🌐</div>
 
 <h3>
-Websites
+<strong>Websites</strong>
 </h3>
 
 <p>
@@ -665,7 +904,7 @@ para telemóveis.
 <div class="card-icon">📄</div>
 
 <h3>
-CV Profissional
+<strong>CV Profissional</strong>
 </h3>
 
 <p>
@@ -681,7 +920,7 @@ candidaturas profissionais.
 <div class="card-icon">🎨</div>
 
 <h3>
-Logos & Identidade
+<strong>Logos & Identidade</strong>
 </h3>
 
 <p>
@@ -696,7 +935,7 @@ Criamos conceitos visuais para pessoas, marcas e pequenos negócios.
 <div class="card-icon">🖼️</div>
 
 <h3>
-Materiais Digitais
+<strong>Materiais Digitais</strong>
 </h3>
 
 <p>
@@ -711,7 +950,7 @@ Flyers, banners, cartões digitais e outros materiais para divulgação.
 <div class="card-icon">💼</div>
 
 <h3>
-Portfólios
+<strong>Portfólios</strong>
 </h3>
 
 <p>
@@ -726,7 +965,7 @@ Apresente os seus trabalhos e competências através de um portfólio digital.
 <div class="card-icon">📱</div>
 
 <h3>
-WhatsApp & Redes
+<strong>WhatsApp & Redes</strong>
 </h3>
 
 <p>
@@ -741,7 +980,7 @@ Integração de WhatsApp, redes sociais e canais digitais.
 <div class="card-icon">🚀</div>
 
 <h3>
-Presença Digital
+<strong>Presença Digital</strong>
 </h3>
 
 <p>
@@ -756,7 +995,7 @@ Ajudamos a organizar a presença digital de profissionais e negócios.
 <div class="card-icon">⚙️</div>
 
 <h3>
-Soluções Personalizadas
+<strong>Soluções Personalizadas</strong>
 </h3>
 
 <p>
@@ -770,14 +1009,478 @@ Desenvolvemos soluções de acordo com a necessidade apresentada.
 </section>
 
 
+<!-- =========================
+     PREÇOS
+========================= -->
+
+<section class="pricing" id="precos">
+
+<div class="section-title">
+
+<h2>
+<strong>Preços e Pacotes</strong>
+</h2>
+
+<p>
+Soluções profissionais com preços acessíveis.
+</p>
+
+</div>
+
+
+<div class="pricing-grid">
+
+
+<!-- CV -->
+
+<div class="price-card">
+
+<div class="price-icon">📄</div>
+
+<h3>
+<strong>CV Profissional</strong>
+</h3>
+
+<div class="price">
+1.500 Kz
+</div>
+
+<p>
+Currículo moderno, organizado e profissional.
+</p>
+
+<a class="price-btn"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20solicitar%20um%20CV%20Profissional%20de%201.500%20Kz."
+target="_blank">
+
+Pedir pelo WhatsApp
+
+</a>
+
+</div>
+
+
+<!-- CV + CARTA -->
+
+<div class="price-card">
+
+<div class="price-icon">📑</div>
+
+<h3>
+<strong>CV + Carta</strong>
+</h3>
+
+<div class="price">
+3.000 Kz
+</div>
+
+<p>
+CV profissional + carta de apresentação.
+</p>
+
+<a class="price-btn"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20o%20pacote%20CV%20%2B%20Carta%20por%203.000%20Kz."
+target="_blank">
+
+Pedir pelo WhatsApp
+
+</a>
+
+</div>
+
+
+<!-- FLYER -->
+
+<div class="price-card">
+
+<div class="price-icon">🖼️</div>
+
+<h3>
+<strong>Flyer Digital</strong>
+</h3>
+
+<div class="price">
+2.000 Kz
+</div>
+
+<p>
+Flyer profissional para divulgação.
+</p>
+
+<a class="price-btn"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Flyer%20Digital%20de%202.000%20Kz."
+target="_blank">
+
+Pedir pelo WhatsApp
+
+</a>
+
+</div>
+
+
+<!-- CARTÃO -->
+
+<div class="price-card">
+
+<div class="price-icon">💳</div>
+
+<h3>
+<strong>Cartão Digital</strong>
+</h3>
+
+<div class="price">
+2.000 Kz
+</div>
+
+<p>
+Cartão digital profissional para contactos e divulgação.
+</p>
+
+<a class="price-btn"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Cartão%20Digital%20de%202.000%20Kz."
+target="_blank">
+
+Pedir pelo WhatsApp
+
+</a>
+
+</div>
+
+
+<!-- LOGOTIPO -->
+
+<div class="price-card">
+
+<div class="price-icon">🎨</div>
+
+<h3>
+<strong>Logotipo</strong>
+</h3>
+
+<div class="price">
+3.000 Kz
+</div>
+
+<p>
+Logotipo personalizado para a sua marca ou negócio.
+</p>
+
+<a class="price-btn"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Logotipo%20por%203.000%20Kz."
+target="_blank">
+
+Pedir pelo WhatsApp
+
+</a>
+
+</div>
+
+
+<!-- LOGO + IDENTIDADE -->
+
+<div class="price-card">
+
+<div class="price-icon">✨</div>
+
+<h3>
+<strong>Logo + Identidade</strong>
+</h3>
+
+<div class="price">
+7.000 Kz
+</div>
+
+<p>
+Logotipo + identidade visual básica.
+</p>
+
+<a class="price-btn"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20Logo%20%2B%20Identidade%20por%207.000%20Kz."
+target="_blank">
+
+Pedir pelo WhatsApp
+
+</a>
+
+</div>
+
+
 <!-- PORTFÓLIO -->
+
+<div class="price-card">
+
+<div class="price-icon">💼</div>
+
+<h3>
+<strong>Portfólio Digital</strong>
+</h3>
+
+<div class="price">
+22.500 Kz
+</div>
+
+<p>
+Página digital para apresentar trabalhos e competências.
+</p>
+
+<a class="price-btn"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Portfólio%20Digital%20por%2022.500%20Kz."
+target="_blank">
+
+Pedir pelo WhatsApp
+
+</a>
+
+</div>
+
+
+<!-- WEBSITE START -->
+
+<div class="price-card">
+
+<div class="price-icon">🌐</div>
+
+<h3>
+<strong>Website Start</strong>
+</h3>
+
+<div class="price">
+30.000 Kz
+</div>
+
+<p>
+Página simples, responsiva e com integração WhatsApp.
+</p>
+
+<a class="price-btn"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Website%20Start%20por%2030.000%20Kz."
+target="_blank">
+
+Pedir pelo WhatsApp
+
+</a>
+
+</div>
+
+
+<!-- WEBSITE PRO -->
+
+<div class="price-card">
+
+<div class="price-icon">💻</div>
+
+<h3>
+<strong>Website Pro</strong>
+</h3>
+
+<div class="price">
+50.000 Kz
+</div>
+
+<p>
+Website profissional com várias secções e presença digital completa.
+</p>
+
+<a class="price-btn"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Website%20Pro%20por%2050.000%20Kz."
+target="_blank">
+
+Pedir pelo WhatsApp
+
+</a>
+
+</div>
+
+
+<!-- WEBSITE BUSINESS -->
+
+<div class="price-card">
+
+<div class="price-icon">🏢</div>
+
+<h3>
+<strong>Website Business</strong>
+</h3>
+
+<div class="price">
+90.000 Kz+
+</div>
+
+<p>
+Solução mais completa para empresas e negócios.
+</p>
+
+<a class="price-btn"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20saber%20mais%20sobre%20o%20Website%20Business%20a%20partir%20de%2090.000%20Kz."
+target="_blank">
+
+Pedir pelo WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     PACOTES
+========================= -->
+
+<div class="packages-title">
+
+<h3>
+🔥 <strong>Pacotes Especiais</strong>
+</h3>
+
+<p>
+Escolha uma solução completa e simplifique o seu projeto.
+</p>
+
+</div>
+
+
+<div class="packages">
+
+
+<!-- PROFISSIONAL -->
+
+<div class="package">
+
+<h3>
+📄 Pacote Profissional
+</h3>
+
+<div class="package-price">
+7.000 Kz
+</div>
+
+<p>
+Para quem quer apresentar-se melhor profissionalmente.
+</p>
+
+<ul>
+
+<li>✔️ <strong>CV Profissional</strong></li>
+
+<li>✔️ <strong>Carta de Apresentação</strong></li>
+
+<li>✔️ <strong>Preparação para candidatura</strong></li>
+
+</ul>
+
+<a class="package-btn"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20o%20Pacote%20Profissional%20por%207.000%20Kz."
+target="_blank">
+
+QUERO ESTE PACOTE
+
+</a>
+
+</div>
+
+
+<!-- NEGÓCIO -->
+
+<div class="package">
+
+<h3>
+🚀 Pacote Negócio
+</h3>
+
+<div class="package-price">
+15.000 Kz
+</div>
+
+<p>
+Para pequenos negócios que querem começar com uma imagem profissional.
+</p>
+
+<ul>
+
+<li>✔️ <strong>Logotipo</strong></li>
+
+<li>✔️ <strong>Flyer Digital</strong></li>
+
+<li>✔️ <strong>Cartão Digital</strong></li>
+
+<li>✔️ <strong>Descrição comercial para WhatsApp</strong></li>
+
+</ul>
+
+<a class="package-btn"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20o%20Pacote%20Negócio%20por%2015.000%20Kz."
+target="_blank">
+
+QUERO ESTE PACOTE
+
+</a>
+
+</div>
+
+
+<!-- PRESENÇA DIGITAL -->
+
+<div class="package">
+
+<h3>
+🌐 Presença Digital
+</h3>
+
+<div class="package-price">
+50.000 Kz
+</div>
+
+<p>
+Uma solução para quem quer começar uma presença digital profissional.
+</p>
+
+<ul>
+
+<li>✔️ <strong>Website Start</strong></li>
+
+<li>✔️ <strong>Logotipo</strong></li>
+
+<li>✔️ <strong>Cartão Digital</strong></li>
+
+<li>✔️ <strong>Integração WhatsApp</strong></li>
+
+</ul>
+
+<a class="package-btn"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20o%20Pacote%20Presença%20Digital%20por%2050.000%20Kz."
+target="_blank">
+
+QUERO ESTE PACOTE
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="price-note">
+
+<strong>Nota:</strong> Os preços apresentados são <strong>preços base</strong>.
+Projetos personalizados ou necessidades específicas podem ter
+um orçamento diferente.
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PORTFÓLIO
+========================= -->
 
 <section class="portfolio" id="portfolio">
 
 <div class="section-title">
 
 <h2>
-O nosso portfólio
+<strong>O nosso portfólio</strong>
 </h2>
 
 <p>
@@ -809,7 +1512,7 @@ Projeto próprio
 </span>
 
 <h3>
-Fely e Amigos — Educação
+<strong>Fely e Amigos — Educação</strong>
 </h3>
 
 <p>
@@ -849,7 +1552,7 @@ Projeto próprio
 </span>
 
 <h3>
-Fely e Amigos — Soluções Digitais
+<strong>Fely e Amigos — Soluções Digitais</strong>
 </h3>
 
 <p>
@@ -870,7 +1573,7 @@ Ver projeto
 </div>
 
 
-<!-- PROJETO 3 — CV -->
+<!-- PROJETO 3 -->
 
 <div class="project">
 
@@ -897,7 +1600,7 @@ Projetos demonstrativos
 </span>
 
 <h3>
-CVs Profissionais
+<strong>CVs Profissionais</strong>
 </h3>
 
 <p>
@@ -932,7 +1635,7 @@ CV 3
 </div>
 
 
-<!-- PROJETO 4 — IDENTIDADE KUDIMA -->
+<!-- PROJETO 4 -->
 
 <div class="project">
 
@@ -959,7 +1662,7 @@ Projeto demonstrativo
 </span>
 
 <h3>
-KUDIMA CAFÉ — Identidade Visual
+<strong>KUDIMA CAFÉ — Identidade Visual</strong>
 </h3>
 
 <p>
@@ -970,13 +1673,17 @@ para uma cafeteria fictícia.
 <a class="project-btn"
 href="logo.png"
 target="_blank">
+
 Ver logo
+
 </a>
 
 <a class="project-btn"
 href="identidade%20visual.png"
 target="_blank">
+
 Ver identidade
+
 </a>
 
 </div>
@@ -984,7 +1691,7 @@ Ver identidade
 </div>
 
 
-<!-- PROJETO 5 — FLYER -->
+<!-- PROJETO 5 -->
 
 <div class="project">
 
@@ -1002,7 +1709,7 @@ Projeto demonstrativo
 </span>
 
 <h3>
-KUDIMA CAFÉ — Flyer Digital
+<strong>KUDIMA CAFÉ — Flyer Digital</strong>
 </h3>
 
 <p>
@@ -1013,7 +1720,9 @@ de uma oferta da cafeteria.
 <a class="project-btn"
 href="flayer.png"
 target="_blank">
+
 Ver flyer
+
 </a>
 
 </div>
@@ -1021,7 +1730,7 @@ Ver flyer
 </div>
 
 
-<!-- PROJETO 6 — CARTÃO DIGITAL -->
+<!-- PROJETO 6 -->
 
 <div class="project">
 
@@ -1033,7 +1742,6 @@ alt="Cartão digital KUDIMA CAFÉ">
 <img src="Cartão de visita para cafeteria e padaria moderno em preto e amarelo_20260910_180252_0001.png"
 alt="Cartão digital KUDIMA CAFÉ versão 2">
 
-
 </div>
 
 <div class="project-content">
@@ -1043,35 +1751,7 @@ Projeto demonstrativo
 </span>
 
 <h3>
-KUDIMA CAFÉ — Cartão Digital
-</h3>
-
-<p>
-Cartão de visita digital desenvolvido
-para apresentação e contacto com clientes.
-</p>
-
-<a class="project-btn"
-href="Cartão de visita para cafeteria e padaria moderno em preto e amarelo_20260910_180252_0001.png"
-target="_blank">
-
-Ver cartão
-
-</a>
-
-</div>
-
-</div>
-</div>
-
-<div class="project-content">
-
-<span>
-Projeto demonstrativo
-</span>
-
-<h3>
-KUDIMA CAFÉ — Cartão Digital
+<strong>KUDIMA CAFÉ — Cartão Digital</strong>
 </h3>
 
 <p>
@@ -1111,7 +1791,7 @@ Projeto demonstrativo
 </span>
 
 <h3>
-Portfólio Profissional
+<strong>Portfólio Profissional</strong>
 </h3>
 
 <p>
@@ -1150,7 +1830,7 @@ Serviço
 </span>
 
 <h3>
-Presença Digital
+<strong>Presença Digital</strong>
 </h3>
 
 <p>
@@ -1175,14 +1855,16 @@ Solicitar
 </section>
 
 
-<!-- PROCESSO -->
+<!-- =========================
+     PROCESSO
+========================= -->
 
 <section id="processo">
 
 <div class="section-title">
 
 <h2>
-Como funciona
+<strong>Como funciona</strong>
 </h2>
 
 <p>
@@ -1201,7 +1883,7 @@ Um processo simples, claro e profissional.
 </div>
 
 <h3>
-Conte-nos a ideia
+<strong>Conte-nos a ideia</strong>
 </h3>
 
 <p>
@@ -1218,7 +1900,7 @@ Explique o que precisa.
 </div>
 
 <h3>
-Analisamos
+<strong>Analisamos</strong>
 </h3>
 
 <p>
@@ -1235,7 +1917,7 @@ Entendemos a sua necessidade.
 </div>
 
 <h3>
-Propomos
+<strong>Propomos</strong>
 </h3>
 
 <p>
@@ -1252,7 +1934,7 @@ Apresentamos uma solução.
 </div>
 
 <h3>
-Desenvolvemos
+<strong>Desenvolvemos</strong>
 </h3>
 
 <p>
@@ -1269,7 +1951,7 @@ Criamos o projeto.
 </div>
 
 <h3>
-Entregamos
+<strong>Entregamos</strong>
 </h3>
 
 <p>
@@ -1284,14 +1966,16 @@ Apresentamos o resultado final.
 </section>
 
 
-<!-- CONTACTO -->
+<!-- =========================
+     CONTACTO
+========================= -->
 
 <section class="contact" id="contacto">
 
 <div class="section-title">
 
 <h2>
-Tem uma ideia?
+<strong>Tem uma ideia?</strong>
 </h2>
 
 <p>
@@ -1324,19 +2008,22 @@ Solicitar orçamento
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
 <p>
-© 2026 Fely e Amigos — Soluções Digitais.
+© 2026 <strong>Fely e Amigos — Soluções Digitais.</strong>
 </p>
 
 <p>
-Transformar ideias em soluções digitais.
+<strong>Transformar ideias em soluções digitais.</strong>
 </p>
 
 </footer>
+
 
 </body>
 </html>
