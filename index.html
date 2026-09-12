@@ -7,1279 +7,1182 @@
 <title>Fely e Amigos | Soluções Digitais</title>
 
 <meta name="description" content="Fely e Amigos — Soluções Digitais. Websites, CVs profissionais, identidade visual, materiais digitais, portfólios e presença online.">
-
 <meta name="theme-color" content="#0b1b2d">
 
 <style>
-
-/* =====================================================
-   FELY E AMIGOS — SOLUÇÕES DIGITAIS V3
-   VISUAL PREMIUM + OTIMIZAÇÃO MOBILE
-===================================================== */
-
 :root{
-    --primary:#1769aa;
-    --primary-light:#2388d2;
-    --primary-dark:#0b4777;
-    --navy:#081827;
-    --navy-2:#12263f;
-    --text:#172033;
-    --muted:#64748b;
-    --light:#f5f8fc;
-    --white:#ffffff;
-    --border:#e2eaf2;
-    --green:#25D366;
-
-    --radius:18px;
-    --shadow:0 12px 35px rgba(15,35,60,.08);
-    --shadow-hover:0 20px 45px rgba(15,35,60,.14);
+--primary:#1769aa;
+--primary-dark:#0b4777;
+--navy:#0b1b2d;
+--navy2:#12263f;
+--light:#f5f8fc;
+--blue-light:#eaf4fc;
+--white:#fff;
+--text:#172033;
+--muted:#64748b;
+--border:#e2e8f0;
+--green:#25D366;
+--shadow:0 10px 30px rgba(15,35,60,.08);
+--shadow2:0 18px 45px rgba(15,35,60,.14);
 }
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html{
-    scroll-padding-top:90px;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--light);
-    color:var(--text);
-    line-height:1.6;
-    overflow-x:hidden;
+font-family:Arial,Helvetica,sans-serif;
+color:var(--text);
+background:#fff;
+line-height:1.6;
 }
 
 img{
-    max-width:100%;
-    height:auto;
+display:block;
+max-width:100%;
 }
 
 a{
-    -webkit-tap-highlight-color:transparent;
+text-decoration:none;
+color:inherit;
 }
 
-strong{
-    font-weight:800;
+.container{
+width:min(1180px,92%);
+margin:auto;
 }
 
+/* TOPO */
 
-/* =====================================================
-   HEADER
-===================================================== */
-
-header{
-    background:rgba(255,255,255,.97);
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
-    padding:12px 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    border-bottom:1px solid rgba(23,105,170,.08);
-    box-shadow:0 4px 20px rgba(10,30,50,.06);
+.topbar{
+background:var(--navy);
+color:#dbe7f1;
+font-size:13px;
 }
 
-.logo{
-    flex-shrink:0;
+.topbar-inner{
+min-height:38px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+
+.topbar a{
+color:#fff;
+}
+
+.topbar a:hover{
+text-decoration:underline;
+}
+
+/* HEADER */
+
+.header{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(255,255,255,.97);
+border-bottom:1px solid var(--border);
+box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+
+.header-inner{
+min-height:78px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:25px;
 }
 
 .logo img{
-    width:145px;
-    height:auto;
-    display:block;
+width:170px;
+max-height:58px;
+object-fit:contain;
 }
 
-nav{
-    display:flex;
-    gap:4px;
-    align-items:center;
-    justify-content:flex-end;
+.desktop-nav{
+display:flex;
+align-items:center;
+gap:3px;
 }
 
-nav a{
-    text-decoration:none;
-    color:#334155;
-    font-weight:700;
-    font-size:13px;
-    padding:8px 10px;
-    border-radius:8px;
-    transition:.2s ease;
+.desktop-nav a{
+font-size:14px;
+font-weight:600;
+padding:10px 11px;
+border-radius:7px;
+color:#26364a;
+transition:.2s;
 }
 
-nav a:hover{
-    color:var(--primary);
-    background:#eef7ff;
+.desktop-nav a:hover{
+background:var(--blue-light);
+color:var(--primary);
 }
 
+.desktop-nav .header-btn{
+background:var(--primary);
+color:#fff;
+padding:11px 16px;
+}
 
-/* =====================================================
-   HERO
-===================================================== */
+.desktop-nav .header-btn:hover{
+background:var(--primary-dark);
+color:#fff;
+}
+
+.mobile-menu{
+display:none;
+}
+
+.mobile-menu summary{
+list-style:none;
+cursor:pointer;
+background:var(--navy);
+color:#fff;
+padding:10px 15px;
+border-radius:7px;
+font-weight:bold;
+}
+
+.mobile-menu summary::-webkit-details-marker{
+display:none;
+}
+
+.mobile-nav{
+position:absolute;
+left:4%;
+right:4%;
+top:70px;
+background:#fff;
+border:1px solid var(--border);
+border-radius:12px;
+box-shadow:var(--shadow2);
+padding:8px;
+}
+
+.mobile-nav a{
+display:block;
+padding:13px;
+border-bottom:1px solid var(--border);
+font-weight:600;
+}
+
+.mobile-nav a:last-child{
+border:0;
+}
+
+/* HERO */
 
 .hero{
-    min-height:680px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:90px 6%;
-    position:relative;
-    overflow:hidden;
-
-    background:
-        radial-gradient(circle at 12% 18%,rgba(23,105,170,.12),transparent 30%),
-        radial-gradient(circle at 88% 82%,rgba(37,211,102,.05),transparent 24%),
-        linear-gradient(135deg,#edf7ff 0%,#ffffff 52%,#f5faff 100%);
-}
-
-.hero:before,
-.hero:after{
-    content:"";
-    position:absolute;
-    border-radius:50%;
-    pointer-events:none;
+background:
+linear-gradient(135deg,#f8fbff 0%,#edf6fd 55%,#fff 100%);
+border-bottom:1px solid var(--border);
+position:relative;
+overflow:hidden;
 }
 
 .hero:before{
-    width:340px;
-    height:340px;
-    background:rgba(23,105,170,.045);
-    top:-170px;
-    right:-110px;
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+border-radius:50%;
+background:rgba(23,105,170,.06);
+right:-150px;
+top:-160px;
 }
 
 .hero:after{
-    width:260px;
-    height:260px;
-    background:rgba(23,105,170,.04);
-    bottom:-140px;
-    left:-110px;
+content:"";
+position:absolute;
+width:250px;
+height:250px;
+border-radius:50%;
+background:rgba(11,71,119,.05);
+left:-120px;
+bottom:-140px;
 }
 
-.hero-content{
-    max-width:900px;
-    position:relative;
-    z-index:2;
+.hero-inner{
+position:relative;
+z-index:2;
+min-height:530px;
+display:grid;
+grid-template-columns:1.15fr .85fr;
+align-items:center;
+gap:60px;
+padding:70px 0;
 }
 
 .badge{
-    display:inline-flex;
-    align-items:center;
-    padding:8px 16px;
-    border-radius:30px;
-    background:rgba(23,105,170,.08);
-    color:var(--primary);
-    border:1px solid rgba(23,105,170,.14);
-    font-weight:800;
-    font-size:11px;
-    letter-spacing:1.2px;
-    margin-bottom:22px;
+display:inline-block;
+background:#e5f2fc;
+color:var(--primary-dark);
+padding:7px 12px;
+border-radius:30px;
+font-size:12px;
+font-weight:800;
+letter-spacing:.7px;
+margin-bottom:18px;
 }
 
 .hero h1{
-    font-size:64px;
-    line-height:1.04;
-    margin-bottom:18px;
-    color:var(--navy);
-    letter-spacing:-2px;
+font-size:clamp(42px,6vw,70px);
+line-height:1.03;
+color:var(--navy);
+margin-bottom:12px;
 }
 
 .hero h2{
-    font-size:28px;
-    line-height:1.3;
-    color:var(--primary);
-    margin-bottom:22px;
+font-size:clamp(21px,3vw,31px);
+line-height:1.25;
+color:var(--primary);
+margin-bottom:20px;
 }
 
 .hero p{
-    max-width:720px;
-    margin:0 auto 34px;
-    font-size:18px;
-    color:#526176;
+font-size:17px;
+color:#526275;
+max-width:650px;
 }
 
-.hero-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:8px;
+.hero-actions{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:28px;
 }
-
-
-/* =====================================================
-   BOTÕES
-===================================================== */
 
 .btn{
-    display:inline-block;
-    padding:14px 24px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:800;
-    transition:.25s ease;
-    border:2px solid transparent;
-    cursor:pointer;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:46px;
+padding:12px 20px;
+border-radius:8px;
+font-weight:700;
+border:1px solid transparent;
+transition:.2s;
 }
 
 .btn-primary{
-    background:linear-gradient(135deg,var(--primary),var(--primary-light));
-    color:white;
-    box-shadow:0 8px 22px rgba(23,105,170,.20);
+background:var(--primary);
+color:#fff;
 }
 
 .btn-primary:hover{
-    background:linear-gradient(135deg,var(--primary-dark),var(--primary));
-    transform:translateY(-3px);
-    box-shadow:0 12px 28px rgba(23,105,170,.25);
+background:var(--primary-dark);
+transform:translateY(-1px);
 }
 
-.btn-secondary{
-    background:white;
-    color:var(--primary);
-    border-color:#b9d8ee;
+.btn-outline{
+background:#fff;
+color:var(--primary-dark);
+border-color:#cbdbea;
 }
 
-.btn-secondary:hover{
-    background:#eef7ff;
-    border-color:var(--primary);
-    transform:translateY(-3px);
+.btn-outline:hover{
+background:var(--blue-light);
 }
 
+.hero-panel{
+background:#fff;
+border:1px solid var(--border);
+border-radius:18px;
+padding:28px;
+box-shadow:var(--shadow);
+}
 
-/* =====================================================
-   SEÇÕES
-===================================================== */
+.hero-panel-top{
+display:flex;
+align-items:center;
+gap:14px;
+padding-bottom:20px;
+margin-bottom:20px;
+border-bottom:1px solid var(--border);
+}
+
+.hero-icon{
+width:48px;
+height:48px;
+border-radius:10px;
+background:var(--navy);
+color:#fff;
+display:grid;
+place-items:center;
+font-weight:900;
+}
+
+.hero-panel h3{
+color:var(--navy);
+font-size:19px;
+}
+
+.hero-list{
+list-style:none;
+}
+
+.hero-list li{
+padding:11px 0;
+border-bottom:1px solid #edf1f5;
+font-size:14px;
+color:#45566a;
+}
+
+.hero-list li:last-child{
+border:0;
+}
+
+.hero-list strong{
+color:var(--primary-dark);
+}
+
+/* ACESSOS */
+
+.quick-access{
+margin-top:-30px;
+position:relative;
+z-index:10;
+}
+
+.quick-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+background:#fff;
+border:1px solid var(--border);
+border-radius:14px;
+box-shadow:var(--shadow);
+overflow:hidden;
+}
+
+.quick-item{
+padding:20px;
+border-right:1px solid var(--border);
+}
+
+.quick-item:last-child{
+border:0;
+}
+
+.quick-item small{
+display:block;
+color:var(--muted);
+font-size:12px;
+}
+
+.quick-item strong{
+color:var(--navy);
+font-size:16px;
+}
+
+.quick-item a{
+color:var(--primary);
+font-weight:bold;
+font-size:13px;
+}
+
+/* SEÇÕES */
 
 section{
-    padding:90px 6%;
+padding:85px 0;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
+.section-header{
+max-width:760px;
+margin-bottom:42px;
 }
 
-.section-title h2{
-    font-size:38px;
-    line-height:1.2;
-    margin-bottom:12px;
-    color:var(--navy);
-    letter-spacing:-.5px;
+.section-label{
+color:var(--primary);
+font-size:12px;
+font-weight:800;
+letter-spacing:1px;
+text-transform:uppercase;
+margin-bottom:8px;
 }
 
-.section-title h2:after{
-    content:"";
-    display:block;
-    width:45px;
-    height:4px;
-    margin:15px auto 0;
-    border-radius:10px;
-    background:linear-gradient(90deg,var(--primary),#42a5f5);
+.section-header h2{
+font-size:clamp(28px,4vw,42px);
+line-height:1.15;
+color:var(--navy);
+margin-bottom:12px;
 }
 
-.section-title p{
-    color:var(--muted);
-    max-width:700px;
-    margin:auto;
+.section-header p{
+color:var(--muted);
 }
 
+/* SOBRE */
 
-/* =====================================================
-   SOBRE
-===================================================== */
-
-#sobre{
-    background:white;
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:55px;
+align-items:center;
 }
 
-.about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    font-size:17px;
-    color:#526176;
-    background:#f8fbff;
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:40px;
-    box-shadow:var(--shadow);
+.about-box{
+background:var(--light);
+border-left:4px solid var(--primary);
+border-radius:10px;
+padding:28px;
 }
 
-.about strong{
-    color:var(--navy);
+.about-box h3{
+color:var(--navy);
+margin-bottom:10px;
 }
 
-
-/* =====================================================
-   SERVIÇOS
-===================================================== */
-
-#servicos{
-    background:#f6f9fc;
+.about-box p{
+color:var(--muted);
 }
 
-.cards{
-    max-width:1150px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
+.about-points{
+display:grid;
+gap:18px;
 }
 
-.card{
-    background:white;
-    padding:10px 10px 20px;
-    border-radius:18px;
-    border:1px solid var(--border);
-    box-shadow:0 7px 24px rgba(15,35,60,.055);
-    text-align:center;
-    transition:.25s ease;
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
+.point{
+display:flex;
+gap:15px;
 }
 
-.card:hover{
-    transform:translateY(-6px);
-    box-shadow:var(--shadow-hover);
-    border-color:#cce3f4;
+.point-mark{
+width:35px;
+height:35px;
+flex:0 0 35px;
+border-radius:8px;
+background:var(--blue-light);
+color:var(--primary);
+display:grid;
+place-items:center;
+font-size:11px;
+font-weight:bold;
 }
 
-.card-image{
-    width:100%;
-    height:175px;
-    object-fit:cover;
-    border-radius:13px;
-    margin-bottom:18px;
-    display:block;
-    background:#edf4fa;
+.point h4{
+color:var(--navy);
+margin-bottom:3px;
 }
 
-.card h3{
-    margin:0 10px 9px;
-    color:var(--navy);
-    font-size:18px;
+.point p{
+font-size:14px;
+color:var(--muted);
 }
 
-.card p{
-    color:var(--muted);
-    font-size:14px;
-    margin:0 8px 20px;
+/* DESTAQUES */
+
+.highlights{
+background:var(--light);
 }
 
-.service-btn{
-    display:block;
-    width:calc(100% - 16px);
-    margin:auto auto 0;
-    padding:12px 14px;
-    background:var(--navy);
-    color:white;
-    text-decoration:none;
-    border-radius:9px;
-    font-weight:800;
-    font-size:13px;
-    transition:.25s ease;
+.highlight-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
-.service-btn:hover{
-    background:var(--primary);
-    transform:translateY(-2px);
+.highlight{
+background:#fff;
+border:1px solid var(--border);
+border-radius:12px;
+padding:25px;
+box-shadow:var(--shadow);
 }
 
+.highlight.featured{
+border-top:4px solid var(--primary);
+}
 
-/* =====================================================
-   PREÇOS
-===================================================== */
+.highlight small{
+color:var(--primary);
+font-weight:bold;
+}
+
+.highlight h3{
+color:var(--navy);
+margin:8px 0;
+}
+
+.highlight-price{
+font-size:23px;
+font-weight:800;
+color:var(--primary-dark);
+margin:12px 0;
+}
+
+.highlight p{
+font-size:14px;
+color:var(--muted);
+margin-bottom:15px;
+}
+
+/* SERVIÇOS */
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.service-card{
+background:#fff;
+border:1px solid var(--border);
+border-radius:12px;
+overflow:hidden;
+transition:.2s;
+}
+
+.service-card:hover{
+transform:translateY(-4px);
+box-shadow:var(--shadow2);
+}
+
+.service-image{
+width:100%;
+height:160px;
+object-fit:cover;
+background:#edf3f8;
+}
+
+.service-content{
+padding:20px;
+}
+
+.service-content h3{
+font-size:18px;
+color:var(--navy);
+margin-bottom:7px;
+}
+
+.service-content p{
+font-size:14px;
+color:var(--muted);
+}
+
+/* PREÇOS */
 
 .pricing{
-    background:
-        radial-gradient(circle at 90% 10%,rgba(23,105,170,.08),transparent 25%),
-        #edf6fd;
+background:var(--light);
 }
 
-.pricing-grid{
-    max-width:1150px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
+.price-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:14px;
 }
 
 .price-card{
-    background:white;
-    padding:28px 24px;
-    border-radius:18px;
-    border:1px solid var(--border);
-    box-shadow:0 8px 25px rgba(15,35,60,.065);
-    text-align:center;
-    transition:.25s ease;
-    position:relative;
-    overflow:hidden;
-}
-
-.price-card:hover{
-    transform:translateY(-7px);
-    box-shadow:var(--shadow-hover);
+background:#fff;
+border:1px solid var(--border);
+border-radius:10px;
+padding:19px;
+position:relative;
 }
 
 .price-card.featured{
-    border:2px solid var(--primary);
-    box-shadow:0 15px 40px rgba(23,105,170,.18);
-    transform:translateY(-7px);
+border:2px solid var(--primary);
 }
 
-.price-card.featured:hover{
-    transform:translateY(-11px);
-}
-
-.price-badge{
-    display:inline-block;
-    background:linear-gradient(135deg,var(--primary),var(--primary-light));
-    color:white;
-    padding:6px 13px;
-    border-radius:20px;
-    font-size:11px;
-    font-weight:800;
-    margin-bottom:10px;
-}
-
-.price-icon{
-    font-size:40px;
-    line-height:1;
-    margin-bottom:12px;
+.price-card .tag{
+position:absolute;
+right:0;
+top:0;
+background:var(--primary);
+color:#fff;
+font-size:10px;
+font-weight:bold;
+padding:5px 8px;
+border-radius:0 8px 0 8px;
 }
 
 .price-card h3{
-    font-size:20px;
-    color:var(--navy);
-    margin-bottom:7px;
+font-size:15px;
+color:var(--navy);
+min-height:42px;
 }
 
 .price{
-    font-size:31px;
-    font-weight:900;
-    color:var(--primary);
-    margin:14px 0;
+font-size:21px;
+font-weight:800;
+color:var(--primary-dark);
+margin:10px 0;
 }
 
 .price-card p{
-    color:var(--muted);
-    font-size:14px;
-    margin-bottom:20px;
-    min-height:45px;
-}
-
-.price-btn{
-    display:inline-block;
-    width:100%;
-    padding:12px 15px;
-    background:var(--primary);
-    color:white;
-    text-decoration:none;
-    border-radius:9px;
-    font-weight:800;
-    transition:.25s ease;
-}
-
-.price-btn:hover{
-    background:var(--primary-dark);
-    transform:translateY(-2px);
-}
-
-.price-note{
-    max-width:850px;
-    margin:30px auto 0;
-    text-align:center;
-    color:var(--muted);
-    font-size:14px;
-}
-
-.trust-line{
-    max-width:900px;
-    margin:22px auto 0;
-    text-align:center;
-    color:var(--primary);
-    font-size:14px;
-    font-weight:800;
-}
-
-
-/* =====================================================
-   PACOTES
-===================================================== */
-
-.packages-title{
-    text-align:center;
-    margin:65px 0 30px;
-}
-
-.packages-title h3{
-    font-size:30px;
-    color:var(--navy);
-}
-
-.packages-title p{
-    color:var(--muted);
+font-size:12px;
+color:var(--muted);
 }
 
 .packages{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:24px;
+margin-top:35px;
+}
+
+.packages h3{
+color:var(--navy);
+margin-bottom:18px;
+}
+
+.package-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
 }
 
 .package{
-    background:linear-gradient(145deg,#081827,#1769aa);
-    color:white;
-    padding:32px 26px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 12px 35px rgba(10,35,60,.16);
-    position:relative;
-    transition:.25s ease;
-    overflow:hidden;
+background:#fff;
+border:1px solid var(--border);
+border-radius:12px;
+padding:24px;
 }
 
-.package:before{
-    content:"";
-    position:absolute;
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    background:rgba(255,255,255,.055);
-    top:-90px;
-    right:-70px;
-    pointer-events:none;
+.package.recommended{
+border:2px solid var(--primary);
 }
 
-.package:hover{
-    transform:translateY(-7px);
-    box-shadow:0 20px 45px rgba(10,35,60,.22);
-}
-
-.package.featured-package{
-    border:3px solid white;
-    box-shadow:0 18px 45px rgba(23,105,170,.28);
-    transform:translateY(-7px);
-}
-
-.package.featured-package:hover{
-    transform:translateY(-11px);
-}
-
-.package-badge{
-    display:inline-block;
-    background:white;
-    color:var(--primary);
-    padding:7px 14px;
-    border-radius:20px;
-    font-size:11px;
-    font-weight:900;
-    margin-bottom:13px;
-}
-
-.package h3{
-    font-size:23px;
-    margin-bottom:9px;
-    position:relative;
+.package h4{
+font-size:19px;
+color:var(--navy);
 }
 
 .package-price{
-    font-size:32px;
-    font-weight:900;
-    margin:14px 0;
+font-size:24px;
+font-weight:800;
+color:var(--primary);
+margin:7px 0;
 }
 
 .package p{
-    font-size:14px;
-    margin-bottom:21px;
-    opacity:.95;
+font-size:14px;
+color:var(--muted);
 }
 
-.package ul{
-    list-style:none;
-    text-align:left;
-    margin-bottom:23px;
+.price-note{
+margin-top:22px;
+padding:15px;
+border-radius:8px;
+background:#eef6fc;
+font-size:13px;
+color:#536579;
 }
 
-.package li{
-    margin:9px 0;
-    font-size:14px;
-}
-
-.package-btn{
-    display:block;
-    padding:13px;
-    background:white;
-    color:var(--primary);
-    text-decoration:none;
-    border-radius:9px;
-    font-weight:900;
-    transition:.25s ease;
-}
-
-.package-btn:hover{
-    background:#eef7ff;
-    transform:translateY(-2px);
-}
-
-
-/* =====================================================
-   PORTFÓLIO
-===================================================== */
-
-.portfolio{
-    background:white;
-}
+/* PORTFÓLIO */
 
 .portfolio-grid{
-    max-width:1150px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:26px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
 }
 
-.project{
-    background:#f8fafc;
-    border:1px solid var(--border);
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 7px 25px rgba(15,35,60,.055);
-    transition:.25s ease;
+.portfolio-card{
+background:#fff;
+border:1px solid var(--border);
+border-radius:12px;
+overflow:hidden;
+transition:.2s;
 }
 
-.project:hover{
-    transform:translateY(-7px);
-    box-shadow:var(--shadow-hover);
+.portfolio-card:hover{
+transform:translateY(-3px);
+box-shadow:var(--shadow2);
 }
 
-.project.featured-project{
-    border:2px solid #b9d8ee;
+.portfolio-images{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:3px;
+background:#edf2f7;
 }
 
-.project-top{
-    height:195px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:linear-gradient(135deg,#e9f4fc,#f7fbff);
-    overflow:hidden;
+.portfolio-images.single{
+grid-template-columns:1fr;
 }
 
-.project-top img{
-    width:100%;
-    height:195px;
-    object-fit:cover;
-    display:block;
-    background:#edf4fa;
+.portfolio-images img{
+width:100%;
+height:145px;
+object-fit:cover;
 }
 
-.project-emoji{
-    font-size:65px;
+.portfolio-content{
+padding:18px;
 }
 
-.project-content{
-    padding:24px;
+.portfolio-content h3{
+font-size:17px;
+color:var(--navy);
+margin-bottom:5px;
 }
 
-.project-content > span{
-    font-size:11px;
-    color:var(--primary);
-    font-weight:900;
-    text-transform:uppercase;
-    letter-spacing:.5px;
+.portfolio-content p{
+font-size:13px;
+color:var(--muted);
+margin-bottom:12px;
 }
 
-.project-content h3{
-    margin:8px 0 10px;
-    color:var(--navy);
-    line-height:1.3;
+.portfolio-link{
+font-size:13px;
+font-weight:bold;
+color:var(--primary);
 }
 
-.project-content p{
-    color:var(--muted);
-    font-size:14px;
-    margin-bottom:17px;
+/* PORQUÊ */
+
+.why{
+background:var(--navy);
+color:#fff;
 }
 
-
-/* =====================================================
-   PORTFÓLIO — INFORMAÇÕES
-===================================================== */
-
-.project-badge{
-    display:inline-block;
-    background:var(--navy);
-    color:white;
-    padding:6px 12px;
-    border-radius:20px;
-    font-size:10px;
-    font-weight:900;
-    margin-bottom:10px;
+.why .section-header h2{
+color:#fff;
 }
 
-.project-info{
-    background:white;
-    padding:15px;
-    border-radius:11px;
-    border:1px solid var(--border);
-    margin:15px 0;
-    text-align:left;
+.why .section-header p{
+color:#bdccda;
 }
 
-.project-info strong{
-    display:block;
-    color:var(--navy);
-    font-size:12px;
-    margin-bottom:4px;
+.why-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
 }
 
-.project-info span{
-    display:block;
-    color:var(--muted);
-    font-size:12px;
-    text-transform:none;
-    margin-bottom:11px;
+.why-card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.13);
+border-radius:11px;
+padding:22px;
 }
 
-.project-info span:last-child{
-    margin-bottom:0;
+.why-number{
+font-size:26px;
+font-weight:800;
+color:#8bc9f5;
+margin-bottom:10px;
 }
 
-.project-sales-buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:5px;
+.why-card h3{
+font-size:17px;
+margin-bottom:6px;
 }
 
-.project-sales-buttons .project-btn{
-    flex:1;
-    min-width:145px;
-    text-align:center;
+.why-card p{
+font-size:13px;
+color:#b9c9d8;
 }
 
-.project-btn{
-    display:inline-block;
-    padding:10px 15px;
-    background:var(--primary);
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    font-size:13px;
-    font-weight:800;
-    margin:3px;
-    transition:.25s ease;
-}
-
-.project-btn:hover{
-    background:var(--primary-dark);
-    transform:translateY(-2px);
-}
-
-.project-btn.secondary-project-btn{
-    background:white;
-    color:var(--primary);
-    border:2px solid #b9d8ee;
-}
-
-.project-btn.secondary-project-btn:hover{
-    background:#eef7ff;
-    border-color:var(--primary);
-}
-
-
-/* =====================================================
-   IMAGENS DOS PROJETOS
-===================================================== */
-
-.project-images{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:5px;
-    background:#e9f4fc;
-    padding:5px;
-}
-
-.project-images img{
-    width:100%;
-    height:155px;
-    object-fit:cover;
-    display:block;
-    background:white;
-    border-radius:4px;
-}
-
-
-/* =====================================================
-   CV
-===================================================== */
-
-.cv-preview{
-    background:linear-gradient(135deg,#081827,#1769aa,#2388d2);
-    min-height:195px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-    color:white;
-    text-align:center;
-}
-
-.cv-preview .cv-icon{
-    font-size:55px;
-    margin-bottom:8px;
-}
-
-.cv-preview strong{
-    font-size:18px;
-}
-
-.cv-links{
-    display:flex;
-    flex-wrap:wrap;
-    gap:5px;
-}
-
-
-/* =====================================================
-   PROCESSO
-===================================================== */
-
-#processo{
-    background:#f6f9fc;
-}
+/* PROCESSO */
 
 .process{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:14px;
+background:var(--light);
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:15px;
 }
 
 .step{
-    text-align:center;
-    padding:25px 12px;
-    background:white;
-    border:1px solid var(--border);
-    border-radius:16px;
-    box-shadow:0 7px 20px rgba(15,35,60,.05);
-    transition:.25s ease;
+background:#fff;
+border:1px solid var(--border);
+border-radius:11px;
+padding:22px;
 }
 
-.step:hover{
-    transform:translateY(-5px);
-    box-shadow:var(--shadow);
-}
-
-.number{
-    width:52px;
-    height:52px;
-    margin:0 auto 15px;
-    border-radius:50%;
-    background:linear-gradient(135deg,var(--primary),#2388d2);
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:900;
-    font-size:19px;
-    box-shadow:0 7px 18px rgba(23,105,170,.18);
+.step-number{
+width:38px;
+height:38px;
+border-radius:50%;
+background:var(--primary);
+color:#fff;
+display:grid;
+place-items:center;
+font-weight:800;
+margin-bottom:15px;
 }
 
 .step h3{
-    font-size:15px;
-    margin-bottom:7px;
-    color:var(--navy);
+font-size:16px;
+color:var(--navy);
+margin-bottom:5px;
 }
 
 .step p{
-    font-size:13px;
-    color:var(--muted);
+font-size:13px;
+color:var(--muted);
 }
 
+/* CONTACTO */
 
-/* =====================================================
-   CONTACTO
-===================================================== */
-
-.contact{
-    background:
-        radial-gradient(circle at 15% 20%,rgba(255,255,255,.07),transparent 25%),
-        radial-gradient(circle at 85% 80%,rgba(255,255,255,.07),transparent 25%),
-        linear-gradient(135deg,#06131f,#0d4774,#1769aa);
-
-    color:white;
-    text-align:center;
-    position:relative;
-    overflow:hidden;
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
 }
 
-.contact .section-title h2,
-.contact .section-title p{
-    color:white;
+.contact-card{
+border:1px solid var(--border);
+border-radius:13px;
+padding:30px;
 }
 
-.contact .section-title h2:after{
-    background:white;
+.contact-card.primary{
+background:var(--navy);
+color:#fff;
 }
 
-.contact p{
-    max-width:650px;
-    margin:auto;
-    color:rgba(255,255,255,.88);
+.contact-card h3{
+font-size:24px;
+color:var(--navy);
+margin-bottom:10px;
 }
 
-.contact-buttons{
-    margin-top:28px;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:8px;
+.contact-card.primary h3{
+color:#fff;
 }
 
-
-/* =====================================================
-   WHATSAPP FLUTUANTE
-===================================================== */
-
-.whatsapp-float{
-    position:fixed;
-    width:60px;
-    height:60px;
-    right:20px;
-    bottom:20px;
-    background:var(--green);
-    color:white;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
-    text-decoration:none;
-    box-shadow:0 8px 25px rgba(0,0,0,.25);
-    z-index:9999;
-    transition:.25s ease;
+.contact-card p{
+color:var(--muted);
+margin-bottom:18px;
 }
 
-.whatsapp-float:hover{
-    transform:scale(1.08);
-    box-shadow:0 12px 30px rgba(0,0,0,.30);
+.contact-card.primary p{
+color:#c5d2df;
 }
 
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer{
-    background:#06111d;
-    color:#aebdcd;
-    text-align:center;
-    padding:30px 6%;
-    font-size:14px;
+.contact-info{
+display:grid;
+gap:12px;
 }
 
-footer strong{
-    color:white;
+.contact-item{
+background:var(--light);
+padding:13px;
+border-radius:8px;
 }
 
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media(max-width:1000px){
-
-    header{
-        padding-left:4%;
-        padding-right:4%;
-    }
-
-    nav{
-        gap:2px;
-    }
-
-    nav a{
-        font-size:11px;
-        padding:7px 6px;
-    }
-
-    .cards{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .pricing-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .packages{
-        grid-template-columns:1fr;
-        max-width:650px;
-    }
-
-    .portfolio-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .process{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .hero h1{
-        font-size:52px;
-    }
+.contact-item strong{
+display:block;
+font-size:14px;
+color:var(--navy);
 }
 
+.contact-item span{
+font-size:13px;
+color:var(--muted);
+}
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* FOOTER */
+
+.footer{
+background:#071522;
+color:#b8c7d5;
+padding:55px 0 0;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:1.4fr 1fr 1fr 1fr;
+gap:40px;
+padding-bottom:45px;
+}
+
+.footer h3{
+font-size:16px;
+color:#fff;
+margin-bottom:15px;
+}
+
+.footer-brand p{
+font-size:13px;
+max-width:330px;
+color:#9fb0bf;
+}
+
+.footer-links{
+list-style:none;
+}
+
+.footer-links li{
+margin-bottom:8px;
+}
+
+.footer-links a{
+font-size:13px;
+color:#aebdca;
+}
+
+.footer-links a:hover{
+color:#fff;
+}
+
+.footer-bottom{
+border-top:1px solid rgba(255,255,255,.09);
+padding:18px 0;
+display:flex;
+justify-content:space-between;
+gap:15px;
+flex-wrap:wrap;
+font-size:12px;
+color:#8798a8;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+z-index:2000;
+width:58px;
+height:58px;
+border-radius:50%;
+background:var(--green);
+color:#fff;
+display:grid;
+place-items:center;
+font-size:25px;
+font-weight:900;
+box-shadow:0 7px 25px rgba(0,0,0,.22);
+transition:.2s;
+}
+
+.whatsapp:hover{
+transform:scale(1.06);
+}
+
+/* RESPONSIVO */
+
+@media(max-width:1050px){
+
+.desktop-nav{
+display:none;
+}
+
+.mobile-menu{
+display:block;
+}
+
+.hero-inner{
+grid-template-columns:1fr;
+gap:35px;
+}
+
+.service-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.price-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.portfolio-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.why-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.process-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.footer-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
 
 @media(max-width:700px){
 
-    header{
-        padding:11px 5%;
-        flex-direction:column;
-        gap:10px;
-    }
-
-    .logo img{
-        width:130px;
-    }
-
-    nav{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:3px;
-    }
-
-    nav a{
-        font-size:10px;
-        padding:6px 5px;
-    }
-
-    .hero{
-        min-height:590px;
-        padding:70px 5%;
-    }
-
-    .hero h1{
-        font-size:38px;
-        letter-spacing:-1px;
-    }
-
-    .hero h2{
-        font-size:21px;
-    }
-
-    .hero p{
-        font-size:15px;
-    }
-
-    .badge{
-        font-size:10px;
-        padding:7px 13px;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .hero .btn{
-        width:100%;
-        max-width:300px;
-    }
-
-    section{
-        padding:70px 5%;
-    }
-
-    .section-title{
-        margin-bottom:38px;
-    }
-
-    .section-title h2{
-        font-size:29px;
-    }
-
-    .about{
-        padding:27px 20px;
-        font-size:16px;
-        border-radius:16px;
-    }
-
-    .cards,
-    .pricing-grid,
-    .portfolio-grid,
-    .process{
-        grid-template-columns:1fr;
-    }
-
-    .card-image{
-        height:210px;
-    }
-
-    .price-card{
-        padding:27px 20px;
-    }
-
-    .price-card.featured{
-        transform:none;
-    }
-
-    .price-card.featured:hover{
-        transform:translateY(-6px);
-    }
-
-    .price{
-        font-size:29px;
-    }
-
-    .packages{
-        max-width:100%;
-    }
-
-    .package.featured-package{
-        transform:none;
-    }
-
-    .package.featured-package:hover{
-        transform:translateY(-7px);
-    }
-
-    .project-top{
-        height:220px;
-    }
-
-    .project-top img{
-        height:220px;
-    }
-
-    .project-images{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .project-images img{
-        height:175px;
-    }
-
-    .project-sales-buttons{
-        flex-direction:column;
-    }
-
-    .project-sales-buttons .project-btn{
-        width:100%;
-        margin:3px 0;
-    }
-
-    .project-content{
-        padding:22px 18px;
-    }
-
-    .cv-preview{
-        min-height:210px;
-    }
-
-    .contact-buttons{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .contact-buttons .btn{
-        width:100%;
-        max-width:300px;
-    }
-
-    .whatsapp-float{
-        width:55px;
-        height:55px;
-        right:16px;
-        bottom:16px;
-        font-size:25px;
-    }
+.topbar-inner{
+justify-content:center;
+text-align:center;
+padding:8px 0;
 }
 
+.header-inner{
+min-height:70px;
+}
 
-/* =====================================================
-   MOBILE PEQUENO
-===================================================== */
+.logo img{
+width:145px;
+max-height:52px;
+}
+
+.hero-inner{
+padding:55px 0 75px;
+}
+
+.hero h1{
+font-size:43px;
+}
+
+.hero h2{
+font-size:23px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+.quick-access{
+margin-top:-20px;
+}
+
+.quick-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.quick-item{
+border-right:0;
+border-bottom:1px solid var(--border);
+}
+
+section{
+padding:65px 0;
+}
+
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.highlight-grid,
+.package-grid{
+grid-template-columns:1fr;
+}
+
+.service-grid{
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+.service-image{
+height:135px;
+}
+
+.service-content{
+padding:15px;
+}
+
+.service-content h3{
+font-size:16px;
+}
+
+.price-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.portfolio-grid{
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+.portfolio-images img{
+height:125px;
+}
+
+.why-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.process-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr;
+gap:28px;
+}
+
+}
 
 @media(max-width:390px){
 
-    .hero h1{
-        font-size:34px;
-    }
-
-    .hero h2{
-        font-size:19px;
-    }
-
-    nav a{
-        font-size:9px;
-        padding:6px 4px;
-    }
-
-    .section-title h2{
-        font-size:27px;
-    }
-
-    .project-images img{
-        height:145px;
-    }
+.container{
+width:94%;
 }
 
-
-/* =====================================================
-   REDUÇÃO DE MOVIMENTO
-===================================================== */
-
-@media(prefers-reduced-motion:reduce){
-
-    *,
-    *::before,
-    *::after{
-        scroll-behavior:auto !important;
-        transition:none !important;
-    }
+.hero h1{
+font-size:38px;
 }
 
+.hero-actions{
+flex-direction:column;
+}
+
+.btn{
+width:100%;
+}
+
+.quick-grid,
+.service-grid,
+.price-grid,
+.portfolio-grid,
+.why-grid,
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.portfolio-images{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
 </style>
 </head>
 
 <body>
 
+<!-- TOPO -->
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+<div class="topbar">
 
-<header>
+<div class="container topbar-inner">
 
-<div class="logo">
+<span>
+Soluções digitais para profissionais e pequenos negócios
+</span>
+
+<a href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20saber%20mais%20sobre%20os%20serviços." target="_blank">
+WhatsApp: 948 138 785
+</a>
+
+</div>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header class="header">
+
+<div class="container header-inner">
+
+<a href="#inicio" class="logo">
+
 <img
 src="Fa.png"
 alt="Fely e Amigos - Soluções Digitais"
-width="145"
-height="auto"
 loading="eager"
-fetchpriority="high">
-</div>
+fetchpriority="high"
+decoding="async">
 
-<nav aria-label="Navegação principal">
+</a>
+
+
+<nav class="desktop-nav">
 
 <a href="#inicio">Início</a>
 <a href="#sobre">Sobre</a>
@@ -1289,56 +1192,124 @@ fetchpriority="high">
 <a href="#processo">Como Funciona</a>
 <a href="#contacto">Contacto</a>
 
+<a
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20solicitar%20uma%20solução."
+target="_blank"
+class="header-btn">
+Falar connosco
+</a>
+
 </nav>
+
+
+<details class="mobile-menu">
+
+<summary>☰ Menu</summary>
+
+<nav class="mobile-nav">
+
+<a href="#inicio">Início</a>
+<a href="#sobre">Sobre</a>
+<a href="#servicos">Serviços</a>
+<a href="#precos">Preços</a>
+<a href="#portfolio">Portfólio</a>
+<a href="#processo">Como Funciona</a>
+<a href="#contacto">Contacto</a>
+
+<a
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20solicitar%20uma%20solução."
+target="_blank">
+Falar connosco
+</a>
+
+</nav>
+
+</details>
+
+</div>
 
 </header>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
 <section class="hero" id="inicio">
 
-<div class="hero-content">
+<div class="container hero-inner">
 
-<div class="badge">
-SOLUÇÕES DIGITAIS
-</div>
+<div>
 
-<h1>
-Fely e Amigos
-</h1>
+<span class="badge">SOLUÇÕES DIGITAIS</span>
 
-<h2>
-<strong>Transformar ideias em soluções digitais.</strong>
-</h2>
+<h1>Fely e Amigos</h1>
+
+<h2>Transformar ideias em soluções digitais.</h2>
 
 <p>
-Ajudamos pessoas, profissionais e pequenos negócios
-a transformar ideias e necessidades em soluções digitais
-<strong>simples, profissionais e acessíveis.</strong>
+Criamos websites, CVs profissionais, identidades visuais,
+materiais digitais, portfólios e outras soluções para ajudar
+pessoas, profissionais e pequenos negócios a apresentarem-se
+melhor no mundo digital.
 </p>
 
-<div class="hero-buttons">
+<div class="hero-actions">
 
 <a
-class="btn btn-primary"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20saber%20mais%20sobre%20os%20serviços."
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20solicitar%20uma%20solução."
 target="_blank"
-rel="noopener">
-
-Falar connosco
-
+class="btn btn-primary">
+Solicitar uma solução
 </a>
 
-<a
-class="btn btn-secondary"
-href="#portfolio">
-
+<a href="#portfolio" class="btn btn-outline">
 Ver portfólio
-
 </a>
+
+</div>
+
+</div>
+
+
+<div class="hero-panel">
+
+<div class="hero-panel-top">
+
+<div class="hero-icon">
+Fa
+</div>
+
+<h3>Soluções para a sua presença digital</h3>
+
+</div>
+
+
+<ul class="hero-list">
+
+<li>
+<strong>Websites</strong> profissionais e responsivos
+</li>
+
+<li>
+<strong>CVs</strong> preparados para destacar o seu perfil
+</li>
+
+<li>
+<strong>Identidade visual</strong> para pessoas e negócios
+</li>
+
+<li>
+<strong>Materiais digitais</strong> para divulgação
+</li>
+
+<li>
+<strong>Portfólios</strong> para apresentar o seu trabalho
+</li>
+
+<li>
+<strong>Soluções personalizadas</strong> conforme a necessidade
+</li>
+
+</ul>
 
 </div>
 
@@ -1347,730 +1318,572 @@ Ver portfólio
 </section>
 
 
-<!-- =====================================================
-     SOBRE
-===================================================== -->
+<!-- ACESSOS RÁPIDOS -->
+
+<div class="quick-access">
+
+<div class="container">
+
+<div class="quick-grid">
+
+<div class="quick-item">
+<small>CV Profissional</small>
+<strong>1.500 Kz</strong><br>
+<a href="#precos">Ver preços →</a>
+</div>
+
+<div class="quick-item">
+<small>Website Start</small>
+<strong>30.000 Kz</strong><br>
+<a href="#precos">Ver opções →</a>
+</div>
+
+<div class="quick-item">
+<small>Portfólio Digital</small>
+<strong>22.500 Kz</strong><br>
+<a href="#portfolio">Ver exemplos →</a>
+</div>
+
+<div class="quick-item">
+<small>Atendimento</small>
+<strong>WhatsApp</strong><br>
+<a href="#contacto">Falar connosco →</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SOBRE -->
 
 <section id="sobre">
 
-<div class="section-title">
+<div class="container">
 
-<h2>
-Sobre o Fely e Amigos
-</h2>
+<div class="section-header">
+
+<div class="section-label">Sobre nós</div>
+
+<h2>Uma solução digital começa com uma boa ideia.</h2>
 
 <p>
-<strong>Ideias simples</strong> podem transformar-se em grandes soluções.
+O Fely e Amigos transforma necessidades e ideias em materiais
+digitais simples, profissionais e acessíveis.
 </p>
 
 </div>
 
-<div class="about">
+
+<div class="about-grid">
+
+<div class="about-box">
+
+<h3>O nosso propósito</h3>
 
 <p>
-O <strong>Fely e Amigos — Soluções Digitais</strong> nasceu com
-uma missão simples: ajudar pessoas e pequenos negócios a terem
-uma presença digital mais profissional.
+Ajudar profissionais, estudantes, empreendedores e pequenos
+negócios a construírem uma presença digital mais organizada,
+profissional e preparada para comunicar com o seu público.
 </p>
 
 <br>
 
 <p>
-Criamos soluções adaptadas às necessidades de cada pessoa,
-desde um <strong>website profissional</strong> até um
-<strong>currículo, identidade visual ou material digital.</strong>
+Trabalhamos com soluções adequadas à realidade de cada
+cliente, desde um simples CV até à criação de um website.
 </p>
+
+</div>
+
+
+<div class="about-points">
+
+<div class="point">
+
+<div class="point-mark">01</div>
+
+<div>
+<h4>Simples</h4>
+<p>Soluções fáceis de compreender e utilizar.</p>
+</div>
+
+</div>
+
+
+<div class="point">
+
+<div class="point-mark">02</div>
+
+<div>
+<h4>Profissional</h4>
+<p>Apresentação cuidada para valorizar a sua imagem.</p>
+</div>
+
+</div>
+
+
+<div class="point">
+
+<div class="point-mark">03</div>
+
+<div>
+<h4>Acessível</h4>
+<p>Opções pensadas para diferentes necessidades e orçamentos.</p>
+</div>
+
+</div>
+
+
+<div class="point">
+
+<div class="point-mark">04</div>
+
+<div>
+<h4>Personalizado</h4>
+<p>Cada projeto é adaptado ao objetivo do cliente.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- =====================================================
-     SERVIÇOS
-===================================================== -->
+<!-- DESTAQUES -->
+
+<section class="highlights">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="section-label">Destaques</div>
+
+<h2>Soluções em destaque</h2>
+
+<p>
+Algumas das soluções mais procuradas para começar ou melhorar
+a sua presença digital.
+</p>
+
+</div>
+
+
+<div class="highlight-grid">
+
+
+<div class="highlight featured">
+
+<small>PARA PROFISSIONAIS</small>
+
+<h3>CV Profissional</h3>
+
+<div class="highlight-price">1.500 Kz</div>
+
+<p>
+Um currículo mais organizado e profissional para apresentar
+melhor a sua experiência e competências.
+</p>
+
+<a
+class="btn btn-outline"
+href="https://wa.me/244948138785?text=Olá,%20tenho%20interesse%20no%20CV%20Profissional%20de%201.500%20Kz."
+target="_blank">
+Solicitar CV
+</a>
+
+</div>
+
+
+<div class="highlight">
+
+<small>PARA NEGÓCIOS</small>
+
+<h3>Website Start</h3>
+
+<div class="highlight-price">30.000 Kz</div>
+
+<p>
+Uma presença online profissional para apresentar serviços,
+contactos, produtos ou projetos.
+</p>
+
+<a
+class="btn btn-outline"
+href="https://wa.me/244948138785?text=Olá,%20tenho%20interesse%20no%20Website%20Start."
+target="_blank">
+Saber mais
+</a>
+
+</div>
+
+
+<div class="highlight">
+
+<small>PARA APRESENTAÇÃO</small>
+
+<h3>Portfólio Digital</h3>
+
+<div class="highlight-price">22.500 Kz</div>
+
+<p>
+Uma página profissional para reunir trabalhos, serviços,
+contactos e informações importantes.
+</p>
+
+<a
+class="btn btn-outline"
+href="https://wa.me/244948138785?text=Olá,%20tenho%20interesse%20no%20Portfólio%20Digital."
+target="_blank">
+Saber mais
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVIÇOS -->
 
 <section id="servicos">
 
-<div class="section-title">
+<div class="container">
 
-<h2>
-Os nossos serviços
-</h2>
+<div class="section-header">
+
+<div class="section-label">Serviços</div>
+
+<h2>O que podemos criar para si</h2>
 
 <p>
-Soluções digitais pensadas para diferentes necessidades.
+Soluções digitais para diferentes necessidades profissionais,
+pessoais e empresariais.
 </p>
 
 </div>
 
 
-<div class="cards">
+<div class="service-grid">
 
 
-<div class="card">
+<div class="service-card">
 
 <img
-class="card-image"
 src="Websites.jpg"
-alt="Websites profissionais"
+alt="Criação de websites"
+class="service-image"
 loading="lazy"
 decoding="async">
 
-<h3>
-<strong>Websites</strong>
-</h3>
+<div class="service-content">
+
+<h3>Websites</h3>
 
 <p>
-Criamos websites profissionais, responsivos e adaptados
-para telemóveis.
+Websites modernos, responsivos e adaptados ao objetivo
+do seu projeto.
 </p>
 
-<a
-class="service-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20interesse%20no%20serviço%20de%20Websites%20e%20gostaria%20de%20saber%20mais."
-target="_blank"
-rel="noopener">
-
-Solicitar este serviço
-
-</a>
+</div>
 
 </div>
 
 
-<div class="card">
+<div class="service-card">
 
 <img
-class="card-image"
 src="CV Profissional.jpg"
 alt="CV Profissional"
+class="service-image"
 loading="lazy"
 decoding="async">
 
-<h3>
-<strong>CV Profissional</strong>
-</h3>
+<div class="service-content">
+
+<h3>CV Profissional</h3>
 
 <p>
-Currículos modernos, organizados e preparados para
-candidaturas profissionais.
+Currículos organizados para apresentar melhor o seu perfil.
 </p>
 
-<a
-class="service-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20interesse%20no%20serviço%20de%20CV%20Profissional%20e%20gostaria%20de%20saber%20mais."
-target="_blank"
-rel="noopener">
-
-Solicitar este serviço
-
-</a>
+</div>
 
 </div>
 
 
-<div class="card">
+<div class="service-card">
 
 <img
-class="card-image"
 src="logotipo.jpg"
 alt="Logotipo e identidade visual"
+class="service-image"
 loading="lazy"
 decoding="async">
 
-<h3>
-<strong>Logos & Identidade</strong>
-</h3>
+<div class="service-content">
+
+<h3>Logos & Identidade</h3>
 
 <p>
-Criamos conceitos visuais para pessoas, marcas e pequenos negócios.
+Criação de logotipos e identidade visual para pessoas e negócios.
 </p>
 
-<a
-class="service-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20interesse%20no%20serviço%20de%20Logos%20e%20Identidade%20Visual%20e%20gostaria%20de%20saber%20mais."
-target="_blank"
-rel="noopener">
-
-Solicitar este serviço
-
-</a>
+</div>
 
 </div>
 
 
-<div class="card">
+<div class="service-card">
 
 <img
-class="card-image"
 src="Flyer%20Digital.jpg"
 alt="Flyer Digital"
+class="service-image"
 loading="lazy"
 decoding="async">
 
-<h3>
-<strong>Materiais Digitais</strong>
-</h3>
+<div class="service-content">
+
+<h3>Materiais Digitais</h3>
 
 <p>
-Flyers, banners, cartões digitais e outros materiais para divulgação.
+Flyers, cartões e outros materiais para divulgação.
 </p>
 
-<a
-class="service-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20interesse%20no%20serviço%20de%20Materiais%20Digitais%20e%20gostaria%20de%20saber%20mais."
-target="_blank"
-rel="noopener">
-
-Solicitar este serviço
-
-</a>
+</div>
 
 </div>
 
 
-<div class="card">
+<div class="service-card">
 
 <img
-class="card-image"
 src="Portfólio%20Digital.jpg"
 alt="Portfólio Digital"
+class="service-image"
 loading="lazy"
 decoding="async">
 
-<h3>
-<strong>Portfólios</strong>
-</h3>
+<div class="service-content">
+
+<h3>Portfólios</h3>
 
 <p>
-Apresente os seus trabalhos e competências através de um portfólio digital.
+Apresente os seus trabalhos e serviços de forma profissional.
 </p>
 
-<a
-class="service-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20interesse%20no%20serviço%20de%20Portfólio%20Digital%20e%20gostaria%20de%20saber%20mais."
-target="_blank"
-rel="noopener">
-
-Solicitar este serviço
-
-</a>
+</div>
 
 </div>
 
 
-<div class="card">
+<div class="service-card">
 
 <img
-class="card-image"
 src="Cartão%20Digital.jpg"
 alt="Cartão Digital"
+class="service-image"
 loading="lazy"
 decoding="async">
 
-<h3>
-<strong>WhatsApp & Redes</strong>
-</h3>
+<div class="service-content">
+
+<h3>WhatsApp & Redes</h3>
 
 <p>
-Integração de WhatsApp, redes sociais e canais digitais.
+Materiais digitais pensados para partilha e divulgação.
 </p>
 
-<a
-class="service-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20interesse%20no%20serviço%20de%20WhatsApp%20e%20Redes%20Sociais%20e%20gostaria%20de%20saber%20mais."
-target="_blank"
-rel="noopener">
-
-Solicitar este serviço
-
-</a>
+</div>
 
 </div>
 
 
-<div class="card">
+<div class="service-card">
 
 <img
-class="card-image"
 src="Presença%20Digital.jpg"
 alt="Presença Digital"
+class="service-image"
 loading="lazy"
 decoding="async">
 
-<h3>
-<strong>Presença Digital</strong>
-</h3>
+<div class="service-content">
+
+<h3>Presença Digital</h3>
 
 <p>
-Ajudamos a organizar a presença digital de profissionais e negócios.
+Estruturação da sua apresentação profissional no digital.
 </p>
 
-<a
-class="service-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20interesse%20no%20serviço%20de%20Presença%20Digital%20e%20gostaria%20de%20saber%20mais."
-target="_blank"
-rel="noopener">
-
-Solicitar este serviço
-
-</a>
+</div>
 
 </div>
 
 
-<div class="card">
+<div class="service-card">
 
 <img
-class="card-image"
 src="Soluções%20Personalizadas.jpg"
 alt="Soluções Personalizadas"
+class="service-image"
 loading="lazy"
 decoding="async">
 
-<h3>
-<strong>Soluções Personalizadas</strong>
-</h3>
+<div class="service-content">
+
+<h3>Soluções Personalizadas</h3>
 
 <p>
-Desenvolvemos soluções de acordo com a necessidade apresentada.
+Criamos uma solução específica para a necessidade do seu projeto.
 </p>
-
-<a
-class="service-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20uma%20necessidade%20específica%20e%20gostaria%20de%20conhecer%20uma%20Solução%20Personalizada."
-target="_blank"
-rel="noopener">
-
-Solicitar este serviço
-
-</a>
 
 </div>
 
+</div>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- =====================================================
-     PREÇOS
-===================================================== -->
+<!-- PREÇOS -->
 
 <section class="pricing" id="precos">
 
-<div class="section-title">
+<div class="container">
 
-<h2>
-<strong>Preços e Pacotes</strong>
-</h2>
+<div class="section-header">
+
+<div class="section-label">Preços</div>
+
+<h2>Soluções com preços claros</h2>
 
 <p>
-Soluções profissionais com preços acessíveis.
+Conheça os preços base dos principais serviços do Fely e Amigos.
 </p>
 
 </div>
 
 
-<div class="pricing-grid">
+<div class="price-grid">
 
 
 <div class="price-card">
-
-<div class="price-icon">📄</div>
-
-<h3>
-<strong>CV Profissional</strong>
-</h3>
-
-<div class="price">
-1.500 Kz
-</div>
-
-<p>
-Currículo moderno, organizado e profissional.
-</p>
-
-<a
-class="price-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20solicitar%20um%20CV%20Profissional%20de%201.500%20Kz."
-target="_blank"
-rel="noopener">
-
-Pedir pelo WhatsApp
-
-</a>
-
+<h3>CV Profissional</h3>
+<div class="price">1.500 Kz</div>
+<p>CV profissional e organizado.</p>
 </div>
 
 
 <div class="price-card">
-
-<div class="price-icon">📑</div>
-
-<h3>
-<strong>CV + Carta</strong>
-</h3>
-
-<div class="price">
-3.000 Kz
-</div>
-
-<p>
-CV profissional + carta de apresentação.
-</p>
-
-<a
-class="price-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20o%20pacote%20CV%20%2B%20Carta%20por%203.000%20Kz."
-target="_blank"
-rel="noopener">
-
-Pedir pelo WhatsApp
-
-</a>
-
+<h3>CV + Carta</h3>
+<div class="price">3.000 Kz</div>
+<p>Currículo + carta de apresentação.</p>
 </div>
 
 
 <div class="price-card">
-
-<div class="price-icon">🖼️</div>
-
-<h3>
-<strong>Flyer Digital</strong>
-</h3>
-
-<div class="price">
-2.000 Kz
-</div>
-
-<p>
-Flyer profissional para divulgação.
-</p>
-
-<a
-class="price-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Flyer%20Digital%20de%202.000%20Kz."
-target="_blank"
-rel="noopener">
-
-Pedir pelo WhatsApp
-
-</a>
-
+<h3>Flyer Digital</h3>
+<div class="price">2.000 Kz</div>
+<p>Material digital para divulgação.</p>
 </div>
 
 
 <div class="price-card">
-
-<div class="price-icon">💳</div>
-
-<h3>
-<strong>Cartão Digital</strong>
-</h3>
-
-<div class="price">
-2.000 Kz
-</div>
-
-<p>
-Cartão digital profissional para contactos e divulgação.
-</p>
-
-<a
-class="price-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Cartão%20Digital%20de%202.000%20Kz."
-target="_blank"
-rel="noopener">
-
-Pedir pelo WhatsApp
-
-</a>
-
+<h3>Cartão Digital</h3>
+<div class="price">2.000 Kz</div>
+<p>Cartão profissional digital.</p>
 </div>
 
 
 <div class="price-card">
-
-<div class="price-icon">🎨</div>
-
-<h3>
-<strong>Logotipo</strong>
-</h3>
-
-<div class="price">
-3.000 Kz
-</div>
-
-<p>
-Logotipo personalizado para a sua marca ou negócio.
-</p>
-
-<a
-class="price-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Logotipo%20por%203.000%20Kz."
-target="_blank"
-rel="noopener">
-
-Pedir pelo WhatsApp
-
-</a>
-
+<h3>Logotipo</h3>
+<div class="price">3.000 Kz</div>
+<p>Criação de logotipo.</p>
 </div>
 
 
 <div class="price-card">
-
-<div class="price-icon">✨</div>
-
-<h3>
-<strong>Logo + Identidade</strong>
-</h3>
-
-<div class="price">
-7.000 Kz
-</div>
-
-<p>
-Logotipo + identidade visual básica.
-</p>
-
-<a
-class="price-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20Logo%20%2B%20Identidade%20por%207.000%20Kz."
-target="_blank"
-rel="noopener">
-
-Pedir pelo WhatsApp
-
-</a>
-
+<h3>Logo + Identidade</h3>
+<div class="price">7.000 Kz</div>
+<p>Logotipo + identidade visual.</p>
 </div>
 
 
 <div class="price-card">
-
-<div class="price-icon">💼</div>
-
-<h3>
-<strong>Portfólio Digital</strong>
-</h3>
-
-<div class="price">
-22.500 Kz
-</div>
-
-<p>
-Página digital para apresentar trabalhos e competências.
-</p>
-
-<a
-class="price-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Portfólio%20Digital%20por%2022.500%20Kz."
-target="_blank"
-rel="noopener">
-
-Pedir pelo WhatsApp
-
-</a>
-
+<h3>Portfólio Digital</h3>
+<div class="price">22.500 Kz</div>
+<p>Página profissional de apresentação.</p>
 </div>
 
 
 <div class="price-card featured">
 
-<div class="price-badge">
-⭐ DESTAQUE
-</div>
+<span class="tag">DESTAQUE</span>
 
-<div class="price-icon">🌐</div>
-
-<h3>
-<strong>Website Start</strong>
-</h3>
-
-<div class="price">
-30.000 Kz
-</div>
-
-<p>
-Página simples, responsiva e com integração WhatsApp.
-</p>
-
-<a
-class="price-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Website%20Start%20por%2030.000%20Kz."
-target="_blank"
-rel="noopener">
-
-Pedir pelo WhatsApp
-
-</a>
+<h3>Website Start</h3>
+<div class="price">30.000 Kz</div>
+<p>Website profissional para começar.</p>
 
 </div>
 
 
 <div class="price-card">
-
-<div class="price-icon">💻</div>
-
-<h3>
-<strong>Website Pro</strong>
-</h3>
-
-<div class="price">
-50.000 Kz
-</div>
-
-<p>
-Website profissional com várias secções e presença digital completa.
-</p>
-
-<a
-class="price-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20um%20Website%20Pro%20por%2050.000%20Kz."
-target="_blank"
-rel="noopener">
-
-Pedir pelo WhatsApp
-
-</a>
-
+<h3>Website Pro</h3>
+<div class="price">50.000 Kz</div>
+<p>Website com estrutura mais completa.</p>
 </div>
 
 
 <div class="price-card">
-
-<div class="price-icon">🏢</div>
-
-<h3>
-<strong>Website Business</strong>
-</h3>
-
-<div class="price">
-90.000 Kz+
+<h3>Website Business</h3>
+<div class="price">90.000 Kz+</div>
+<p>Solução avançada para negócios.</p>
 </div>
-
-<p>
-Solução mais completa para empresas e negócios.
-</p>
-
-<a
-class="price-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20saber%20mais%20sobre%20o%20Website%20Business%20a%20partir%20de%2090.000%20Kz."
-target="_blank"
-rel="noopener">
-
-Pedir pelo WhatsApp
-
-</a>
-
-</div>
-
-
-</div>
-
-
-<!-- PACOTES -->
-
-<div class="packages-title">
-
-<h3>
-🔥 <strong>Pacotes Especiais</strong>
-</h3>
-
-<p>
-Escolha uma solução completa e simplifique o seu projeto.
-</p>
 
 </div>
 
 
 <div class="packages">
 
+<h3>Pacotes</h3>
 
-<div class="package">
+<div class="package-grid">
 
-<div class="package-badge">
-🔥 RECOMENDADO
-</div>
 
-<h3>
-📄 Pacote Profissional
-</h3>
+<div class="package recommended">
 
-<div class="package-price">
-7.000 Kz
-</div>
+<h4>Pacote Profissional</h4>
+
+<div class="package-price">7.000 Kz</div>
 
 <p>
-Para quem quer apresentar-se melhor profissionalmente.
+Uma combinação de soluções para melhorar a apresentação
+profissional.
 </p>
 
-<ul>
-
-<li>✔️ <strong>CV Profissional</strong></li>
-
-<li>✔️ <strong>Carta de Apresentação</strong></li>
-
-<li>✔️ <strong>Preparação para candidatura</strong></li>
-
-</ul>
+<br>
 
 <a
-class="package-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20o%20Pacote%20Profissional%20por%207.000%20Kz."
+href="https://wa.me/244948138785?text=Olá,%20tenho%20interesse%20no%20Pacote%20Profissional."
 target="_blank"
-rel="noopener">
-
-QUERO ESTE PACOTE
-
-</a>
-
-</div>
-
-
-<div class="package featured-package">
-
-<div class="package-badge">
-⭐ MAIS PROCURADO
-</div>
-
-<h3>
-🚀 Pacote Negócio
-</h3>
-
-<div class="package-price">
-15.000 Kz
-</div>
-
-<p>
-Para pequenos negócios que querem começar com uma imagem profissional.
-</p>
-
-<ul>
-
-<li>✔️ <strong>Logotipo</strong></li>
-
-<li>✔️ <strong>Flyer Digital</strong></li>
-
-<li>✔️ <strong>Cartão Digital</strong></li>
-
-<li>✔️ <strong>Descrição comercial para WhatsApp</strong></li>
-
-</ul>
-
-<a
-class="package-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20o%20Pacote%20Negócio%20por%2015.000%20Kz."
-target="_blank"
-rel="noopener">
-
-QUERO ESTE PACOTE
-
+class="btn btn-primary">
+Solicitar
 </a>
 
 </div>
@@ -2078,77 +1891,82 @@ QUERO ESTE PACOTE
 
 <div class="package">
 
-<h3>
-🌐 Presença Digital
-</h3>
+<h4>Pacote Negócio</h4>
 
-<div class="package-price">
-50.000 Kz
-</div>
+<div class="package-price">15.000 Kz</div>
 
 <p>
-Uma solução para quem quer começar uma presença digital profissional.
+Soluções combinadas para ajudar pequenos negócios a
+melhorarem a sua apresentação.
 </p>
 
-<ul>
-
-<li>✔️ <strong>Website Start</strong></li>
-
-<li>✔️ <strong>Logotipo</strong></li>
-
-<li>✔️ <strong>Cartão Digital</strong></li>
-
-<li>✔️ <strong>Integração WhatsApp</strong></li>
-
-</ul>
+<br>
 
 <a
-class="package-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20o%20Pacote%20Presença%20Digital%20por%2050.000%20Kz."
+href="https://wa.me/244948138785?text=Olá,%20tenho%20interesse%20no%20Pacote%20Negócio."
 target="_blank"
-rel="noopener">
-
-QUERO ESTE PACOTE
-
+class="btn btn-primary">
+Solicitar
 </a>
 
 </div>
 
 
+<div class="package">
+
+<h4>Presença Digital</h4>
+
+<div class="package-price">50.000 Kz</div>
+
+<p>
+Uma solução mais completa para estruturar a presença digital.
+</p>
+
+<br>
+
+<a
+href="https://wa.me/244948138785?text=Olá,%20tenho%20interesse%20na%20Presença%20Digital."
+target="_blank"
+class="btn btn-primary">
+Solicitar
+</a>
+
 </div>
 
+</div>
 
-<div class="trust-line">
-✓ Preços transparentes • ✓ Atendimento pelo WhatsApp • ✓ Soluções personalizadas
 </div>
 
 
 <div class="price-note">
 
 <strong>Nota:</strong>
-Os preços apresentados são <strong>preços base</strong>.
-Projetos personalizados ou necessidades específicas podem ter
-um orçamento diferente.
+Os preços apresentados são preços base. Projetos personalizados,
+funcionalidades adicionais ou necessidades específicas podem
+alterar o valor final após análise.
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- =====================================================
-     PORTFÓLIO
-===================================================== -->
+<!-- PORTFÓLIO -->
 
-<section class="portfolio" id="portfolio">
+<section id="portfolio">
 
-<div class="section-title">
+<div class="container">
 
-<h2>
-<strong>O nosso portfólio</strong>
-</h2>
+<div class="section-header">
+
+<div class="section-label">Portfólio</div>
+
+<h2>Projetos e demonstrações</h2>
 
 <p>
-Projetos próprios e demonstrativos que mostram o que conseguimos desenvolver.
+Alguns trabalhos e projetos desenvolvidos para demonstrar
+diferentes possibilidades.
 </p>
 
 </div>
@@ -2157,156 +1975,68 @@ Projetos próprios e demonstrativos que mostram o que conseguimos desenvolver.
 <div class="portfolio-grid">
 
 
-<!-- EDUCAÇÃO -->
+<!-- FELY EDUCAÇÃO -->
 
-<div class="project featured-project">
+<div class="portfolio-card">
 
-<div class="project-top">
-<div class="project-emoji">🎓</div>
+<div class="portfolio-images single">
+
+<img
+src="Fa.png"
+alt="Fely e Amigos Educação"
+loading="lazy"
+decoding="async">
+
 </div>
 
-<div class="project-content">
+<div class="portfolio-content">
 
-<div class="project-badge">
-⭐ PROJETO EM DESTAQUE
-</div>
-
-<span>
-Projeto próprio
-</span>
-
-<h3>
-<strong>Fely e Amigos — Educação</strong>
-</h3>
+<h3>Fely e Amigos — Educação</h3>
 
 <p>
-Website dedicado à educação, aprendizagem,
-pais e estudantes.
+Projeto digital dedicado à educação e aprendizagem.
 </p>
 
-<div class="project-info">
-
-<strong>
-O que desenvolvemos:
-</strong>
-
-<span>
-Website institucional com estrutura profissional,
-conteúdo educativo e navegação adaptada para telemóveis.
-</span>
-
-<strong>
-Ideal para:
-</strong>
-
-<span>
-Projetos educativos, professores, explicadores,
-formadores e profissionais da área da educação.
-</span>
-
-</div>
-
-<div class="project-sales-buttons">
-
 <a
-class="project-btn"
 href="https://felicidadedias.github.io/fely-e-amigos/"
 target="_blank"
-rel="noopener">
-
-Ver projeto
-
-</a>
-
-<a
-class="project-btn secondary-project-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos!%20Quero%20um%20projeto%20parecido%20com%20o%20Fely%20e%20Amigos%20—%20Educação."
-target="_blank"
-rel="noopener">
-
-Quero um projeto parecido
-
+class="portfolio-link">
+Visitar projeto →
 </a>
 
 </div>
 
 </div>
 
+
+<!-- FELY SOLUÇÕES -->
+
+<div class="portfolio-card">
+
+<div class="portfolio-images single">
+
+<img
+src="Fa.png"
+alt="Fely e Amigos Soluções Digitais"
+loading="lazy"
+decoding="async">
+
 </div>
 
+<div class="portfolio-content">
 
-<!-- SOLUÇÕES DIGITAIS -->
-
-<div class="project featured-project">
-
-<div class="project-top">
-<div class="project-emoji">💻</div>
-</div>
-
-<div class="project-content">
-
-<div class="project-badge">
-⭐ PROJETO EM DESTAQUE
-</div>
-
-<span>
-Projeto próprio
-</span>
-
-<h3>
-<strong>Fely e Amigos — Soluções Digitais</strong>
-</h3>
+<h3>Fely e Amigos — Soluções Digitais</h3>
 
 <p>
-A nossa própria plataforma de apresentação
-de serviços digitais.
+O nosso próprio projeto de soluções digitais.
 </p>
 
-<div class="project-info">
-
-<strong>
-O que desenvolvemos:
-</strong>
-
-<span>
-Website profissional para apresentação de serviços,
-preços, pacotes, portfólio e contacto direto pelo WhatsApp.
-</span>
-
-<strong>
-Ideal para:
-</strong>
-
-<span>
-Profissionais, empreendedores, prestadores de serviços
-e pequenos negócios.
-</span>
-
-</div>
-
-<div class="project-sales-buttons">
-
 <a
-class="project-btn"
 href="https://felicidadedias.github.io/fely-e-amigos-solucoes-digitais./"
 target="_blank"
-rel="noopener">
-
-Ver projeto
-
+class="portfolio-link">
+Ver projeto →
 </a>
-
-<a
-class="project-btn secondary-project-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos!%20Quero%20um%20projeto%20parecido%20com%20o%20Fely%20e%20Amigos%20—%20Soluções%20Digitais."
-target="_blank"
-rel="noopener">
-
-Quero um projeto parecido
-
-</a>
-
-</div>
 
 </div>
 
@@ -2315,101 +2045,51 @@ Quero um projeto parecido
 
 <!-- CVS -->
 
-<div class="project featured-project">
+<div class="portfolio-card">
 
-<div class="cv-preview">
+<div class="portfolio-images">
 
-<div class="cv-icon">
-📄
+<div style="height:145px;background:linear-gradient(135deg,#0b1b2d,#1769aa);color:#fff;display:grid;place-items:center;font-size:30px;font-weight:bold;">
+CV
 </div>
 
-<strong>
-CVs Profissionais
-</strong>
-
-<div>
-3 modelos demonstrativos
+<div style="height:145px;background:#edf6fd;color:#0b4777;display:grid;place-items:center;font-size:22px;font-weight:bold;">
+PDF
 </div>
 
 </div>
 
-<div class="project-content">
+<div class="portfolio-content">
 
-<div class="project-badge">
-⭐ SERVIÇO EM DESTAQUE
-</div>
-
-<span>
-Projetos demonstrativos
-</span>
-
-<h3>
-<strong>CVs Profissionais</strong>
-</h3>
+<h3>CVs Profissionais</h3>
 
 <p>
-Três modelos de currículos profissionais
-criados para diferentes áreas de atuação.
+Exemplos de modelos de currículos profissionais.
 </p>
 
-<div class="project-info">
-
-<strong>
-O que desenvolvemos:
-</strong>
-
-<span>
-CVs modernos, organizados e preparados
-para apresentação profissional.
-</span>
-
-<strong>
-Ideal para:
-</strong>
-
-<span>
-Candidatos a emprego, estudantes,
-profissionais e pessoas que procuram novas oportunidades.
-</span>
-
-</div>
-
-<div class="cv-links">
-
 <a
-class="project-btn"
 href="CV1.pdf"
 target="_blank"
-rel="noopener">
-CV 1
+class="portfolio-link">
+Ver CV →
 </a>
 
+&nbsp;&nbsp;
+
 <a
-class="project-btn"
 href="CV2.pdf"
 target="_blank"
-rel="noopener">
-CV 2
+class="portfolio-link">
+CV 2 →
 </a>
 
+&nbsp;&nbsp;
+
 <a
-class="project-btn"
 href="CV3.pdf"
 target="_blank"
-rel="noopener">
-CV 3
-</a>
-
-</div>
-
-<a
-class="project-btn secondary-project-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20vi%20os%20CVs%20do%20portfólio%20e%20quero%20criar%20o%20meu%20CV."
-target="_blank"
-rel="noopener">
-
-Quero criar o meu CV
-
+class="portfolio-link">
+CV 3 →
 </a>
 
 </div>
@@ -2417,108 +2097,37 @@ Quero criar o meu CV
 </div>
 
 
-<!-- KUDIMA LOGOS -->
+<!-- KUDIMA IDENTIDADE -->
 
-<div class="project featured-project">
+<div class="portfolio-card">
 
-<div class="project-images">
+<div class="portfolio-images">
 
 <img
 src="logo.png"
-alt="Logo KUDIMA CAFÉ"
+alt="KUDIMA CAFÉ identidade visual"
 loading="lazy"
 decoding="async">
 
 <img
 src="logo1.png"
-alt="Logo KUDIMA CAFÉ versão 2"
-loading="lazy"
-decoding="async">
-
-<img
-src="logo2.png"
-alt="Logo KUDIMA CAFÉ versão 3"
+alt="KUDIMA CAFÉ logo"
 loading="lazy"
 decoding="async">
 
 </div>
 
-<div class="project-content">
+<div class="portfolio-content">
 
-<div class="project-badge">
-⭐ PROJETO EM DESTAQUE
-</div>
-
-<span>
-Projeto demonstrativo
-</span>
-
-<h3>
-<strong>KUDIMA CAFÉ — Identidade Visual</strong>
-</h3>
+<h3>KUDIMA CAFÉ</h3>
 
 <p>
-Conceito de identidade visual desenvolvido
-para uma cafeteria fictícia.
+Projeto demonstrativo de identidade visual.
 </p>
 
-<div class="project-info">
-
-<strong>
-O que desenvolvemos:
-</strong>
-
-<span>
-Logotipo e elementos de identidade visual
-para criar uma apresentação mais profissional.
+<span class="portfolio-link">
+Projeto demonstrativo →
 </span>
-
-<strong>
-Ideal para:
-</strong>
-
-<span>
-Cafeterias, restaurantes, lojas, marcas,
-empreendedores e pequenos negócios.
-</span>
-
-</div>
-
-<a
-class="project-btn"
-href="logo.png"
-target="_blank"
-rel="noopener">
-Ver logo
-</a>
-
-<a
-class="project-btn"
-href="logo1.png"
-target="_blank"
-rel="noopener">
-Ver logo 2
-</a>
-
-<a
-class="project-btn"
-href="logo2.png"
-target="_blank"
-rel="noopener">
-Ver logo 3
-</a>
-
-<br>
-
-<a
-class="project-btn secondary-project-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20vi%20o%20projeto%20KUDIMA%20CAFÉ%20e%20quero%20uma%20identidade%20visual%20para%20o%20meu%20negócio."
-target="_blank"
-rel="noopener">
-
-Criar para o meu negócio
-
-</a>
 
 </div>
 
@@ -2527,72 +2136,29 @@ Criar para o meu negócio
 
 <!-- KUDIMA FLYER -->
 
-<div class="project">
+<div class="portfolio-card">
 
-<div class="project-top">
+<div class="portfolio-images single">
 
 <img
 src="flayer.png"
-alt="Flyer KUDIMA CAFÉ"
+alt="KUDIMA CAFÉ Flyer"
 loading="lazy"
 decoding="async">
 
 </div>
 
-<div class="project-content">
+<div class="portfolio-content">
 
-<span>
-Projeto demonstrativo
-</span>
-
-<h3>
-<strong>KUDIMA CAFÉ — Flyer Digital</strong>
-</h3>
+<h3>KUDIMA CAFÉ — Flyer</h3>
 
 <p>
-Flyer promocional criado para divulgação
-de uma oferta da cafeteria.
+Exemplo de material digital para divulgação.
 </p>
 
-<div class="project-info">
-
-<strong>
-O que desenvolvemos:
-</strong>
-
-<span>
-Material digital preparado para divulgação
-de produtos, serviços e promoções.
+<span class="portfolio-link">
+Projeto demonstrativo →
 </span>
-
-<strong>
-Ideal para:
-</strong>
-
-<span>
-Negócios, lojas, restaurantes, eventos
-e campanhas promocionais.
-</span>
-
-</div>
-
-<a
-class="project-btn"
-href="flayer.png"
-target="_blank"
-rel="noopener">
-Ver flyer
-</a>
-
-<a
-class="project-btn secondary-project-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20vi%20o%20Flyer%20da%20KUDIMA%20CAFÉ%20e%20quero%20um%20Flyer%20para%20o%20meu%20negócio."
-target="_blank"
-rel="noopener">
-
-Quero um flyer
-
-</a>
 
 </div>
 
@@ -2601,149 +2167,65 @@ Quero um flyer
 
 <!-- KUDIMA CARTÃO -->
 
-<div class="project">
+<div class="portfolio-card">
 
-<div class="project-images">
-
-<img
-src="cartão1.png"
-alt="Cartão KUDIMA CAFÉ"
-loading="lazy"
-decoding="async">
+<div class="portfolio-images">
 
 <img
 src="cartão.png"
-alt="Cartão KUDIMA CAFÉ versão 2"
+alt="KUDIMA CAFÉ cartão digital"
+loading="lazy"
+decoding="async">
+
+<img
+src="cartão1.png"
+alt="KUDIMA CAFÉ cartão"
 loading="lazy"
 decoding="async">
 
 </div>
 
-<div class="project-content">
+<div class="portfolio-content">
 
-<span>
-Projeto demonstrativo
-</span>
-
-<h3>
-<strong>KUDIMA CAFÉ — Cartão Digital</strong>
-</h3>
+<h3>KUDIMA CAFÉ — Cartão</h3>
 
 <p>
-Cartão de visita digital desenvolvido
-para apresentação e contacto com clientes.
+Exemplo de cartão digital para negócio.
 </p>
 
-<div class="project-info">
-
-<strong>
-O que desenvolvemos:
-</strong>
-
-<span>
-Cartão digital profissional para facilitar
-a apresentação e o contacto com clientes.
-</span>
-
-<strong>
-Ideal para:
-</strong>
-
-<span>
-Profissionais, empresas, vendedores,
-empreendedores e pequenos negócios.
+<span class="portfolio-link">
+Projeto demonstrativo →
 </span>
 
 </div>
 
-<a
-class="project-btn"
-href="cartão1.png"
-target="_blank"
-rel="noopener">
-Ver cartão
-</a>
-
-<a
-class="project-btn"
-href="cartão.png"
-target="_blank"
-rel="noopener">
-Ver cartão 2
-</a>
-
-<a
-class="project-btn secondary-project-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20vi%20o%20Cartão%20Digital%20da%20KUDIMA%20CAFÉ%20e%20quero%20um%20cartão%20para%20o%20meu%20negócio."
-target="_blank"
-rel="noopener">
-
-Quero um cartão
-
-</a>
-
-</div>
-
 </div>
 
 
-<!-- PORTFÓLIO PROFISSIONAL -->
+<!-- PORTFÓLIO -->
 
-<div class="project">
+<div class="portfolio-card">
 
-<div class="project-top">
+<div class="portfolio-images single">
 
-<div class="project-emoji">
-💼
+<img
+src="Portfólio%20Digital.jpg"
+alt="Portfólio profissional"
+loading="lazy"
+decoding="async">
+
 </div>
 
-</div>
+<div class="portfolio-content">
 
-<div class="project-content">
-
-<span>
-Projeto demonstrativo
-</span>
-
-<h3>
-<strong>Portfólio Profissional</strong>
-</h3>
+<h3>Portfólio Profissional</h3>
 
 <p>
-Página digital para apresentar trabalhos,
-competências e experiência profissional.
+Estrutura para apresentar trabalhos, competências e serviços.
 </p>
 
-<div class="project-info">
-
-<strong>
-O que desenvolvemos:
-</strong>
-
-<span>
-Portfólio digital organizado para apresentar
-trabalhos, competências e experiência.
-</span>
-
-<strong>
-Ideal para:
-</strong>
-
-<span>
-Designers, fotógrafos, técnicos, freelancers,
-profissionais e empreendedores.
-</span>
-
-</div>
-
-<a
-class="project-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20criar%20um%20Portfólio%20Profissional."
-target="_blank"
-rel="noopener">
-
-Quero um portfólio
-
+<a href="#contacto" class="portfolio-link">
+Solicitar projeto →
 </a>
 
 </div>
@@ -2753,265 +2235,407 @@ Quero um portfólio
 
 <!-- PRESENÇA DIGITAL -->
 
-<div class="project">
+<div class="portfolio-card">
 
-<div class="project-top">
+<div class="portfolio-images single">
 
-<div class="project-emoji">
-🚀
+<img
+src="Presença%20Digital.jpg"
+alt="Presença digital"
+loading="lazy"
+decoding="async">
+
 </div>
 
-</div>
+<div class="portfolio-content">
 
-<div class="project-content">
-
-<span>
-Serviço
-</span>
-
-<h3>
-<strong>Presença Digital</strong>
-</h3>
+<h3>Presença Digital</h3>
 
 <p>
-Organização da presença digital de profissionais,
-marcas e pequenos negócios.
+Soluções para melhorar a apresentação online.
 </p>
 
-<div class="project-info">
-
-<strong>
-O que desenvolvemos:
-</strong>
-
-<span>
-Estratégia e organização dos principais elementos
-da presença digital de uma marca ou profissional.
-</span>
-
-<strong>
-Ideal para:
-</strong>
-
-<span>
-Profissionais, marcas e pequenos negócios
-que querem começar ou melhorar a sua presença online.
-</span>
-
-</div>
-
-<a
-class="project-btn"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20melhorar%20a%20Presença%20Digital%20do%20meu%20negócio."
-target="_blank"
-rel="noopener">
-
-Melhorar minha presença digital
-
+<a href="#contacto" class="portfolio-link">
+Solicitar projeto →
 </a>
 
 </div>
 
 </div>
 
+</div>
 
 </div>
 
 </section>
 
 
-<!-- =====================================================
-     PROCESSO
-===================================================== -->
+<!-- PORQUÊ -->
 
-<section id="processo">
+<section class="why">
 
-<div class="section-title">
+<div class="container">
 
-<h2>
-<strong>Como funciona</strong>
-</h2>
+<div class="section-header">
+
+<div class="section-label">Porquê nós</div>
+
+<h2>Mais do que criar. Procuramos resolver.</h2>
 
 <p>
-Um processo simples, claro e profissional.
+O nosso foco é entender a necessidade antes de propor uma solução.
 </p>
 
 </div>
 
 
-<div class="process">
+<div class="why-grid">
 
+<div class="why-card">
 
-<div class="step">
+<div class="why-number">01</div>
 
-<div class="number">
-1
-</div>
-
-<h3>
-<strong>Conte-nos a ideia</strong>
-</h3>
+<h3>Entendemos a necessidade</h3>
 
 <p>
-Explique o que precisa.
+Antes de desenvolver, procuramos perceber o objetivo do projeto.
 </p>
 
 </div>
 
 
-<div class="step">
+<div class="why-card">
 
-<div class="number">
-2
-</div>
+<div class="why-number">02</div>
 
-<h3>
-<strong>Analisamos</strong>
-</h3>
+<h3>Propomos soluções</h3>
 
 <p>
-Entendemos a sua necessidade.
+Apresentamos uma solução adequada à necessidade identificada.
 </p>
 
 </div>
 
 
-<div class="step">
+<div class="why-card">
 
-<div class="number">
-3
-</div>
+<div class="why-number">03</div>
 
-<h3>
-<strong>Propomos</strong>
-</h3>
+<h3>Trabalhamos com clareza</h3>
 
 <p>
-Apresentamos uma solução.
+Procuramos manter preços e etapas claros durante o projeto.
 </p>
 
 </div>
 
 
-<div class="step">
+<div class="why-card">
 
-<div class="number">
-4
-</div>
+<div class="why-number">04</div>
 
-<h3>
-<strong>Desenvolvemos</strong>
-</h3>
+<h3>Entregamos com cuidado</h3>
 
 <p>
-Criamos o projeto.
+O objetivo é entregar um resultado funcional e apresentável.
 </p>
 
 </div>
 
-
-<div class="step">
-
-<div class="number">
-5
 </div>
-
-<h3>
-<strong>Entregamos</strong>
-</h3>
-
-<p>
-Apresentamos o resultado final.
-</p>
-
-</div>
-
 
 </div>
 
 </section>
 
 
-<!-- =====================================================
-     CONTACTO
-===================================================== -->
+<!-- PROCESSO -->
 
-<section class="contact" id="contacto">
+<section class="process" id="processo">
 
-<div class="section-title">
+<div class="container">
 
-<h2>
-<strong>Tem uma ideia?</strong>
-</h2>
+<div class="section-header">
+
+<div class="section-label">Como funciona</div>
+
+<h2>Do pedido à entrega</h2>
 
 <p>
-Conte-nos o que precisa e vamos analisar como podemos
-transformar a sua ideia numa solução digital.
+Um processo simples para transformar a sua ideia numa solução.
 </p>
 
 </div>
 
 
-<div class="contact-buttons">
-
-<a
-class="btn btn-primary"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20uma%20ideia%20e%20gostaria%20de%20saber%20como%20podem%20ajudar."
-target="_blank"
-rel="noopener">
-
-💬 Solicitar uma solução
-
-</a>
+<div class="process-grid">
 
 
-<a
-class="btn btn-secondary"
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20gostaria%20de%20receber%20um%20orçamento."
-target="_blank"
-rel="noopener">
+<div class="step">
 
-Solicitar orçamento
+<div class="step-number">1</div>
 
-</a>
+<h3>Conte-nos a ideia</h3>
+
+<p>Explique-nos o que precisa.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">2</div>
+
+<h3>Analisamos</h3>
+
+<p>Procuramos compreender o objetivo.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">3</div>
+
+<h3>Propomos</h3>
+
+<p>Apresentamos a solução adequada.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">4</div>
+
+<h3>Desenvolvemos</h3>
+
+<p>Trabalhamos na criação do projeto.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">5</div>
+
+<h3>Entregamos</h3>
+
+<p>Entregamos a solução final.</p>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- =====================================================
-     WHATSAPP FLUTUANTE
-===================================================== -->
+<!-- CONTACTO -->
 
-<a
-href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços."
-class="whatsapp-float"
-target="_blank"
-rel="noopener"
-aria-label="Falar connosco pelo WhatsApp">
+<section id="contacto">
 
-💬
+<div class="container">
 
-</a>
+<div class="section-header">
 
+<div class="section-label">Contacto</div>
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
+<h2>Tem uma ideia? Vamos conversar.</h2>
 
 <p>
-© 2026 <strong>Fely e Amigos — Soluções Digitais.</strong>
+Explique-nos o que pretende criar e analisaremos a melhor solução.
 </p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card primary">
+
+<h3>Fale connosco pelo WhatsApp</h3>
+
+<p>
+É a forma mais rápida de solicitar informações, orçamento
+ou iniciar um projeto.
+</p>
+
+<a
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20vim%20pelo%20site%20e%20quero%20saber%20mais."
+target="_blank"
+class="btn"
+style="background:#25D366;color:#fff;">
+Falar no WhatsApp
+</a>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>Informações</h3>
+
+<div class="contact-info">
+
+<div class="contact-item">
+<strong>WhatsApp</strong>
+<span>+244 948 138 785</span>
+</div>
+
+<div class="contact-item">
+<strong>Atendimento</strong>
+<span>Segunda a sexta: 08h00–18h00</span>
+</div>
+
+<div class="contact-item">
+<strong>Sábado</strong>
+<span>08h00–13h00</span>
+</div>
+
+<div class="contact-item">
+<strong>Área de atuação</strong>
+<span>Soluções digitais e presença online</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div class="footer-brand">
+
+<h3>Fely e Amigos</h3>
+
+<p>
+Soluções digitais para profissionais, estudantes,
+empreendedores e pequenos negócios.
+</p>
+
+<br>
 
 <p>
 <strong>Transformar ideias em soluções digitais.</strong>
 </p>
 
+</div>
+
+
+<div>
+
+<h3>Navegação</h3>
+
+<ul class="footer-links">
+
+<li><a href="#inicio">Início</a></li>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#servicos">Serviços</a></li>
+<li><a href="#precos">Preços</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>Projetos</h3>
+
+<ul class="footer-links">
+
+<li><a href="#portfolio">Portfólio</a></li>
+<li><a href="#processo">Como funciona</a></li>
+<li><a href="#contacto">Contacto</a></li>
+
+<li>
+<a
+href="https://felicidadedias.github.io/fely-e-amigos/"
+target="_blank">
+Fely e Amigos Educação
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>Contacto</h3>
+
+<ul class="footer-links">
+
+<li>
+<a
+href="https://wa.me/244948138785"
+target="_blank">
+WhatsApp
+</a>
+</li>
+
+<li>
+<a href="#precos">Ver preços</a>
+</li>
+
+<li>
+<a href="#portfolio">Ver portfólio</a>
+</li>
+
+<li>
+<a href="#contacto">Solicitar orçamento</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>
+© 2026 Fely e Amigos — Soluções Digitais
+</span>
+
+<span>
+Transformar ideias em soluções digitais.
+</span>
+
+</div>
+
+</div>
+
 </footer>
 
+
+<!-- WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20vim%20pelo%20site%20e%20quero%20saber%20mais."
+target="_blank"
+aria-label="Falar com Fely e Amigos pelo WhatsApp">
+☎
+</a>
 
 </body>
 </html>
