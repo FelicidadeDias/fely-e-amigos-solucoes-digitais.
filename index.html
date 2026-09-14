@@ -7,11 +7,16 @@
 <title>Fely e Amigos | Soluções Digitais</title>
 
 <meta name="description" content="Fely e Amigos — Soluções Digitais. Websites, CVs profissionais, identidade visual, cardápios digitais, materiais digitais, portfólios e presença online.">
+<meta name="theme-color" content="#071523">
+
+<!-- Prioridade máxima para o visual principal -->
+<link rel="preload" as="image" href="Websites.jpg" fetchpriority="high">
 
 <style>
 :root{
   --primary:#1769aa;
   --primary-dark:#0b4777;
+  --accent:#62b6ff;
   --navy:#071523;
   --navy2:#12263f;
   --light:#f5f8fc;
@@ -33,6 +38,7 @@
 
 html{
   scroll-behavior:smooth;
+  scroll-padding-top:85px;
 }
 
 body{
@@ -40,6 +46,7 @@ body{
   background:var(--light);
   color:var(--text);
   line-height:1.6;
+  overflow-x:hidden;
 }
 
 img{
@@ -63,6 +70,8 @@ button{
 
 section{
   padding:85px 0;
+  content-visibility:auto;
+  contain-intrinsic-size:700px;
 }
 
 .section-head{
@@ -85,6 +94,7 @@ section{
   font-size:clamp(30px,4vw,46px);
   line-height:1.1;
   margin-bottom:15px;
+  letter-spacing:-1px;
 }
 
 .section-head p{
@@ -92,7 +102,10 @@ section{
   font-size:17px;
 }
 
-/* TOPBAR */
+/* =========================
+   TOPBAR
+========================= */
+
 .topbar{
   background:var(--navy);
   color:#fff;
@@ -110,16 +123,25 @@ section{
 .topbar a{
   color:#fff;
   opacity:.9;
+  transition:.2s;
 }
 
-/* HEADER */
+.topbar a:hover{
+  opacity:1;
+  color:var(--accent);
+}
+
+/* =========================
+   HEADER
+========================= */
+
 header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(255,255,255,.96);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(226,232,240,.8);
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid rgba(226,232,240,.85);
+  box-shadow:0 3px 20px rgba(15,35,60,.04);
 }
 
 .nav{
@@ -141,12 +163,14 @@ header{
   width:52px;
   height:52px;
   object-fit:contain;
+  flex:none;
 }
 
 .brand-text strong{
   display:block;
   color:var(--navy);
   font-size:18px;
+  line-height:1.2;
 }
 
 .brand-text small{
@@ -161,10 +185,26 @@ header{
 }
 
 .nav-links a{
+  position:relative;
   font-size:14px;
   font-weight:700;
   color:#334155;
   transition:.25s;
+}
+
+.nav-links a:not(.nav-cta)::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-7px;
+  width:0;
+  height:2px;
+  background:var(--primary);
+  transition:.25s;
+}
+
+.nav-links a:not(.nav-cta):hover::after{
+  width:100%;
 }
 
 .nav-links a:hover{
@@ -176,24 +216,65 @@ header{
   color:#fff!important;
   padding:11px 17px;
   border-radius:999px;
+  box-shadow:0 7px 18px rgba(23,105,170,.22);
 }
 
-/* HERO */
+.nav-cta:hover{
+  transform:translateY(-2px);
+}
+
+/* =========================
+   HERO
+========================= */
+
 .hero{
   min-height:650px;
   display:flex;
   align-items:center;
   position:relative;
-  background:
-    linear-gradient(90deg,
-    rgba(7,21,35,.96),
-    rgba(7,21,35,.78),
-    rgba(7,21,35,.32)),
-    url("Websites.jpg") center/cover no-repeat;
+  overflow:hidden;
   color:#fff;
+  background:var(--navy);
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7,21,35,.97),
+      rgba(7,21,35,.78),
+      rgba(7,21,35,.30)
+    );
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  width:450px;
+  height:450px;
+  right:-180px;
+  top:-160px;
+  border-radius:50%;
+  background:rgba(98,182,255,.12);
+  filter:blur(10px);
+  pointer-events:none;
 }
 
 .hero-content{
+  position:relative;
+  z-index:2;
   max-width:780px;
   padding:70px 0;
 }
@@ -203,7 +284,6 @@ header{
   padding:8px 14px;
   border:1px solid rgba(255,255,255,.25);
   background:rgba(255,255,255,.10);
-  backdrop-filter:blur(10px);
   border-radius:999px;
   font-size:13px;
   font-weight:700;
@@ -214,11 +294,11 @@ header{
   font-size:clamp(42px,7vw,76px);
   line-height:.98;
   margin-bottom:24px;
-  letter-spacing:-2px;
+  letter-spacing:-2.5px;
 }
 
 .hero h1 span{
-  color:#62b6ff;
+  color:var(--accent);
 }
 
 .hero p{
@@ -243,7 +323,7 @@ header{
   border-radius:12px;
   font-weight:800;
   border:1px solid transparent;
-  transition:.25s;
+  transition:transform .2s,box-shadow .2s,background .2s;
 }
 
 .btn:hover{
@@ -253,11 +333,13 @@ header{
 .btn-primary{
   background:var(--primary);
   color:#fff;
+  box-shadow:0 10px 25px rgba(23,105,170,.25);
 }
 
 .btn-green{
   background:var(--green);
   color:#073b20;
+  box-shadow:0 10px 25px rgba(37,211,102,.16);
 }
 
 .btn-light{
@@ -271,11 +353,20 @@ header{
   background:rgba(255,255,255,.06);
 }
 
-/* VISUAL CARDS */
-.visual-grid{
+/* =========================
+   QUICK ACCESS
+========================= */
+
+.quick{
+  margin-top:-55px;
+  position:relative;
+  z-index:5;
+}
+
+.quick-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
 }
 
 .visual-card{
@@ -286,7 +377,7 @@ header{
   isolation:isolate;
   box-shadow:var(--shadow);
   background:#172033;
-  transition:.35s ease;
+  transition:transform .3s ease,box-shadow .3s ease;
 }
 
 .visual-card:hover{
@@ -301,7 +392,7 @@ header{
   height:100%;
   object-fit:cover;
   z-index:-2;
-  transition:.5s ease;
+  transition:transform .5s ease;
 }
 
 .visual-card:hover img{
@@ -357,35 +448,10 @@ header{
   margin-top:9px;
 }
 
-/* QUICK ACCESS */
-.quick{
-  margin-top:-55px;
-  position:relative;
-  z-index:5;
-}
+/* =========================
+   ABOUT
+========================= */
 
-.quick-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
-}
-
-.quick .visual-card{
-  min-height:190px;
-  border-radius:18px;
-}
-
-.quick .visual-content{
-  left:18px;
-  right:18px;
-  bottom:17px;
-}
-
-.quick .visual-content h3{
-  font-size:19px;
-}
-
-/* ABOUT */
 .about{
   background:#fff;
 }
@@ -402,14 +468,32 @@ header{
   min-height:500px;
   border-radius:28px;
   overflow:hidden;
-  background:
-    linear-gradient(180deg,rgba(7,21,35,.1),rgba(7,21,35,.9)),
-    url("Presença Digital.jpg") center/cover no-repeat;
+  background:#12263f;
   box-shadow:var(--shadow2);
+}
+
+.about-visual img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.about-visual::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(7,21,35,.08),
+    rgba(7,21,35,.90)
+  );
 }
 
 .about-visual-content{
   position:absolute;
+  z-index:2;
   left:30px;
   right:30px;
   bottom:30px;
@@ -438,6 +522,7 @@ header{
   font-size:clamp(32px,4vw,48px);
   line-height:1.08;
   margin:10px 0 18px;
+  letter-spacing:-1px;
 }
 
 .about-text p{
@@ -461,6 +546,10 @@ header{
   color:var(--navy);
 }
 
+.check span{
+  color:var(--muted);
+}
+
 .check-icon{
   width:25px;
   height:25px;
@@ -473,7 +562,10 @@ header{
   flex:none;
 }
 
-/* DESTAQUES */
+/* =========================
+   DESTAQUES
+========================= */
+
 .highlights{
   background:var(--navy);
   color:#fff;
@@ -484,10 +576,13 @@ header{
 }
 
 .highlights .section-head span{
-  color:#62b6ff;
+  color:var(--accent);
 }
 
-/* SERVICES */
+/* =========================
+   SERVICES
+========================= */
+
 .services{
   background:#fff;
 }
@@ -506,7 +601,7 @@ header{
   box-shadow:var(--shadow);
   background:#111827;
   isolation:isolate;
-  transition:.35s;
+  transition:transform .3s,box-shadow .3s;
 }
 
 .service-card:hover{
@@ -521,7 +616,7 @@ header{
   height:100%;
   object-fit:cover;
   z-index:-2;
-  transition:.5s;
+  transition:transform .5s;
 }
 
 .service-card:hover img{
@@ -533,13 +628,12 @@ header{
   position:absolute;
   inset:0;
   z-index:-1;
-  background:
-    linear-gradient(
-      to top,
-      rgba(5,15,28,.98),
-      rgba(5,15,28,.70) 50%,
-      rgba(5,15,28,.08)
-    );
+  background:linear-gradient(
+    to top,
+    rgba(5,15,28,.98),
+    rgba(5,15,28,.70) 50%,
+    rgba(5,15,28,.08)
+  );
 }
 
 .service-content{
@@ -573,7 +667,10 @@ header{
   font-size:14px;
 }
 
-/* PRICES */
+/* =========================
+   PRICES
+========================= */
+
 .prices{
   background:var(--light);
 }
@@ -592,7 +689,7 @@ header{
   box-shadow:var(--shadow);
   background:#172033;
   isolation:isolate;
-  transition:.35s;
+  transition:transform .3s,box-shadow .3s;
 }
 
 .price-card:hover{
@@ -607,7 +704,7 @@ header{
   height:100%;
   object-fit:cover;
   z-index:-2;
-  transition:.5s;
+  transition:transform .5s;
 }
 
 .price-card:hover img{
@@ -619,13 +716,12 @@ header{
   position:absolute;
   inset:0;
   z-index:-1;
-  background:
-    linear-gradient(
-      to top,
-      rgba(4,12,22,.98) 5%,
-      rgba(4,12,22,.82) 48%,
-      rgba(4,12,22,.15)
-    );
+  background:linear-gradient(
+    to top,
+    rgba(4,12,22,.98) 5%,
+    rgba(4,12,22,.82) 48%,
+    rgba(4,12,22,.15)
+  );
 }
 
 .price-content{
@@ -662,9 +758,17 @@ header{
   border-radius:10px;
   font-size:12px;
   font-weight:900;
+  transition:.2s;
 }
 
-/* PACKAGES */
+.price-btn:hover{
+  background:var(--accent);
+}
+
+/* =========================
+   PACKAGES
+========================= */
+
 .packages{
   background:#fff;
 }
@@ -683,7 +787,7 @@ header{
   color:#fff;
   isolation:isolate;
   box-shadow:var(--shadow);
-  transition:.35s;
+  transition:transform .3s,box-shadow .3s;
 }
 
 .package-card:hover{
@@ -698,7 +802,7 @@ header{
   height:100%;
   object-fit:cover;
   z-index:-2;
-  transition:.5s;
+  transition:transform .5s;
 }
 
 .package-card:hover img{
@@ -769,9 +873,17 @@ header{
   color:var(--navy);
   font-size:12px;
   font-weight:900;
+  transition:.2s;
 }
 
-/* PORTFOLIO */
+.package-btn:hover{
+  background:var(--accent);
+}
+
+/* =========================
+   PORTFOLIO
+========================= */
+
 .portfolio{
   background:var(--navy);
   color:#fff;
@@ -798,7 +910,7 @@ header{
   overflow:hidden;
   isolation:isolate;
   box-shadow:0 12px 35px rgba(0,0,0,.25);
-  transition:.35s;
+  transition:transform .3s;
 }
 
 .portfolio-card:hover{
@@ -812,7 +924,7 @@ header{
   height:100%;
   object-fit:cover;
   z-index:-2;
-  transition:.5s;
+  transition:transform .5s;
 }
 
 .portfolio-card:hover img{
@@ -865,9 +977,17 @@ header{
   color:#fff;
   font-weight:800;
   font-size:13px;
+  transition:.2s;
 }
 
-/* WHY */
+.portfolio-link:hover{
+  color:var(--accent);
+}
+
+/* =========================
+   WHY
+========================= */
+
 .why{
   background:#fff;
 }
@@ -883,15 +1003,33 @@ header{
   min-height:500px;
   border-radius:26px;
   overflow:hidden;
-  background:
-    linear-gradient(to top,rgba(4,12,22,.95),rgba(4,12,22,.15)),
-    url("Soluções Personalizadas.jpg") center/cover no-repeat;
+  background:#12263f;
   color:#fff;
   box-shadow:var(--shadow2);
 }
 
+.why-main img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.why-main::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(4,12,22,.95),
+    rgba(4,12,22,.15)
+  );
+}
+
 .why-main-content{
   position:absolute;
+  z-index:2;
   left:30px;
   right:30px;
   bottom:30px;
@@ -943,7 +1081,11 @@ header{
   position:absolute;
   inset:0;
   z-index:-1;
-  background:linear-gradient(to top,rgba(4,12,22,.95),rgba(4,12,22,.25));
+  background:linear-gradient(
+    to top,
+    rgba(4,12,22,.95),
+    rgba(4,12,22,.25)
+  );
 }
 
 .why-item-content{
@@ -963,7 +1105,10 @@ header{
   color:#dbe5ef;
 }
 
-/* PROCESS */
+/* =========================
+   PROCESS
+========================= */
+
 .process{
   background:var(--light);
 }
@@ -982,6 +1127,11 @@ header{
   color:#fff;
   isolation:isolate;
   box-shadow:var(--shadow);
+  transition:transform .3s;
+}
+
+.process-card:hover{
+  transform:translateY(-5px);
 }
 
 .process-card img{
@@ -998,7 +1148,11 @@ header{
   position:absolute;
   inset:0;
   z-index:-1;
-  background:linear-gradient(to top,rgba(4,12,22,.96),rgba(4,12,22,.18));
+  background:linear-gradient(
+    to top,
+    rgba(4,12,22,.96),
+    rgba(4,12,22,.18)
+  );
 }
 
 .process-content{
@@ -1029,9 +1183,13 @@ header{
   font-size:12px;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
+
 .contact{
   padding:0 0 85px;
+  background:var(--light);
 }
 
 .contact-box{
@@ -1042,13 +1200,33 @@ header{
   color:#fff;
   display:flex;
   align-items:center;
-  background:
-    linear-gradient(90deg,rgba(4,12,22,.97),rgba(4,12,22,.73),rgba(4,12,22,.25)),
-    url("Soluções Personalizadas.jpg") center/cover no-repeat;
+  background:#071523;
   box-shadow:var(--shadow2);
 }
 
+.contact-box img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.contact-box::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    rgba(4,12,22,.97),
+    rgba(4,12,22,.73),
+    rgba(4,12,22,.25)
+  );
+}
+
 .contact-content{
+  position:relative;
+  z-index:2;
   max-width:700px;
   padding:55px;
 }
@@ -1078,7 +1256,10 @@ header{
   gap:12px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
+
 footer{
   background:var(--navy);
   color:#fff;
@@ -1123,6 +1304,14 @@ footer a{
   gap:7px;
 }
 
+.footer-links a{
+  transition:.2s;
+}
+
+.footer-links a:hover{
+  color:#fff;
+}
+
 .footer-bottom{
   padding-top:22px;
   text-align:center;
@@ -1130,7 +1319,10 @@ footer a{
   font-size:12px;
 }
 
-/* WHATSAPP */
+/* =========================
+   WHATSAPP
+========================= */
+
 .whatsapp{
   position:fixed;
   right:20px;
@@ -1145,14 +1337,17 @@ footer a{
   color:#06391f;
   font-size:27px;
   box-shadow:0 10px 30px rgba(0,0,0,.25);
-  transition:.25s;
+  transition:transform .2s;
 }
 
 .whatsapp:hover{
   transform:scale(1.08);
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media(max-width:1050px){
 
   .nav-links{
@@ -1219,6 +1414,7 @@ footer a{
 
   section{
     padding:65px 0;
+    contain-intrinsic-size:600px;
   }
 
   .container{
@@ -1332,6 +1528,24 @@ footer a{
     font-size:39px;
   }
 }
+
+/* =========================
+   REDUZIR MOVIMENTO
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    transition:none!important;
+    animation:none!important;
+  }
+}
 </style>
 </head>
 
@@ -1341,7 +1555,10 @@ footer a{
 <div class="topbar">
   <div class="container topbar-inner">
     <div>Fely e Amigos — Soluções Digitais</div>
-    <a href="https://wa.me/244948138785">Fale connosco pelo WhatsApp</a>
+
+    <a href="https://wa.me/244948138785">
+      Fale connosco pelo WhatsApp
+    </a>
   </div>
 </div>
 
@@ -1349,22 +1566,36 @@ footer a{
 <header>
   <div class="container nav">
 
-    <a href="#inicio" class="brand">
-      <img src="Fa.png" alt="Fely e Amigos">
+    <a href="#inicio" class="brand" aria-label="Fely e Amigos - Início">
+
+      <img
+        src="Fa.png"
+        width="52"
+        height="52"
+        alt="Fely e Amigos"
+        loading="eager"
+        decoding="async">
+
       <div class="brand-text">
         <strong>Fely e Amigos</strong>
         <small>Soluções Digitais</small>
       </div>
+
     </a>
 
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Navegação principal">
+
       <a href="#inicio">Início</a>
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
       <a href="#precos">Preços</a>
       <a href="#portfolio">Portfólio</a>
       <a href="#processo">Processo</a>
-      <a href="#contacto" class="nav-cta">Contactar</a>
+
+      <a href="#contacto" class="nav-cta">
+        Contactar
+      </a>
+
     </nav>
 
   </div>
@@ -1372,7 +1603,22 @@ footer a{
 
 <!-- HERO -->
 <section class="hero" id="inicio">
+
+  <img
+    class="hero-bg"
+    src="Websites.jpg"
+    width="1920"
+    height="1080"
+    alt=""
+    aria-hidden="true"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async">
+
+  <div class="hero-overlay"></div>
+
   <div class="container">
+
     <div class="hero-content">
 
       <div class="hero-badge">
@@ -1391,64 +1637,105 @@ footer a{
       </p>
 
       <div class="hero-buttons">
+
         <a href="#servicos" class="btn btn-primary">
           Ver serviços
         </a>
 
-        <a href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20conhecer%20os%20serviços."
-           class="btn btn-green">
+        <a
+          href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20quero%20conhecer%20os%20serviços."
+          class="btn btn-green">
           WhatsApp
         </a>
 
         <a href="#portfolio" class="btn btn-outline">
           Ver portfólio
         </a>
+
       </div>
 
     </div>
+
   </div>
 </section>
 
 <!-- QUICK ACCESS -->
 <div class="quick">
+
   <div class="container">
 
     <div class="quick-grid">
 
       <a href="#precos" class="visual-card">
-        <img src="Websites.jpg" alt="Websites">
+
+        <img
+          src="Websites.jpg"
+          width="800"
+          height="500"
+          alt="Websites"
+          loading="eager"
+          decoding="async">
+
         <div class="visual-content">
           <span class="visual-tag">Digital</span>
           <h3>Websites</h3>
           <p>Presença profissional na internet.</p>
         </div>
+
       </a>
 
       <a href="#precos" class="visual-card">
-        <img src="CV Profissional.jpg" alt="CV Profissional">
+
+        <img
+          src="CV Profissional.jpg"
+          width="800"
+          height="500"
+          alt="CV Profissional"
+          loading="eager"
+          decoding="async">
+
         <div class="visual-content">
           <span class="visual-tag">Carreira</span>
           <h3>CV Profissional</h3>
           <p>Apresente melhor o seu perfil.</p>
         </div>
+
       </a>
 
       <a href="#portfolio" class="visual-card">
-        <img src="Portfólio Digital.jpg" alt="Portfólio Digital">
+
+        <img
+          src="Portfólio Digital.jpg"
+          width="800"
+          height="500"
+          alt="Portfólio Digital"
+          loading="eager"
+          decoding="async">
+
         <div class="visual-content">
           <span class="visual-tag">Projetos</span>
           <h3>Portfólios</h3>
           <p>Mostre o seu trabalho com impacto.</p>
         </div>
+
       </a>
 
       <a href="#contacto" class="visual-card">
-        <img src="Presença Digital.jpg" alt="Presença Digital">
+
+        <img
+          src="Presença Digital.jpg"
+          width="800"
+          height="500"
+          alt="Presença Digital"
+          loading="lazy"
+          decoding="async">
+
         <div class="visual-content">
           <span class="visual-tag">Negócios</span>
           <h3>Presença Digital</h3>
           <p>Leve a sua marca para o digital.</p>
         </div>
+
       </a>
 
     </div>
@@ -1458,21 +1745,38 @@ footer a{
 
 <!-- SOBRE -->
 <section class="about" id="sobre">
+
   <div class="container">
 
     <div class="about-layout">
 
       <div class="about-visual">
+
+        <img
+          src="Presença Digital.jpg"
+          width="1000"
+          height="800"
+          alt="Presença Digital"
+          loading="lazy"
+          decoding="async">
+
         <div class="about-visual-content">
-          <h3>Ideias simples podem tornar-se grandes soluções.</h3>
+
+          <h3>
+            Ideias simples podem tornar-se grandes soluções.
+          </h3>
+
           <p>
             Criamos recursos digitais pensados para comunicar,
             apresentar e vender melhor.
           </p>
+
         </div>
+
       </div>
 
       <div class="about-text">
+
         <span>Sobre nós</span>
 
         <h2>
@@ -1494,30 +1798,40 @@ footer a{
         <div class="check-list">
 
           <div class="check">
+
             <div class="check-icon">✓</div>
+
             <div>
               <strong>Design profissional</strong><br>
               <span>Apresentação moderna e organizada.</span>
             </div>
+
           </div>
 
           <div class="check">
+
             <div class="check-icon">✓</div>
+
             <div>
               <strong>Soluções acessíveis</strong><br>
               <span>Opções para diferentes necessidades.</span>
             </div>
+
           </div>
 
           <div class="check">
+
             <div class="check-icon">✓</div>
+
             <div>
               <strong>Foco no cliente</strong><br>
               <span>Cada projeto começa pela sua necessidade.</span>
             </div>
+
           </div>
 
         </div>
+
       </div>
 
     </div>
@@ -1527,20 +1841,35 @@ footer a{
 
 <!-- DESTAQUES -->
 <section class="highlights">
+
   <div class="container">
 
     <div class="section-head">
+
       <span>O que fazemos</span>
-      <h2>Recursos digitais para diferentes objetivos.</h2>
+
+      <h2>
+        Recursos digitais para diferentes objetivos.
+      </h2>
+
       <p>
         Desde uma apresentação profissional até uma presença digital completa.
       </p>
+
     </div>
 
     <div class="visual-grid">
 
       <div class="visual-card">
-        <img src="Websites.jpg" alt="Criação de Websites">
+
+        <img
+          src="Websites.jpg"
+          width="800"
+          height="500"
+          alt="Criação de Websites"
+          loading="lazy"
+          decoding="async">
+
         <div class="visual-content">
           <span class="visual-tag">01</span>
           <h3>Websites</h3>
@@ -1549,10 +1878,19 @@ footer a{
             serviços e projetos.
           </p>
         </div>
+
       </div>
 
       <div class="visual-card">
-        <img src="CV Profissional.jpg" alt="CV Profissional">
+
+        <img
+          src="CV Profissional.jpg"
+          width="800"
+          height="500"
+          alt="CV Profissional"
+          loading="lazy"
+          decoding="async">
+
         <div class="visual-content">
           <span class="visual-tag">02</span>
           <h3>Carreira</h3>
@@ -1560,10 +1898,19 @@ footer a{
             CVs profissionais pensados para causar uma boa primeira impressão.
           </p>
         </div>
+
       </div>
 
       <div class="visual-card">
-        <img src="cardápio.png" alt="Cardápio Digital">
+
+        <img
+          src="cardápio.png"
+          width="800"
+          height="500"
+          alt="Cardápio Digital"
+          loading="lazy"
+          decoding="async">
+
         <div class="visual-content">
           <span class="visual-tag">03</span>
           <h3>Cardápios Digitais</h3>
@@ -1571,10 +1918,19 @@ footer a{
             Menus modernos para restaurantes, cafés, pastelarias e negócios.
           </p>
         </div>
+
       </div>
 
       <div class="visual-card">
-        <img src="logotipo.jpg" alt="Logotipo">
+
+        <img
+          src="logotipo.jpg"
+          width="800"
+          height="500"
+          alt="Logotipo"
+          loading="lazy"
+          decoding="async">
+
         <div class="visual-content">
           <span class="visual-tag">04</span>
           <h3>Identidade Visual</h3>
@@ -1582,10 +1938,19 @@ footer a{
             Logotipos e elementos visuais para fortalecer uma marca.
           </p>
         </div>
+
       </div>
 
       <div class="visual-card">
-        <img src="Flyer Digital.jpg" alt="Materiais Digitais">
+
+        <img
+          src="Flyer Digital.jpg"
+          width="800"
+          height="500"
+          alt="Materiais Digitais"
+          loading="lazy"
+          decoding="async">
+
         <div class="visual-content">
           <span class="visual-tag">05</span>
           <h3>Materiais Digitais</h3>
@@ -1593,10 +1958,19 @@ footer a{
             Flyers, cartões e conteúdos visuais para divulgação.
           </p>
         </div>
+
       </div>
 
       <div class="visual-card">
-        <img src="Portfólio Digital.jpg" alt="Portfólio Digital">
+
+        <img
+          src="Portfólio Digital.jpg"
+          width="800"
+          height="500"
+          alt="Portfólio Digital"
+          loading="lazy"
+          decoding="async">
+
         <div class="visual-content">
           <span class="visual-tag">06</span>
           <h3>Portfólios</h3>
@@ -1604,6 +1978,7 @@ footer a{
             Mostre trabalhos, competências, projetos e resultados.
           </p>
         </div>
+
       </div>
 
     </div>
@@ -1613,123 +1988,103 @@ footer a{
 
 <!-- SERVIÇOS -->
 <section class="services" id="servicos">
+
   <div class="container">
 
     <div class="section-head">
+
       <span>Serviços</span>
-      <h2>Escolha a solução que precisa.</h2>
+
+      <h2>
+        Escolha a solução que precisa.
+      </h2>
+
       <p>
         Serviços digitais simples, profissionais e adaptados ao seu objetivo.
       </p>
+
     </div>
 
     <div class="services-grid">
 
       <div class="service-card">
-        <img src="Websites.jpg" alt="Websites">
+        <img src="Websites.jpg" width="900" height="650" alt="Websites" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">01</div>
           <h3>Websites</h3>
-          <p>
-            Sites profissionais para empresas, profissionais,
-            projetos e negócios.
-          </p>
+          <p>Sites profissionais para empresas, profissionais, projetos e negócios.</p>
         </div>
       </div>
 
       <div class="service-card">
-        <img src="CV Profissional.jpg" alt="CV Profissional">
+        <img src="CV Profissional.jpg" width="900" height="650" alt="CV Profissional" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">02</div>
           <h3>CV Profissional</h3>
-          <p>
-            Currículos modernos, organizados e preparados
-            para causar boa impressão.
-          </p>
+          <p>Currículos modernos, organizados e preparados para causar boa impressão.</p>
         </div>
       </div>
 
       <div class="service-card">
-        <img src="logotipo.jpg" alt="Logotipos e Identidade Visual">
+        <img src="logotipo.jpg" width="900" height="650" alt="Logotipos e Identidade Visual" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">03</div>
           <h3>Logos & Identidade</h3>
-          <p>
-            Logotipos e identidade visual para tornar
-            a sua marca reconhecível.
-          </p>
+          <p>Logotipos e identidade visual para tornar a sua marca reconhecível.</p>
         </div>
       </div>
 
       <div class="service-card">
-        <img src="Flyer Digital.jpg" alt="Materiais Digitais">
+        <img src="Flyer Digital.jpg" width="900" height="650" alt="Materiais Digitais" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">04</div>
           <h3>Materiais Digitais</h3>
-          <p>
-            Flyers, cartazes, cartões e materiais
-            para divulgação.
-          </p>
+          <p>Flyers, cartazes, cartões e materiais para divulgação.</p>
         </div>
       </div>
 
       <div class="service-card">
-        <img src="Portfólio Digital.jpg" alt="Portfólios">
+        <img src="Portfólio Digital.jpg" width="900" height="650" alt="Portfólios" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">05</div>
           <h3>Portfólios</h3>
-          <p>
-            Apresente os seus trabalhos e competências
-            de forma profissional.
-          </p>
+          <p>Apresente os seus trabalhos e competências de forma profissional.</p>
         </div>
       </div>
 
       <div class="service-card">
-        <img src="Cartão Digital.jpg" alt="Cartão Digital">
+        <img src="Cartão Digital.jpg" width="900" height="650" alt="Cartão Digital" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">06</div>
           <h3>WhatsApp & Redes</h3>
-          <p>
-            Recursos digitais para facilitar o contacto
-            e divulgação.
-          </p>
+          <p>Recursos digitais para facilitar o contacto e divulgação.</p>
         </div>
       </div>
 
       <div class="service-card">
-        <img src="Presença Digital.jpg" alt="Presença Digital">
+        <img src="Presença Digital.jpg" width="900" height="650" alt="Presença Digital" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">07</div>
           <h3>Presença Digital</h3>
-          <p>
-            Organização da presença online para pessoas
-            e pequenos negócios.
-          </p>
+          <p>Organização da presença online para pessoas e pequenos negócios.</p>
         </div>
       </div>
 
       <div class="service-card">
-        <img src="cardápio.png" alt="Cardápio Digital">
+        <img src="cardápio.png" width="900" height="650" alt="Cardápio Digital" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">08</div>
           <h3>Cardápio Digital</h3>
-          <p>
-            Menus interativos com produtos, preços,
-            carrinho e pedidos pelo WhatsApp.
-          </p>
+          <p>Menus interativos com produtos, preços, carrinho e pedidos pelo WhatsApp.</p>
         </div>
       </div>
 
       <div class="service-card">
-        <img src="Soluções Personalizadas.jpg" alt="Soluções Personalizadas">
+        <img src="Soluções Personalizadas.jpg" width="900" height="650" alt="Soluções Personalizadas" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">09</div>
           <h3>Soluções Personalizadas</h3>
-          <p>
-            Tem uma ideia diferente? Podemos transformar
-            a sua necessidade numa solução digital.
-          </p>
+          <p>Tem uma ideia diferente? Podemos transformar a sua necessidade numa solução digital.</p>
         </div>
       </div>
 
@@ -1740,135 +2095,122 @@ footer a{
 
 <!-- PREÇOS -->
 <section class="prices" id="precos">
+
   <div class="container">
 
     <div class="section-head">
+
       <span>Preços</span>
-      <h2>Soluções com preços claros.</h2>
+
+      <h2>
+        Soluções com preços claros.
+      </h2>
+
       <p>
         Escolha o serviço ideal ou fale connosco para uma solução personalizada.
       </p>
+
     </div>
 
     <div class="prices-grid">
 
       <div class="price-card">
-        <img src="CV Profissional.jpg" alt="CV Profissional">
+        <img src="CV Profissional.jpg" width="900" height="650" alt="CV Profissional" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>CV Profissional</h3>
           <div class="price-value">1.500 Kz</div>
           <p>Currículo profissional e moderno.</p>
-          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20um%20CV%20Profissional%20de%201.500%20Kz.">
-            Solicitar
-          </a>
+          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20um%20CV%20Profissional%20de%201.500%20Kz.">Solicitar</a>
         </div>
       </div>
 
       <div class="price-card">
-        <img src="CV Profissional.jpg" alt="CV e Carta">
+        <img src="CV Profissional.jpg" width="900" height="650" alt="CV e Carta" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>CV + Carta</h3>
           <div class="price-value">3.000 Kz</div>
           <p>CV profissional + carta de apresentação.</p>
-          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20o%20pacote%20CV%20%2B%20Carta%20de%203.000%20Kz.">
-            Solicitar
-          </a>
+          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20o%20pacote%20CV%20%2B%20Carta%20de%203.000%20Kz.">Solicitar</a>
         </div>
       </div>
 
       <div class="price-card">
-        <img src="Flyer Digital.jpg" alt="Flyer Digital">
+        <img src="Flyer Digital.jpg" width="900" height="650" alt="Flyer Digital" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Flyer Digital</h3>
           <div class="price-value">2.000 Kz</div>
           <p>Arte digital para divulgação.</p>
-          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20um%20Flyer%20Digital%20de%202.000%20Kz.">
-            Solicitar
-          </a>
+          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20um%20Flyer%20Digital%20de%202.000%20Kz.">Solicitar</a>
         </div>
       </div>
 
       <div class="price-card">
-        <img src="Cartão Digital.jpg" alt="Cartão Digital">
+        <img src="Cartão Digital.jpg" width="900" height="650" alt="Cartão Digital" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Cartão Digital</h3>
           <div class="price-value">2.000 Kz</div>
           <p>Cartão digital para contactos e divulgação.</p>
-          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20um%20Cartão%20Digital%20de%202.000%20Kz.">
-            Solicitar
-          </a>
+          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20um%20Cartão%20Digital%20de%202.000%20Kz.">Solicitar</a>
         </div>
       </div>
 
       <div class="price-card">
-        <img src="logotipo.jpg" alt="Logotipo">
+        <img src="logotipo.jpg" width="900" height="650" alt="Logotipo" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Logotipo</h3>
           <div class="price-value">3.000 Kz</div>
           <p>Logotipo personalizado para a sua marca.</p>
-          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20um%20Logotipo%20de%203.000%20Kz.">
-            Solicitar
-          </a>
+          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20um%20Logotipo%20de%203.000%20Kz.">Solicitar</a>
         </div>
       </div>
 
       <div class="price-card">
-        <img src="logotipo.jpg" alt="Logo e Identidade">
+        <img src="logotipo.jpg" width="900" height="650" alt="Logo e Identidade" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Logo + Identidade</h3>
           <div class="price-value">7.000 Kz</div>
           <p>Logo + elementos básicos de identidade visual.</p>
-          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20Logo%20%2B%20Identidade%20de%207.000%20Kz.">
-            Solicitar
-          </a>
+          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20Logo%20%2B%20Identidade%20de%207.000%20Kz.">Solicitar</a>
         </div>
       </div>
 
       <div class="price-card">
-        <img src="Portfólio Digital.jpg" alt="Portfólio Digital">
+        <img src="Portfólio Digital.jpg" width="900" height="650" alt="Portfólio Digital" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Portfólio Digital</h3>
           <div class="price-value">22.500 Kz</div>
           <p>Apresente os seus trabalhos online.</p>
-          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20um%20Portfólio%20Digital%20de%2022.500%20Kz.">
-            Solicitar
-          </a>
+          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20um%20Portfólio%20Digital%20de%2022.500%20Kz.">Solicitar</a>
         </div>
       </div>
 
       <div class="price-card">
-        <img src="Websites.jpg" alt="Website Start">
+        <img src="Websites.jpg" width="900" height="650" alt="Website Start" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Website Start</h3>
           <div class="price-value">30.000 Kz</div>
           <p>Website profissional para começar online.</p>
-          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20o%20Website%20Start%20de%2030.000%20Kz.">
-            Solicitar
-          </a>
+          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20o%20Website%20Start%20de%2030.000%20Kz.">Solicitar</a>
         </div>
       </div>
 
       <div class="price-card">
-        <img src="Presença Digital.jpg" alt="Website Pro">
+        <img src="Presença Digital.jpg" width="900" height="650" alt="Website Pro" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Website Pro</h3>
           <div class="price-value">50.000 Kz</div>
           <p>Website mais completo e profissional.</p>
-          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20o%20Website%20Pro%20de%2050.000%20Kz.">
-            Solicitar
-          </a>
+          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20o%20Website%20Pro%20de%2050.000%20Kz.">Solicitar</a>
         </div>
       </div>
 
       <div class="price-card">
-        <img src="Soluções Personalizadas.jpg" alt="Website Business">
+        <img src="Soluções Personalizadas.jpg" width="900" height="650" alt="Website Business" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Website Business</h3>
           <div class="price-value">90.000 Kz+</div>
           <p>Projetos empresariais e soluções personalizadas.</p>
-          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20informações%20sobre%20o%20Website%20Business.">
-            Solicitar
-          </a>
+          <a class="price-btn" href="https://wa.me/244948138785?text=Olá,%20quero%20informações%20sobre%20o%20Website%20Business.">Solicitar</a>
         </div>
       </div>
 
@@ -1879,24 +2221,40 @@ footer a{
 
 <!-- PACOTES -->
 <section class="packages">
+
   <div class="container">
 
     <div class="section-head">
+
       <span>Pacotes</span>
-      <h2>Comece com uma solução completa.</h2>
+
+      <h2>
+        Comece com uma solução completa.
+      </h2>
+
       <p>
         Pacotes pensados para quem precisa de mais do que um único serviço.
       </p>
+
     </div>
 
     <div class="package-grid">
 
       <div class="package-card">
-        <img src="CV Profissional.jpg" alt="Pacote Profissional">
+
+        <img src="CV Profissional.jpg" width="1000" height="800" alt="Pacote Profissional" loading="lazy" decoding="async">
+
         <div class="package-content">
-          <span class="package-label">Para profissionais</span>
+
+          <span class="package-label">
+            Para profissionais
+          </span>
+
           <h3>Profissional</h3>
-          <div class="package-price">7.000 Kz</div>
+
+          <div class="package-price">
+            7.000 Kz
+          </div>
 
           <ul>
             <li>CV Profissional</li>
@@ -1905,19 +2263,31 @@ footer a{
             <li>Material profissional</li>
           </ul>
 
-          <a class="package-btn"
-             href="https://wa.me/244948138785?text=Olá,%20quero%20o%20Pacote%20Profissional%20de%207.000%20Kz.">
+          <a
+            class="package-btn"
+            href="https://wa.me/244948138785?text=Olá,%20quero%20o%20Pacote%20Profissional%20de%207.000%20Kz.">
             Quero este pacote
           </a>
+
         </div>
+
       </div>
 
       <div class="package-card">
-        <img src="logotipo.jpg" alt="Pacote Negócio">
+
+        <img src="logotipo.jpg" width="1000" height="800" alt="Pacote Negócio" loading="lazy" decoding="async">
+
         <div class="package-content">
-          <span class="package-label">Para pequenos negócios</span>
+
+          <span class="package-label">
+            Para pequenos negócios
+          </span>
+
           <h3>Negócio</h3>
-          <div class="package-price">15.000 Kz</div>
+
+          <div class="package-price">
+            15.000 Kz
+          </div>
 
           <ul>
             <li>Logotipo</li>
@@ -1926,19 +2296,31 @@ footer a{
             <li>Cartão Digital</li>
           </ul>
 
-          <a class="package-btn"
-             href="https://wa.me/244948138785?text=Olá,%20quero%20o%20Pacote%20Negócio%20de%2015.000%20Kz.">
+          <a
+            class="package-btn"
+            href="https://wa.me/244948138785?text=Olá,%20quero%20o%20Pacote%20Negócio%20de%2015.000%20Kz.">
             Quero este pacote
           </a>
+
         </div>
+
       </div>
 
       <div class="package-card">
-        <img src="Presença Digital.jpg" alt="Pacote Presença Digital">
+
+        <img src="Presença Digital.jpg" width="1000" height="800" alt="Pacote Presença Digital" loading="lazy" decoding="async">
+
         <div class="package-content">
-          <span class="package-label">Para quem quer crescer online</span>
+
+          <span class="package-label">
+            Para quem quer crescer online
+          </span>
+
           <h3>Presença Digital</h3>
-          <div class="package-price">50.000 Kz</div>
+
+          <div class="package-price">
+            50.000 Kz
+          </div>
 
           <ul>
             <li>Website profissional</li>
@@ -1947,11 +2329,14 @@ footer a{
             <li>Integração com WhatsApp</li>
           </ul>
 
-          <a class="package-btn"
-             href="https://wa.me/244948138785?text=Olá,%20quero%20o%20Pacote%20Presença%20Digital%20de%2050.000%20Kz.">
+          <a
+            class="package-btn"
+            href="https://wa.me/244948138785?text=Olá,%20quero%20o%20Pacote%20Presença%20Digital%20de%2050.000%20Kz.">
             Quero este pacote
           </a>
+
         </div>
+
       </div>
 
     </div>
@@ -1961,107 +2346,142 @@ footer a{
 
 <!-- PORTFÓLIO -->
 <section class="portfolio" id="portfolio">
+
   <div class="container">
 
     <div class="section-head">
+
       <span>Portfólio</span>
-      <h2>Alguns dos nossos projetos.</h2>
+
+      <h2>
+        Alguns dos nossos projetos.
+      </h2>
+
       <p>
         Projetos criados para transformar ideias em apresentações digitais.
       </p>
+
     </div>
 
     <div class="portfolio-grid">
 
       <div class="portfolio-card">
-        <img src="Websites.jpg" alt="Fely e Amigos Educação">
+
+        <img src="Websites.jpg" width="900" height="650" alt="Fely e Amigos Educação" loading="lazy" decoding="async">
+
         <div class="portfolio-content">
           <span>Educação</span>
           <h3>Fely e Amigos</h3>
           <p>Projeto dedicado à educação e aprendizagem.</p>
+
           <a class="portfolio-link"
              href="https://felicidadedias.github.io/fely-e-amigos/">
             Ver projeto →
           </a>
         </div>
+
       </div>
 
       <div class="portfolio-card">
-        <img src="Presença Digital.jpg" alt="Fely e Amigos Soluções Digitais">
+
+        <img src="Presença Digital.jpg" width="900" height="650" alt="Fely e Amigos Soluções Digitais" loading="lazy" decoding="async">
+
         <div class="portfolio-content">
           <span>Serviços</span>
           <h3>Fely e Amigos — Soluções</h3>
           <p>Website para apresentação dos serviços digitais.</p>
+
           <a class="portfolio-link"
              href="https://felicidadedias.github.io/fely-e-amigos-solucoes-digitais./">
             Ver projeto →
           </a>
         </div>
+
       </div>
 
       <div class="portfolio-card">
-        <img src="cardápio.png" alt="KUDIMA Cardápio Digital">
+
+        <img src="cardápio.png" width="900" height="650" alt="KUDIMA Cardápio Digital" loading="lazy" decoding="async">
+
         <div class="portfolio-content">
           <span>Novo projeto</span>
           <h3>KUDIMA Cardápio Digital</h3>
           <p>Menu digital interativo com pedido pelo WhatsApp.</p>
+
           <a class="portfolio-link"
              href="https://felicidadedias.github.io/kudima-cardapio/">
             Ver cardápio →
           </a>
         </div>
+
       </div>
 
       <div class="portfolio-card">
-        <img src="CV Profissional.jpg" alt="CVs Profissionais">
+
+        <img src="CV Profissional.jpg" width="900" height="650" alt="CVs Profissionais" loading="lazy" decoding="async">
+
         <div class="portfolio-content">
           <span>Carreira</span>
           <h3>CVs Profissionais</h3>
           <p>Modelos de currículos profissionais.</p>
+
           <a class="portfolio-link"
              href="CV1.pdf">
             Ver modelo →
           </a>
         </div>
+
       </div>
 
       <div class="portfolio-card">
-        <img src="logotipo.jpg" alt="Identidade Visual KUDIMA">
+
+        <img src="logotipo.jpg" width="900" height="650" alt="Identidade Visual KUDIMA" loading="lazy" decoding="async">
+
         <div class="portfolio-content">
           <span>Marca</span>
           <h3>KUDIMA Café</h3>
           <p>Conceito de identidade visual para negócio.</p>
+
           <a class="portfolio-link"
              href="logo.png">
             Ver projeto →
           </a>
         </div>
+
       </div>
 
       <div class="portfolio-card">
-        <img src="Flyer Digital.jpg" alt="Flyer Digital">
+
+        <img src="Flyer Digital.jpg" width="900" height="650" alt="Flyer Digital" loading="lazy" decoding="async">
+
         <div class="portfolio-content">
           <span>Publicidade</span>
           <h3>Flyer Digital</h3>
           <p>Materiais visuais para divulgação.</p>
+
           <a class="portfolio-link"
              href="flayer.png">
             Ver material →
           </a>
         </div>
+
       </div>
 
       <div class="portfolio-card">
-        <img src="Cartão Digital.jpg" alt="Cartões Digitais">
+
+        <img src="Cartão Digital.jpg" width="900" height="650" alt="Cartões Digitais" loading="lazy" decoding="async">
+
         <div class="portfolio-content">
           <span>Identidade</span>
           <h3>Cartões Digitais</h3>
           <p>Materiais para contacto e divulgação.</p>
+
           <a class="portfolio-link"
              href="cartão.png">
             Ver material →
           </a>
         </div>
+
       </div>
 
     </div>
@@ -2071,62 +2491,117 @@ footer a{
 
 <!-- PORQUE -->
 <section class="why">
+
   <div class="container">
 
     <div class="why-layout">
 
       <div class="why-main">
+
+        <img
+          src="Soluções Personalizadas.jpg"
+          width="1000"
+          height="800"
+          alt="Soluções Personalizadas"
+          loading="lazy"
+          decoding="async">
+
         <div class="why-main-content">
-          <span>Por que Fely e Amigos?</span>
-          <h2>Não vendemos apenas ficheiros.</h2>
+
+          <span>
+            Por que Fely e Amigos?
+          </span>
+
+          <h2>
+            Não vendemos apenas ficheiros.
+          </h2>
+
           <p>
             Criamos ferramentas que ajudam pessoas e negócios
             a comunicar melhor, apresentar melhor e conquistar
             mais oportunidades.
           </p>
+
         </div>
+
       </div>
 
       <div class="why-list">
 
         <div class="why-item">
-          <img src="Websites.jpg" alt="Profissionalismo">
+
+          <img
+            src="Websites.jpg"
+            width="700"
+            height="500"
+            alt="Profissionalismo"
+            loading="lazy"
+            decoding="async">
+
           <div class="why-item-content">
             <h3>Profissionalismo</h3>
             <p>
               Visual moderno e organizado para representar melhor o seu projeto.
             </p>
           </div>
+
         </div>
 
         <div class="why-item">
-          <img src="CV Profissional.jpg" alt="Acessibilidade">
+
+          <img
+            src="CV Profissional.jpg"
+            width="700"
+            height="500"
+            alt="Acessibilidade"
+            loading="lazy"
+            decoding="async">
+
           <div class="why-item-content">
             <h3>Acessibilidade</h3>
             <p>
               Soluções pensadas para diferentes níveis de orçamento.
             </p>
           </div>
+
         </div>
 
         <div class="why-item">
-          <img src="Cartão Digital.jpg" alt="Praticidade">
+
+          <img
+            src="Cartão Digital.jpg"
+            width="700"
+            height="500"
+            alt="Praticidade"
+            loading="lazy"
+            decoding="async">
+
           <div class="why-item-content">
             <h3>Praticidade</h3>
             <p>
               Recursos fáceis de utilizar e partilhar.
             </p>
           </div>
+
         </div>
 
         <div class="why-item">
-          <img src="Soluções Personalizadas.jpg" alt="Personalização">
+
+          <img
+            src="Soluções Personalizadas.jpg"
+            width="700"
+            height="500"
+            alt="Personalização"
+            loading="lazy"
+            decoding="async">
+
           <div class="why-item-content">
             <h3>Personalização</h3>
             <p>
               A solução é adaptada ao objetivo de cada cliente.
             </p>
           </div>
+
         </div>
 
       </div>
@@ -2138,61 +2613,83 @@ footer a{
 
 <!-- PROCESSO -->
 <section class="process" id="processo">
+
   <div class="container">
 
     <div class="section-head">
+
       <span>Como trabalhamos</span>
-      <h2>Do pedido à entrega.</h2>
+
+      <h2>
+        Do pedido à entrega.
+      </h2>
+
       <p>
         Um processo simples para transformar a sua ideia numa solução.
       </p>
+
     </div>
 
     <div class="process-grid">
 
       <div class="process-card">
-        <img src="Websites.jpg" alt="Conte-nos a ideia">
+
+        <img src="Websites.jpg" width="700" height="500" alt="Conte-nos a ideia" loading="lazy" decoding="async">
+
         <div class="process-content">
           <div class="process-number">01</div>
           <h3>Conte-nos a ideia</h3>
           <p>Explique o que precisa e qual é o seu objetivo.</p>
         </div>
+
       </div>
 
       <div class="process-card">
-        <img src="CV Profissional.jpg" alt="Analisamos">
+
+        <img src="CV Profissional.jpg" width="700" height="500" alt="Analisamos" loading="lazy" decoding="async">
+
         <div class="process-content">
           <div class="process-number">02</div>
           <h3>Analisamos</h3>
           <p>Entendemos a necessidade e definimos a melhor solução.</p>
         </div>
+
       </div>
 
       <div class="process-card">
-        <img src="logotipo.jpg" alt="Propomos">
+
+        <img src="logotipo.jpg" width="700" height="500" alt="Propomos" loading="lazy" decoding="async">
+
         <div class="process-content">
           <div class="process-number">03</div>
           <h3>Propomos</h3>
           <p>Apresentamos a proposta e os detalhes do projeto.</p>
         </div>
+
       </div>
 
       <div class="process-card">
-        <img src="Flyer Digital.jpg" alt="Desenvolvemos">
+
+        <img src="Flyer Digital.jpg" width="700" height="500" alt="Desenvolvemos" loading="lazy" decoding="async">
+
         <div class="process-content">
           <div class="process-number">04</div>
           <h3>Desenvolvemos</h3>
           <p>Transformamos a proposta num recurso digital.</p>
         </div>
+
       </div>
 
       <div class="process-card">
-        <img src="Presença Digital.jpg" alt="Entregamos">
+
+        <img src="Presença Digital.jpg" width="700" height="500" alt="Entregamos" loading="lazy" decoding="async">
+
         <div class="process-content">
           <div class="process-number">05</div>
           <h3>Entregamos</h3>
           <p>Receba a sua solução pronta para utilizar.</p>
         </div>
+
       </div>
 
     </div>
@@ -2202,13 +2699,25 @@ footer a{
 
 <!-- CONTACTO -->
 <section class="contact" id="contacto">
+
   <div class="container">
 
     <div class="contact-box">
 
+      <img
+        src="Soluções Personalizadas.jpg"
+        width="1400"
+        height="800"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async">
+
       <div class="contact-content">
 
-        <span>Vamos criar?</span>
+        <span>
+          Vamos criar?
+        </span>
 
         <h2>
           Tem uma ideia?
@@ -2223,8 +2732,9 @@ footer a{
 
         <div class="contact-buttons">
 
-          <a class="btn btn-green"
-             href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20uma%20ideia%20e%20gostaria%20de%20saber%20como%20podem%20ajudar.">
+          <a
+            class="btn btn-green"
+            href="https://wa.me/244948138785?text=Olá%20Fely%20e%20Amigos,%20tenho%20uma%20ideia%20e%20gostaria%20de%20saber%20como%20podem%20ajudar.">
             Falar connosco
           </a>
 
@@ -2249,35 +2759,66 @@ footer a{
     <div class="footer-grid">
 
       <div>
+
         <div class="footer-brand">
-          <img src="Fa.png" alt="Fely e Amigos">
+
+          <img
+            src="Fa.png"
+            width="50"
+            height="50"
+            alt="Fely e Amigos"
+            loading="lazy"
+            decoding="async">
+
           <div>
             <h3>Fely e Amigos</h3>
             <p>Soluções Digitais</p>
           </div>
+
         </div>
 
         <p>
           Transformar ideias em soluções digitais.
         </p>
+
       </div>
 
       <div>
+
         <h3>Serviços</h3>
 
         <ul class="footer-links">
-          <li><a href="#servicos">Websites</a></li>
-          <li><a href="#servicos">CV Profissional</a></li>
-          <li><a href="#servicos">Identidade Visual</a></li>
-          <li><a href="#servicos">Cardápio Digital</a></li>
-          <li><a href="#servicos">Portfólios</a></li>
+
+          <li>
+            <a href="#servicos">Websites</a>
+          </li>
+
+          <li>
+            <a href="#servicos">CV Profissional</a>
+          </li>
+
+          <li>
+            <a href="#servicos">Identidade Visual</a>
+          </li>
+
+          <li>
+            <a href="#servicos">Cardápio Digital</a>
+          </li>
+
+          <li>
+            <a href="#servicos">Portfólios</a>
+          </li>
+
         </ul>
+
       </div>
 
       <div>
+
         <h3>Contactos</h3>
 
         <ul class="footer-links">
+
           <li>
             <a href="https://wa.me/244948138785">
               WhatsApp
@@ -2295,7 +2836,9 @@ footer a{
               Ver portfólio
             </a>
           </li>
+
         </ul>
+
       </div>
 
     </div>
