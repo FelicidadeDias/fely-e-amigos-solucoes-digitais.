@@ -9,8 +9,11 @@
 <meta name="description" content="Fely e Amigos — Soluções Digitais. Websites, CVs profissionais, identidade visual, cardápios digitais, materiais digitais, portfólios e presença online.">
 <meta name="theme-color" content="#071523">
 
-<!-- Prioridade máxima para o visual principal -->
-<link rel="preload" as="image" href="Websites.jpg" fetchpriority="high">
+<!-- Apenas o visual principal recebe prioridade -->
+<link rel="preload"
+      as="image"
+      href="Websites.jpg"
+      fetchpriority="high">
 
 <style>
 :root{
@@ -47,6 +50,8 @@ body{
   color:var(--text);
   line-height:1.6;
   overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeSpeed;
 }
 
 img{
@@ -67,6 +72,10 @@ button{
   width:min(1180px,92%);
   margin:auto;
 }
+
+/* =====================================================
+   RENDERIZAÇÃO MAIS LEVE
+===================================================== */
 
 section{
   padding:85px 0;
@@ -102,9 +111,9 @@ section{
   font-size:17px;
 }
 
-/* =========================
+/* =====================================================
    TOPBAR
-========================= */
+===================================================== */
 
 .topbar{
   background:var(--navy);
@@ -123,7 +132,7 @@ section{
 .topbar a{
   color:#fff;
   opacity:.9;
-  transition:.2s;
+  transition:color .2s,opacity .2s;
 }
 
 .topbar a:hover{
@@ -131,9 +140,9 @@ section{
   color:var(--accent);
 }
 
-/* =========================
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 header{
   position:sticky;
@@ -189,7 +198,7 @@ header{
   font-size:14px;
   font-weight:700;
   color:#334155;
-  transition:.25s;
+  transition:color .2s;
 }
 
 .nav-links a:not(.nav-cta)::after{
@@ -200,7 +209,7 @@ header{
   width:0;
   height:2px;
   background:var(--primary);
-  transition:.25s;
+  transition:width .2s;
 }
 
 .nav-links a:not(.nav-cta):hover::after{
@@ -223,9 +232,9 @@ header{
   transform:translateY(-2px);
 }
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero{
   min-height:650px;
@@ -259,6 +268,7 @@ header{
     );
 }
 
+/* Sem blur: mais leve em telemóveis */
 .hero::after{
   content:"";
   position:absolute;
@@ -267,8 +277,7 @@ header{
   right:-180px;
   top:-160px;
   border-radius:50%;
-  background:rgba(98,182,255,.12);
-  filter:blur(10px);
+  background:rgba(98,182,255,.10);
   pointer-events:none;
 }
 
@@ -353,9 +362,9 @@ header{
   background:rgba(255,255,255,.06);
 }
 
-/* =========================
+/* =====================================================
    QUICK ACCESS
-========================= */
+===================================================== */
 
 .quick{
   margin-top:-55px;
@@ -377,11 +386,11 @@ header{
   isolation:isolate;
   box-shadow:var(--shadow);
   background:#172033;
-  transition:transform .3s ease,box-shadow .3s ease;
+  transition:transform .25s ease,box-shadow .25s ease;
 }
 
 .visual-card:hover{
-  transform:translateY(-6px);
+  transform:translateY(-5px);
   box-shadow:var(--shadow2);
 }
 
@@ -392,11 +401,11 @@ header{
   height:100%;
   object-fit:cover;
   z-index:-2;
-  transition:transform .5s ease;
+  transition:transform .4s ease;
 }
 
 .visual-card:hover img{
-  transform:scale(1.07);
+  transform:scale(1.05);
 }
 
 .visual-card::after{
@@ -406,9 +415,9 @@ header{
   z-index:-1;
   background:linear-gradient(
     to top,
-    rgba(4,12,22,.96) 0%,
+    rgba(4,12,22,.96),
     rgba(4,12,22,.65) 42%,
-    rgba(4,12,22,.12) 100%
+    rgba(4,12,22,.12)
   );
 }
 
@@ -448,9 +457,9 @@ header{
   margin-top:9px;
 }
 
-/* =========================
+/* =====================================================
    ABOUT
-========================= */
+===================================================== */
 
 .about{
   background:#fff;
@@ -470,6 +479,7 @@ header{
   overflow:hidden;
   background:#12263f;
   box-shadow:var(--shadow2);
+  contain:layout paint;
 }
 
 .about-visual img{
@@ -562,9 +572,9 @@ header{
   flex:none;
 }
 
-/* =========================
+/* =====================================================
    DESTAQUES
-========================= */
+===================================================== */
 
 .highlights{
   background:var(--navy);
@@ -579,9 +589,9 @@ header{
   color:var(--accent);
 }
 
-/* =========================
+/* =====================================================
    SERVICES
-========================= */
+===================================================== */
 
 .services{
   background:#fff;
@@ -601,11 +611,12 @@ header{
   box-shadow:var(--shadow);
   background:#111827;
   isolation:isolate;
-  transition:transform .3s,box-shadow .3s;
+  contain:layout paint;
+  transition:transform .25s,box-shadow .25s;
 }
 
 .service-card:hover{
-  transform:translateY(-6px);
+  transform:translateY(-5px);
   box-shadow:var(--shadow2);
 }
 
@@ -616,11 +627,11 @@ header{
   height:100%;
   object-fit:cover;
   z-index:-2;
-  transition:transform .5s;
+  transition:transform .4s;
 }
 
 .service-card:hover img{
-  transform:scale(1.08);
+  transform:scale(1.05);
 }
 
 .service-card::after{
@@ -667,9 +678,9 @@ header{
   font-size:14px;
 }
 
-/* =========================
-   PRICES
-========================= */
+/* =====================================================
+   PREÇOS
+===================================================== */
 
 .prices{
   background:var(--light);
@@ -689,11 +700,12 @@ header{
   box-shadow:var(--shadow);
   background:#172033;
   isolation:isolate;
-  transition:transform .3s,box-shadow .3s;
+  contain:layout paint;
+  transition:transform .25s,box-shadow .25s;
 }
 
 .price-card:hover{
-  transform:translateY(-6px);
+  transform:translateY(-5px);
   box-shadow:var(--shadow2);
 }
 
@@ -704,11 +716,11 @@ header{
   height:100%;
   object-fit:cover;
   z-index:-2;
-  transition:transform .5s;
+  transition:transform .4s;
 }
 
 .price-card:hover img{
-  transform:scale(1.06);
+  transform:scale(1.05);
 }
 
 .price-card::after{
@@ -758,16 +770,16 @@ header{
   border-radius:10px;
   font-size:12px;
   font-weight:900;
-  transition:.2s;
+  transition:background .2s;
 }
 
 .price-btn:hover{
   background:var(--accent);
 }
 
-/* =========================
+/* =====================================================
    PACKAGES
-========================= */
+===================================================== */
 
 .packages{
   background:#fff;
@@ -787,11 +799,12 @@ header{
   color:#fff;
   isolation:isolate;
   box-shadow:var(--shadow);
-  transition:transform .3s,box-shadow .3s;
+  contain:layout paint;
+  transition:transform .25s,box-shadow .25s;
 }
 
 .package-card:hover{
-  transform:translateY(-7px);
+  transform:translateY(-6px);
   box-shadow:var(--shadow2);
 }
 
@@ -802,11 +815,11 @@ header{
   height:100%;
   object-fit:cover;
   z-index:-2;
-  transition:transform .5s;
+  transition:transform .4s;
 }
 
 .package-card:hover img{
-  transform:scale(1.07);
+  transform:scale(1.05);
 }
 
 .package-card::after{
@@ -873,16 +886,16 @@ header{
   color:var(--navy);
   font-size:12px;
   font-weight:900;
-  transition:.2s;
+  transition:background .2s;
 }
 
 .package-btn:hover{
   background:var(--accent);
 }
 
-/* =========================
-   PORTFOLIO
-========================= */
+/* =====================================================
+   PORTFÓLIO
+===================================================== */
 
 .portfolio{
   background:var(--navy);
@@ -910,11 +923,12 @@ header{
   overflow:hidden;
   isolation:isolate;
   box-shadow:0 12px 35px rgba(0,0,0,.25);
-  transition:transform .3s;
+  contain:layout paint;
+  transition:transform .25s;
 }
 
 .portfolio-card:hover{
-  transform:translateY(-6px);
+  transform:translateY(-5px);
 }
 
 .portfolio-card img{
@@ -924,11 +938,11 @@ header{
   height:100%;
   object-fit:cover;
   z-index:-2;
-  transition:transform .5s;
+  transition:transform .4s;
 }
 
 .portfolio-card:hover img{
-  transform:scale(1.07);
+  transform:scale(1.05);
 }
 
 .portfolio-card::after{
@@ -977,16 +991,16 @@ header{
   color:#fff;
   font-weight:800;
   font-size:13px;
-  transition:.2s;
+  transition:color .2s;
 }
 
 .portfolio-link:hover{
   color:var(--accent);
 }
 
-/* =========================
+/* =====================================================
    WHY
-========================= */
+===================================================== */
 
 .why{
   background:#fff;
@@ -1006,6 +1020,7 @@ header{
   background:#12263f;
   color:#fff;
   box-shadow:var(--shadow2);
+  contain:layout paint;
 }
 
 .why-main img{
@@ -1065,6 +1080,7 @@ header{
   overflow:hidden;
   isolation:isolate;
   color:#fff;
+  contain:layout paint;
 }
 
 .why-item img{
@@ -1105,9 +1121,9 @@ header{
   color:#dbe5ef;
 }
 
-/* =========================
+/* =====================================================
    PROCESS
-========================= */
+===================================================== */
 
 .process{
   background:var(--light);
@@ -1127,7 +1143,8 @@ header{
   color:#fff;
   isolation:isolate;
   box-shadow:var(--shadow);
-  transition:transform .3s;
+  contain:layout paint;
+  transition:transform .25s;
 }
 
 .process-card:hover{
@@ -1183,9 +1200,9 @@ header{
   font-size:12px;
 }
 
-/* =========================
+/* =====================================================
    CONTACT
-========================= */
+===================================================== */
 
 .contact{
   padding:0 0 85px;
@@ -1202,6 +1219,7 @@ header{
   align-items:center;
   background:#071523;
   box-shadow:var(--shadow2);
+  contain:layout paint;
 }
 
 .contact-box img{
@@ -1256,9 +1274,9 @@ header{
   gap:12px;
 }
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
   background:var(--navy);
@@ -1305,7 +1323,7 @@ footer a{
 }
 
 .footer-links a{
-  transition:.2s;
+  transition:color .2s;
 }
 
 .footer-links a:hover{
@@ -1319,9 +1337,9 @@ footer a{
   font-size:12px;
 }
 
-/* =========================
+/* =====================================================
    WHATSAPP
-========================= */
+===================================================== */
 
 .whatsapp{
   position:fixed;
@@ -1344,9 +1362,9 @@ footer a{
   transform:scale(1.08);
 }
 
-/* =========================
+/* =====================================================
    RESPONSIVE
-========================= */
+===================================================== */
 
 @media(max-width:1050px){
 
@@ -1404,7 +1422,7 @@ footer a{
   .process-grid{
     grid-template-columns:repeat(2,1fr);
   }
-
+  
   .footer-grid{
     grid-template-columns:1fr 1fr;
   }
@@ -1507,6 +1525,24 @@ footer a{
     right:15px;
     bottom:15px;
   }
+
+  /* Reduz efeitos pesados em telemóveis */
+  .visual-card:hover,
+  .service-card:hover,
+  .price-card:hover,
+  .package-card:hover,
+  .portfolio-card:hover,
+  .process-card:hover{
+    transform:none;
+  }
+
+  .visual-card:hover img,
+  .service-card:hover img,
+  .price-card:hover img,
+  .package-card:hover img,
+  .portfolio-card:hover img{
+    transform:none;
+  }
 }
 
 @media(max-width:390px){
@@ -1529,9 +1565,9 @@ footer a{
   }
 }
 
-/* =========================
-   REDUZIR MOVIMENTO
-========================= */
+/* =====================================================
+   ACESSIBILIDADE / APARELHOS MAIS FRACOS
+===================================================== */
 
 @media(prefers-reduced-motion:reduce){
 
@@ -1544,6 +1580,22 @@ footer a{
   *::after{
     transition:none!important;
     animation:none!important;
+  }
+}
+
+/* =====================================================
+   CONEXÃO / PROCESSAMENTO LIMITADO
+===================================================== */
+
+@media(pointer:coarse){
+
+  .visual-card,
+  .service-card,
+  .price-card,
+  .package-card,
+  .portfolio-card,
+  .process-card{
+    transition:box-shadow .2s ease;
   }
 }
 </style>
@@ -1574,6 +1626,7 @@ footer a{
         height="52"
         alt="Fely e Amigos"
         loading="eager"
+        fetchpriority="high"
         decoding="async">
 
       <div class="brand-text">
@@ -1673,7 +1726,7 @@ footer a{
           width="800"
           height="500"
           alt="Websites"
-          loading="eager"
+          loading="lazy"
           decoding="async">
 
         <div class="visual-content">
@@ -1691,7 +1744,7 @@ footer a{
           width="800"
           height="500"
           alt="CV Profissional"
-          loading="eager"
+          loading="lazy"
           decoding="async">
 
         <div class="visual-content">
@@ -1709,7 +1762,7 @@ footer a{
           width="800"
           height="500"
           alt="Portfólio Digital"
-          loading="eager"
+          loading="lazy"
           decoding="async">
 
         <div class="visual-content">
@@ -1798,36 +1851,27 @@ footer a{
         <div class="check-list">
 
           <div class="check">
-
             <div class="check-icon">✓</div>
-
             <div>
               <strong>Design profissional</strong><br>
               <span>Apresentação moderna e organizada.</span>
             </div>
-
           </div>
 
           <div class="check">
-
             <div class="check-icon">✓</div>
-
             <div>
               <strong>Soluções acessíveis</strong><br>
               <span>Opções para diferentes necessidades.</span>
             </div>
-
           </div>
 
           <div class="check">
-
             <div class="check-icon">✓</div>
-
             <div>
               <strong>Foco no cliente</strong><br>
               <span>Cada projeto começa pela sua necessidade.</span>
             </div>
-
           </div>
 
         </div>
@@ -1861,124 +1905,57 @@ footer a{
     <div class="visual-grid">
 
       <div class="visual-card">
-
-        <img
-          src="Websites.jpg"
-          width="800"
-          height="500"
-          alt="Criação de Websites"
-          loading="lazy"
-          decoding="async">
-
+        <img src="Websites.jpg" width="800" height="500" alt="Criação de Websites" loading="lazy" decoding="async">
         <div class="visual-content">
           <span class="visual-tag">01</span>
           <h3>Websites</h3>
-          <p>
-            Páginas profissionais para apresentar marcas,
-            serviços e projetos.
-          </p>
+          <p>Páginas profissionais para apresentar marcas, serviços e projetos.</p>
         </div>
-
       </div>
 
       <div class="visual-card">
-
-        <img
-          src="CV Profissional.jpg"
-          width="800"
-          height="500"
-          alt="CV Profissional"
-          loading="lazy"
-          decoding="async">
-
+        <img src="CV Profissional.jpg" width="800" height="500" alt="CV Profissional" loading="lazy" decoding="async">
         <div class="visual-content">
           <span class="visual-tag">02</span>
           <h3>Carreira</h3>
-          <p>
-            CVs profissionais pensados para causar uma boa primeira impressão.
-          </p>
+          <p>CVs profissionais pensados para causar uma boa primeira impressão.</p>
         </div>
-
       </div>
 
       <div class="visual-card">
-
-        <img
-          src="cardápio.png"
-          width="800"
-          height="500"
-          alt="Cardápio Digital"
-          loading="lazy"
-          decoding="async">
-
+        <img src="cardápio.png" width="800" height="500" alt="Cardápio Digital" loading="lazy" decoding="async">
         <div class="visual-content">
           <span class="visual-tag">03</span>
           <h3>Cardápios Digitais</h3>
-          <p>
-            Menus modernos para restaurantes, cafés, pastelarias e negócios.
-          </p>
+          <p>Menus modernos para restaurantes, cafés, pastelarias e negócios.</p>
         </div>
-
       </div>
 
       <div class="visual-card">
-
-        <img
-          src="logotipo.jpg"
-          width="800"
-          height="500"
-          alt="Logotipo"
-          loading="lazy"
-          decoding="async">
-
+        <img src="logotipo.jpg" width="800" height="500" alt="Logotipo" loading="lazy" decoding="async">
         <div class="visual-content">
           <span class="visual-tag">04</span>
           <h3>Identidade Visual</h3>
-          <p>
-            Logotipos e elementos visuais para fortalecer uma marca.
-          </p>
+          <p>Logotipos e elementos visuais para fortalecer uma marca.</p>
         </div>
-
       </div>
 
       <div class="visual-card">
-
-        <img
-          src="Flyer Digital.jpg"
-          width="800"
-          height="500"
-          alt="Materiais Digitais"
-          loading="lazy"
-          decoding="async">
-
+        <img src="Flyer Digital.jpg" width="800" height="500" alt="Materiais Digitais" loading="lazy" decoding="async">
         <div class="visual-content">
           <span class="visual-tag">05</span>
           <h3>Materiais Digitais</h3>
-          <p>
-            Flyers, cartões e conteúdos visuais para divulgação.
-          </p>
+          <p>Flyers, cartões e conteúdos visuais para divulgação.</p>
         </div>
-
       </div>
 
       <div class="visual-card">
-
-        <img
-          src="Portfólio Digital.jpg"
-          width="800"
-          height="500"
-          alt="Portfólio Digital"
-          loading="lazy"
-          decoding="async">
-
+        <img src="Portfólio Digital.jpg" width="800" height="500" alt="Portfólio Digital" loading="lazy" decoding="async">
         <div class="visual-content">
           <span class="visual-tag">06</span>
           <h3>Portfólios</h3>
-          <p>
-            Mostre trabalhos, competências, projetos e resultados.
-          </p>
+          <p>Mostre trabalhos, competências, projetos e resultados.</p>
         </div>
-
       </div>
 
     </div>
@@ -2633,63 +2610,48 @@ footer a{
     <div class="process-grid">
 
       <div class="process-card">
-
         <img src="Websites.jpg" width="700" height="500" alt="Conte-nos a ideia" loading="lazy" decoding="async">
-
         <div class="process-content">
           <div class="process-number">01</div>
           <h3>Conte-nos a ideia</h3>
           <p>Explique o que precisa e qual é o seu objetivo.</p>
         </div>
-
       </div>
 
       <div class="process-card">
-
         <img src="CV Profissional.jpg" width="700" height="500" alt="Analisamos" loading="lazy" decoding="async">
-
         <div class="process-content">
           <div class="process-number">02</div>
           <h3>Analisamos</h3>
           <p>Entendemos a necessidade e definimos a melhor solução.</p>
         </div>
-
       </div>
 
       <div class="process-card">
-
         <img src="logotipo.jpg" width="700" height="500" alt="Propomos" loading="lazy" decoding="async">
-
         <div class="process-content">
           <div class="process-number">03</div>
           <h3>Propomos</h3>
           <p>Apresentamos a proposta e os detalhes do projeto.</p>
         </div>
-
       </div>
 
       <div class="process-card">
-
         <img src="Flyer Digital.jpg" width="700" height="500" alt="Desenvolvemos" loading="lazy" decoding="async">
-
         <div class="process-content">
           <div class="process-number">04</div>
           <h3>Desenvolvemos</h3>
           <p>Transformamos a proposta num recurso digital.</p>
         </div>
-
       </div>
 
       <div class="process-card">
-
         <img src="Presença Digital.jpg" width="700" height="500" alt="Entregamos" loading="lazy" decoding="async">
-
         <div class="process-content">
           <div class="process-number">05</div>
           <h3>Entregamos</h3>
           <p>Receba a sua solução pronta para utilizar.</p>
         </div>
-
       </div>
 
     </div>
@@ -2789,25 +2751,11 @@ footer a{
 
         <ul class="footer-links">
 
-          <li>
-            <a href="#servicos">Websites</a>
-          </li>
-
-          <li>
-            <a href="#servicos">CV Profissional</a>
-          </li>
-
-          <li>
-            <a href="#servicos">Identidade Visual</a>
-          </li>
-
-          <li>
-            <a href="#servicos">Cardápio Digital</a>
-          </li>
-
-          <li>
-            <a href="#servicos">Portfólios</a>
-          </li>
+          <li><a href="#servicos">Websites</a></li>
+          <li><a href="#servicos">CV Profissional</a></li>
+          <li><a href="#servicos">Identidade Visual</a></li>
+          <li><a href="#servicos">Cardápio Digital</a></li>
+          <li><a href="#servicos">Portfólios</a></li>
 
         </ul>
 
