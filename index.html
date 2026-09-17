@@ -9,10 +9,10 @@
 <meta name="description" content="Fely e Amigos — Soluções Digitais. Websites, CVs profissionais, identidade visual, cardápios digitais, materiais digitais, portfólios e presença online.">
 <meta name="theme-color" content="#071523">
 
-<!-- Apenas o visual principal recebe prioridade -->
+<!-- Imagem principal carregada primeiro -->
 <link rel="preload"
       as="image"
-      href="Websites.jpg"
+      href="Websites.webp"
       fetchpriority="high">
 
 <style>
@@ -72,10 +72,6 @@ button{
   width:min(1180px,92%);
   margin:auto;
 }
-
-/* =====================================================
-   RENDERIZAÇÃO MAIS LEVE
-===================================================== */
 
 section{
   padding:85px 0;
@@ -268,7 +264,6 @@ header{
     );
 }
 
-/* Sem blur: mais leve em telemóveis */
 .hero::after{
   content:"";
   position:absolute;
@@ -376,6 +371,13 @@ header{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:15px;
+}
+
+/* Corrigido: estava sendo usado no HTML mas faltava no CSS */
+.visual-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
 .visual-card{
@@ -1376,6 +1378,10 @@ footer a{
     grid-template-columns:repeat(2,1fr);
   }
 
+  .visual-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
   .services-grid,
   .prices-grid,
   .portfolio-grid{
@@ -1422,7 +1428,7 @@ footer a{
   .process-grid{
     grid-template-columns:repeat(2,1fr);
   }
-  
+
   .footer-grid{
     grid-template-columns:1fr 1fr;
   }
@@ -1526,7 +1532,6 @@ footer a{
     bottom:15px;
   }
 
-  /* Reduz efeitos pesados em telemóveis */
   .visual-card:hover,
   .service-card:hover,
   .price-card:hover,
@@ -1566,7 +1571,7 @@ footer a{
 }
 
 /* =====================================================
-   ACESSIBILIDADE / APARELHOS MAIS FRACOS
+   ACESSIBILIDADE
 ===================================================== */
 
 @media(prefers-reduced-motion:reduce){
@@ -1584,7 +1589,7 @@ footer a{
 }
 
 /* =====================================================
-   CONEXÃO / PROCESSAMENTO LIMITADO
+   APARELHOS COM TOQUE
 ===================================================== */
 
 @media(pointer:coarse){
@@ -1621,7 +1626,7 @@ footer a{
     <a href="#inicio" class="brand" aria-label="Fely e Amigos - Início">
 
       <img
-        src="Fa.png"
+        src="Fa.webp"
         width="52"
         height="52"
         alt="Fely e Amigos"
@@ -1659,7 +1664,7 @@ footer a{
 
   <img
     class="hero-bg"
-    src="Websites.jpg"
+    src="Websites.webp"
     width="1920"
     height="1080"
     alt=""
@@ -1722,7 +1727,7 @@ footer a{
       <a href="#precos" class="visual-card">
 
         <img
-          src="Websites.jpg"
+          src="Websites.webp"
           width="800"
           height="500"
           alt="Websites"
@@ -1740,7 +1745,7 @@ footer a{
       <a href="#precos" class="visual-card">
 
         <img
-          src="CV Profissional.jpg"
+          src="CV Profissional.webp"
           width="800"
           height="500"
           alt="CV Profissional"
@@ -1758,7 +1763,7 @@ footer a{
       <a href="#portfolio" class="visual-card">
 
         <img
-          src="Portfólio Digital.jpg"
+          src="Portfólio Digital.webp"
           width="800"
           height="500"
           alt="Portfólio Digital"
@@ -1776,7 +1781,7 @@ footer a{
       <a href="#contacto" class="visual-card">
 
         <img
-          src="Presença Digital.jpg"
+          src="Presença Digital.webp"
           width="800"
           height="500"
           alt="Presença Digital"
@@ -1806,7 +1811,7 @@ footer a{
       <div class="about-visual">
 
         <img
-          src="Presença Digital.jpg"
+          src="Presença Digital.webp"
           width="1000"
           height="800"
           alt="Presença Digital"
@@ -1905,7 +1910,7 @@ footer a{
     <div class="visual-grid">
 
       <div class="visual-card">
-        <img src="Websites.jpg" width="800" height="500" alt="Criação de Websites" loading="lazy" decoding="async">
+        <img src="Websites.webp" width="800" height="500" alt="Criação de Websites" loading="lazy" decoding="async">
         <div class="visual-content">
           <span class="visual-tag">01</span>
           <h3>Websites</h3>
@@ -1914,7 +1919,7 @@ footer a{
       </div>
 
       <div class="visual-card">
-        <img src="CV Profissional.jpg" width="800" height="500" alt="CV Profissional" loading="lazy" decoding="async">
+        <img src="CV Profissional.webp" width="800" height="500" alt="CV Profissional" loading="lazy" decoding="async">
         <div class="visual-content">
           <span class="visual-tag">02</span>
           <h3>Carreira</h3>
@@ -1923,7 +1928,7 @@ footer a{
       </div>
 
       <div class="visual-card">
-        <img src="cardápio.png" width="800" height="500" alt="Cardápio Digital" loading="lazy" decoding="async">
+        <img src="cardápio.webp" width="800" height="500" alt="Cardápio Digital" loading="lazy" decoding="async">
         <div class="visual-content">
           <span class="visual-tag">03</span>
           <h3>Cardápios Digitais</h3>
@@ -1932,7 +1937,7 @@ footer a{
       </div>
 
       <div class="visual-card">
-        <img src="logotipo.jpg" width="800" height="500" alt="Logotipo" loading="lazy" decoding="async">
+        <img src="logotipo.webp" width="800" height="500" alt="Logotipo" loading="lazy" decoding="async">
         <div class="visual-content">
           <span class="visual-tag">04</span>
           <h3>Identidade Visual</h3>
@@ -1941,7 +1946,7 @@ footer a{
       </div>
 
       <div class="visual-card">
-        <img src="Flyer Digital.jpg" width="800" height="500" alt="Materiais Digitais" loading="lazy" decoding="async">
+        <img src="Flyer Digital.webp" width="800" height="500" alt="Materiais Digitais" loading="lazy" decoding="async">
         <div class="visual-content">
           <span class="visual-tag">05</span>
           <h3>Materiais Digitais</h3>
@@ -1950,7 +1955,7 @@ footer a{
       </div>
 
       <div class="visual-card">
-        <img src="Portfólio Digital.jpg" width="800" height="500" alt="Portfólio Digital" loading="lazy" decoding="async">
+        <img src="Portfólio Digital.webp" width="800" height="500" alt="Portfólio Digital" loading="lazy" decoding="async">
         <div class="visual-content">
           <span class="visual-tag">06</span>
           <h3>Portfólios</h3>
@@ -1985,7 +1990,7 @@ footer a{
     <div class="services-grid">
 
       <div class="service-card">
-        <img src="Websites.jpg" width="900" height="650" alt="Websites" loading="lazy" decoding="async">
+        <img src="Websites.webp" width="900" height="650" alt="Websites" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">01</div>
           <h3>Websites</h3>
@@ -1994,7 +1999,7 @@ footer a{
       </div>
 
       <div class="service-card">
-        <img src="CV Profissional.jpg" width="900" height="650" alt="CV Profissional" loading="lazy" decoding="async">
+        <img src="CV Profissional.webp" width="900" height="650" alt="CV Profissional" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">02</div>
           <h3>CV Profissional</h3>
@@ -2003,7 +2008,7 @@ footer a{
       </div>
 
       <div class="service-card">
-        <img src="logotipo.jpg" width="900" height="650" alt="Logotipos e Identidade Visual" loading="lazy" decoding="async">
+        <img src="logotipo.webp" width="900" height="650" alt="Logotipos e Identidade Visual" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">03</div>
           <h3>Logos & Identidade</h3>
@@ -2012,7 +2017,7 @@ footer a{
       </div>
 
       <div class="service-card">
-        <img src="Flyer Digital.jpg" width="900" height="650" alt="Materiais Digitais" loading="lazy" decoding="async">
+        <img src="Flyer Digital.webp" width="900" height="650" alt="Materiais Digitais" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">04</div>
           <h3>Materiais Digitais</h3>
@@ -2021,7 +2026,7 @@ footer a{
       </div>
 
       <div class="service-card">
-        <img src="Portfólio Digital.jpg" width="900" height="650" alt="Portfólios" loading="lazy" decoding="async">
+        <img src="Portfólio Digital.webp" width="900" height="650" alt="Portfólios" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">05</div>
           <h3>Portfólios</h3>
@@ -2030,7 +2035,7 @@ footer a{
       </div>
 
       <div class="service-card">
-        <img src="Cartão Digital.jpg" width="900" height="650" alt="Cartão Digital" loading="lazy" decoding="async">
+        <img src="Cartão Digital.webp" width="900" height="650" alt="Cartão Digital" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">06</div>
           <h3>WhatsApp & Redes</h3>
@@ -2039,7 +2044,7 @@ footer a{
       </div>
 
       <div class="service-card">
-        <img src="Presença Digital.jpg" width="900" height="650" alt="Presença Digital" loading="lazy" decoding="async">
+        <img src="Presença Digital.webp" width="900" height="650" alt="Presença Digital" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">07</div>
           <h3>Presença Digital</h3>
@@ -2048,7 +2053,7 @@ footer a{
       </div>
 
       <div class="service-card">
-        <img src="cardápio.png" width="900" height="650" alt="Cardápio Digital" loading="lazy" decoding="async">
+        <img src="cardápio.webp" width="900" height="650" alt="Cardápio Digital" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">08</div>
           <h3>Cardápio Digital</h3>
@@ -2057,7 +2062,7 @@ footer a{
       </div>
 
       <div class="service-card">
-        <img src="Soluções Personalizadas.jpg" width="900" height="650" alt="Soluções Personalizadas" loading="lazy" decoding="async">
+        <img src="Soluções Personalizadas.webp" width="900" height="650" alt="Soluções Personalizadas" loading="lazy" decoding="async">
         <div class="service-content">
           <div class="service-number">09</div>
           <h3>Soluções Personalizadas</h3>
@@ -2092,7 +2097,7 @@ footer a{
     <div class="prices-grid">
 
       <div class="price-card">
-        <img src="CV Profissional.jpg" width="900" height="650" alt="CV Profissional" loading="lazy" decoding="async">
+        <img src="CV Profissional.webp" width="900" height="650" alt="CV Profissional" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>CV Profissional</h3>
           <div class="price-value">1.500 Kz</div>
@@ -2102,7 +2107,7 @@ footer a{
       </div>
 
       <div class="price-card">
-        <img src="CV Profissional.jpg" width="900" height="650" alt="CV e Carta" loading="lazy" decoding="async">
+        <img src="CV Profissional.webp" width="900" height="650" alt="CV e Carta" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>CV + Carta</h3>
           <div class="price-value">3.000 Kz</div>
@@ -2112,7 +2117,7 @@ footer a{
       </div>
 
       <div class="price-card">
-        <img src="Flyer Digital.jpg" width="900" height="650" alt="Flyer Digital" loading="lazy" decoding="async">
+        <img src="Flyer Digital.webp" width="900" height="650" alt="Flyer Digital" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Flyer Digital</h3>
           <div class="price-value">2.000 Kz</div>
@@ -2122,7 +2127,7 @@ footer a{
       </div>
 
       <div class="price-card">
-        <img src="Cartão Digital.jpg" width="900" height="650" alt="Cartão Digital" loading="lazy" decoding="async">
+        <img src="Cartão Digital.webp" width="900" height="650" alt="Cartão Digital" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Cartão Digital</h3>
           <div class="price-value">2.000 Kz</div>
@@ -2132,7 +2137,7 @@ footer a{
       </div>
 
       <div class="price-card">
-        <img src="logotipo.jpg" width="900" height="650" alt="Logotipo" loading="lazy" decoding="async">
+        <img src="logotipo.webp" width="900" height="650" alt="Logotipo" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Logotipo</h3>
           <div class="price-value">3.000 Kz</div>
@@ -2142,7 +2147,7 @@ footer a{
       </div>
 
       <div class="price-card">
-        <img src="logotipo.jpg" width="900" height="650" alt="Logo e Identidade" loading="lazy" decoding="async">
+        <img src="logotipo.webp" width="900" height="650" alt="Logo e Identidade" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Logo + Identidade</h3>
           <div class="price-value">7.000 Kz</div>
@@ -2152,7 +2157,7 @@ footer a{
       </div>
 
       <div class="price-card">
-        <img src="Portfólio Digital.jpg" width="900" height="650" alt="Portfólio Digital" loading="lazy" decoding="async">
+        <img src="Portfólio Digital.webp" width="900" height="650" alt="Portfólio Digital" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Portfólio Digital</h3>
           <div class="price-value">22.500 Kz</div>
@@ -2162,7 +2167,7 @@ footer a{
       </div>
 
       <div class="price-card">
-        <img src="Websites.jpg" width="900" height="650" alt="Website Start" loading="lazy" decoding="async">
+        <img src="Websites.webp" width="900" height="650" alt="Website Start" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Website Start</h3>
           <div class="price-value">30.000 Kz</div>
@@ -2172,7 +2177,7 @@ footer a{
       </div>
 
       <div class="price-card">
-        <img src="Presença Digital.jpg" width="900" height="650" alt="Website Pro" loading="lazy" decoding="async">
+        <img src="Presença Digital.webp" width="900" height="650" alt="Website Pro" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Website Pro</h3>
           <div class="price-value">50.000 Kz</div>
@@ -2182,7 +2187,7 @@ footer a{
       </div>
 
       <div class="price-card">
-        <img src="Soluções Personalizadas.jpg" width="900" height="650" alt="Website Business" loading="lazy" decoding="async">
+        <img src="Soluções Personalizadas.webp" width="900" height="650" alt="Website Business" loading="lazy" decoding="async">
         <div class="price-content">
           <h3>Website Business</h3>
           <div class="price-value">90.000 Kz+</div>
@@ -2219,7 +2224,7 @@ footer a{
 
       <div class="package-card">
 
-        <img src="CV Profissional.jpg" width="1000" height="800" alt="Pacote Profissional" loading="lazy" decoding="async">
+        <img src="CV Profissional.webp" width="1000" height="800" alt="Pacote Profissional" loading="lazy" decoding="async">
 
         <div class="package-content">
 
@@ -2252,7 +2257,7 @@ footer a{
 
       <div class="package-card">
 
-        <img src="logotipo.jpg" width="1000" height="800" alt="Pacote Negócio" loading="lazy" decoding="async">
+        <img src="logotipo.webp" width="1000" height="800" alt="Pacote Negócio" loading="lazy" decoding="async">
 
         <div class="package-content">
 
@@ -2285,7 +2290,7 @@ footer a{
 
       <div class="package-card">
 
-        <img src="Presença Digital.jpg" width="1000" height="800" alt="Pacote Presença Digital" loading="lazy" decoding="async">
+        <img src="Presença Digital.webp" width="1000" height="800" alt="Pacote Presença Digital" loading="lazy" decoding="async">
 
         <div class="package-content">
 
@@ -2344,7 +2349,7 @@ footer a{
 
       <div class="portfolio-card">
 
-        <img src="Websites.jpg" width="900" height="650" alt="Fely e Amigos Educação" loading="lazy" decoding="async">
+        <img src="Websites.webp" width="900" height="650" alt="Fely e Amigos Educação" loading="lazy" decoding="async">
 
         <div class="portfolio-content">
           <span>Educação</span>
@@ -2361,7 +2366,7 @@ footer a{
 
       <div class="portfolio-card">
 
-        <img src="Presença Digital.jpg" width="900" height="650" alt="Fely e Amigos Soluções Digitais" loading="lazy" decoding="async">
+        <img src="Presença Digital.webp" width="900" height="650" alt="Fely e Amigos Soluções Digitais" loading="lazy" decoding="async">
 
         <div class="portfolio-content">
           <span>Serviços</span>
@@ -2378,7 +2383,7 @@ footer a{
 
       <div class="portfolio-card">
 
-        <img src="cardápio.png" width="900" height="650" alt="KUDIMA Cardápio Digital" loading="lazy" decoding="async">
+        <img src="cardápio.webp" width="900" height="650" alt="KUDIMA Cardápio Digital" loading="lazy" decoding="async">
 
         <div class="portfolio-content">
           <span>Novo projeto</span>
@@ -2395,7 +2400,7 @@ footer a{
 
       <div class="portfolio-card">
 
-        <img src="CV Profissional.jpg" width="900" height="650" alt="CVs Profissionais" loading="lazy" decoding="async">
+        <img src="CV Profissional.webp" width="900" height="650" alt="CVs Profissionais" loading="lazy" decoding="async">
 
         <div class="portfolio-content">
           <span>Carreira</span>
@@ -2412,7 +2417,7 @@ footer a{
 
       <div class="portfolio-card">
 
-        <img src="logotipo.jpg" width="900" height="650" alt="Identidade Visual KUDIMA" loading="lazy" decoding="async">
+        <img src="logotipo.webp" width="900" height="650" alt="Identidade Visual KUDIMA" loading="lazy" decoding="async">
 
         <div class="portfolio-content">
           <span>Marca</span>
@@ -2429,7 +2434,7 @@ footer a{
 
       <div class="portfolio-card">
 
-        <img src="Flyer Digital.jpg" width="900" height="650" alt="Flyer Digital" loading="lazy" decoding="async">
+        <img src="Flyer Digital.webp" width="900" height="650" alt="Flyer Digital" loading="lazy" decoding="async">
 
         <div class="portfolio-content">
           <span>Publicidade</span>
@@ -2446,7 +2451,7 @@ footer a{
 
       <div class="portfolio-card">
 
-        <img src="Cartão Digital.jpg" width="900" height="650" alt="Cartões Digitais" loading="lazy" decoding="async">
+        <img src="Cartão Digital.webp" width="900" height="650" alt="Cartões Digitais" loading="lazy" decoding="async">
 
         <div class="portfolio-content">
           <span>Identidade</span>
@@ -2476,7 +2481,7 @@ footer a{
       <div class="why-main">
 
         <img
-          src="Soluções Personalizadas.jpg"
+          src="Soluções Personalizadas.webp"
           width="1000"
           height="800"
           alt="Soluções Personalizadas"
@@ -2508,7 +2513,7 @@ footer a{
         <div class="why-item">
 
           <img
-            src="Websites.jpg"
+            src="Websites.webp"
             width="700"
             height="500"
             alt="Profissionalismo"
@@ -2527,7 +2532,7 @@ footer a{
         <div class="why-item">
 
           <img
-            src="CV Profissional.jpg"
+            src="CV Profissional.webp"
             width="700"
             height="500"
             alt="Acessibilidade"
@@ -2546,7 +2551,7 @@ footer a{
         <div class="why-item">
 
           <img
-            src="Cartão Digital.jpg"
+            src="Cartão Digital.webp"
             width="700"
             height="500"
             alt="Praticidade"
@@ -2565,7 +2570,7 @@ footer a{
         <div class="why-item">
 
           <img
-            src="Soluções Personalizadas.jpg"
+            src="Soluções Personalizadas.webp"
             width="700"
             height="500"
             alt="Personalização"
@@ -2610,7 +2615,7 @@ footer a{
     <div class="process-grid">
 
       <div class="process-card">
-        <img src="Websites.jpg" width="700" height="500" alt="Conte-nos a ideia" loading="lazy" decoding="async">
+        <img src="Websites.webp" width="700" height="500" alt="Conte-nos a ideia" loading="lazy" decoding="async">
         <div class="process-content">
           <div class="process-number">01</div>
           <h3>Conte-nos a ideia</h3>
@@ -2619,7 +2624,7 @@ footer a{
       </div>
 
       <div class="process-card">
-        <img src="CV Profissional.jpg" width="700" height="500" alt="Analisamos" loading="lazy" decoding="async">
+        <img src="CV Profissional.webp" width="700" height="500" alt="Analisamos" loading="lazy" decoding="async">
         <div class="process-content">
           <div class="process-number">02</div>
           <h3>Analisamos</h3>
@@ -2628,7 +2633,7 @@ footer a{
       </div>
 
       <div class="process-card">
-        <img src="logotipo.jpg" width="700" height="500" alt="Propomos" loading="lazy" decoding="async">
+        <img src="logotipo.webp" width="700" height="500" alt="Propomos" loading="lazy" decoding="async">
         <div class="process-content">
           <div class="process-number">03</div>
           <h3>Propomos</h3>
@@ -2637,7 +2642,7 @@ footer a{
       </div>
 
       <div class="process-card">
-        <img src="Flyer Digital.jpg" width="700" height="500" alt="Desenvolvemos" loading="lazy" decoding="async">
+        <img src="Flyer Digital.webp" width="700" height="500" alt="Desenvolvemos" loading="lazy" decoding="async">
         <div class="process-content">
           <div class="process-number">04</div>
           <h3>Desenvolvemos</h3>
@@ -2646,7 +2651,7 @@ footer a{
       </div>
 
       <div class="process-card">
-        <img src="Presença Digital.jpg" width="700" height="500" alt="Entregamos" loading="lazy" decoding="async">
+        <img src="Presença Digital.webp" width="700" height="500" alt="Entregamos" loading="lazy" decoding="async">
         <div class="process-content">
           <div class="process-number">05</div>
           <h3>Entregamos</h3>
@@ -2667,7 +2672,7 @@ footer a{
     <div class="contact-box">
 
       <img
-        src="Soluções Personalizadas.jpg"
+        src="Soluções Personalizadas.webp"
         width="1400"
         height="800"
         alt=""
@@ -2725,7 +2730,7 @@ footer a{
         <div class="footer-brand">
 
           <img
-            src="Fa.png"
+            src="Fa.webp"
             width="50"
             height="50"
             alt="Fely e Amigos"
